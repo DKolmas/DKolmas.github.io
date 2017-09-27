@@ -1,4 +1,3 @@
 name: Damian Kolmas
 markdown: kramdown
-
 permalink: /blog/:year/:month/:day/:title
