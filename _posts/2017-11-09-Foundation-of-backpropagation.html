@@ -1,3 +1,9 @@
+---
+layout: post
+title: "Foundation of backpropagation algorithm"
+date: 2017-11-09
+---
+
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
@@ -11776,9 +11782,7 @@ div#notebook {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Here I desribe how to update weights in a simple Neural Network with one hidden layer and two outputs.</p>
-<ul>
-<li>My intenstion is to make this desritpion general enough so the one can easly switch to a specific use case. Specific use case means a neural network with other number of hidden layers, nodes and number of inputs and outputs.</li>
-</ul>
+<p>My intenstion is to make this desritpion general enough so the one can easly switch to a specific use case. Specific use case means a neural network with other number of hidden layers, nodes and number of inputs and outputs. Acitvation functions and a loss (cost) function are not defined as well on purpose.</p>
 
 </div>
 </div>
@@ -12051,7 +12055,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="delta_w_calculation_chain_rule_01.png"></p>
+<p><img src="blog/delta_w_calculation_chain_rule_01.png"></p>
 
 </div>
 </div>
@@ -12159,7 +12163,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>To de above formula we can introduce "error term" $\delta$ which desribes an error L which is seen from perspective of input to a given node.</p>
+<p>To the above formula we can introduce "error term" $\delta$ which desribes an error L seen from perspective of input to a given node.</p>
 
 </div>
 </div>
@@ -12330,7 +12334,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="delta_w_hidden_01.png"></p>
+<p><img src="blog/delta_w_hidden_01.png"></p>
 
 </div>
 </div>
@@ -12747,21 +12751,9 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>introduction of error term greatly simplifies interpreatation of how error calclated at the output of the netowork $L$ propagates back to all weights during the update proa cess</li>
-<li>error term depends on type of error function $L$ and activation functions in nodes on the way to a specific weights</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>It is important to remember in calcualtions what activation function is used in a given layer. It can happen that ouptu layer has identity activation function while other layers have for example sigmoid activatin function</li>
-</ul>
+<p>Introduction of error term greatly simplifies interpreatation of how error calclated at the output of the netowork $L$ propagates back to all weights during the update proa cess</p>
+<p>Error term depends on type of error function $L$ and activation functions in nodes on the way to a specific weights</p>
+<p>It is important to remember in calcualtions what activation function is used in a given layer. It can happen that ouptu layer has identity activation function while other layers have for example sigmoid activatin function</p>
 
 </div>
 </div>
