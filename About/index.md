@@ -6,9 +6,9 @@ title: About
 <img src="Damian_4.JPG" class="profile-picture" width="256" align="right">
 
 Hi, my name is Damian Kolmas.
-I have created this website so I could keep up with my notes in Machine Learninig topic. Moreover I want to share my notes with others.
+I have created this website so I could store my Machine Learninig notes. I would like to share my notes with others, especially those who start they journey with Machine Learning topic.
 
-I ma very much interested in Machine Learning, drones (autonomous control applications) and finally I am big fan of smart cities concept (Internet of Things).
+I ma very much interested in Machine Learning, drones (autonomous control applications) and finally I am big fan of Internet of Things (IoT) and in particular smart cities concept.
 
 If you have comments or questions please let me know (via LI).
 
