@@ -9905,7 +9905,7 @@ Adapted from GitHub theme
 .cm-s-ipython span.cm-tab {
   background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAMCAYAAAAkuj5RAAAAAXNSR0IArs4c6QAAAGFJREFUSMft1LsRQFAQheHPowAKoACx3IgEKtaEHujDjORSgWTH/ZOdnZOcM/sgk/kFFWY0qV8foQwS4MKBCS3qR6ixBJvElOobYAtivseIE120FaowJPN75GMu8j/LfMwNjh4HUpwg4LUAAAAASUVORK5CYII=);
   background-position: right;
-  background-repeat: no-repeat;	
+  background-repeat: no-repeat;
 }
 div.output_wrapper {
   /* this position must be relative to enable descendents to be absolute within it */
@@ -11781,7 +11781,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>This post is my first note on Autoencoders. I will show here implementation of simple undercoplete autoencoder in Tensorflow and show results using <a href="http://scikit-learn.org/stable/auto_examples/datasets/plot_iris_dataset.html">the iris dataset</a></p>
+<p>This post is my first note on Autoencoders. I will show here implementation of simple undercomplete autoencoder in Tensorflow and show results using <a href="http://scikit-learn.org/stable/auto_examples/datasets/plot_iris_dataset.html">the iris dataset</a></p>
 <p>The purpose of that autoencoder is to act as PCA (Principal Component Analysis, refer to <a href="">Sebastian Raschka post</a> for great discussion on PCA topic and more).</p>
 <p>In the code below I show how simply it can by to experiment with basic Autoencoder as we have easy access to dataset through Sklearn.</p>
 
@@ -11792,7 +11792,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Shortly ther are types of Autoencoders <a href="http://machinelearninguru.com/deep_learning/tensorflow/neural_networks/autoencoder/autoencoder.html">overview link</a>:</p>
+<p>Shortly, ther are types of Autoencoders <a href="http://machinelearninguru.com/deep_learning/tensorflow/neural_networks/autoencoder/autoencoder.html">overview link</a>:</p>
 <ul>
 <li>Undercomplete autoencoders</li>
 <li>Regularized:<ul>
@@ -12022,7 +12022,7 @@ A shape of data content of iris dataset: (150, 4)
 <p>To build the network of the architecture type shown above we can:</p>
 <ul>
 <li>use separate weigths and biases definition as it is <a href="https://www.tensorflow.org/versions/r1.0/get_started/mnist/mechanics">here</a> end perform operation like: W*X+b</li>
-<li>use dense layer (fully connected layer) definition as it is <a href="https://www.tensorflow.org/api_docs/python/tf/layers/dense">here</a></li>
+<li>use dense layer (fully connected layer) definition as it is <a href="https://www.tensorflow.org/api_docs/python/tf/layers/dense">here</a> - this method is used in this post</li>
 </ul>
 
 </div>
@@ -12061,11 +12061,10 @@ A shape of data content of iris dataset: (150, 4)
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>NOTE</p>
 <p>In orderto performe PCA using Autoencoder it is necessary to desing your NN so that:</p>
 <ul>
 <li>all activations functions are linear - in <a href="https://www.tensorflow.org/api_docs/python/tf/layers/dense">tf.layer.dense</a> "activation" parameter is set to lienar activation function by default</li>
-<li></li>
+<li>loss function hast to be defined as MSE loss</li>
 </ul>
 
 </div>
