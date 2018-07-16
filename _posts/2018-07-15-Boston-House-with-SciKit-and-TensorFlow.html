@@ -11781,7 +11781,8 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Linear Regression with with SciKit &amp; TensorFlow - fun example with Boston House data set</p>
+<p>Last update: 16.07.2018 <br>
+This is a draft version of the note. I have to share my time with other obligations :)</p>
 
 </div>
 </div>
@@ -11790,16 +11791,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Last update: 12.07.2018</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Motivation">Motivation<a class="anchor-link" href="#Motivation">&#182;</a></h3>
+<h2 id="Motivation">Motivation<a class="anchor-link" href="#Motivation">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -11819,7 +11811,7 @@ Using SciKit LM I will look how number of traing/test samples affect evaluation 
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Content">Content<a class="anchor-link" href="#Content">&#182;</a></h3>
+<h2 id="Content">Content<a class="anchor-link" href="#Content">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -11843,7 +11835,7 @@ Using SciKit LM I will look how number of traing/test samples affect evaluation 
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Why-using-gradient-descent-optimization-(TensorFlow)-if-closed-form-solution-exists-(SciKit)">Why using gradient descent optimization (TensorFlow) if closed-form solution exists (SciKit)<a class="anchor-link" href="#Why-using-gradient-descent-optimization-(TensorFlow)-if-closed-form-solution-exists-(SciKit)">&#182;</a></h3>
+<h2 id="Why-using-gradient-descent-optimization-(TensorFlow)-if-closed-form-solution-exists-(SciKit)">Why using gradient descent optimization (TensorFlow) if closed-form solution exists (SciKit)<a class="anchor-link" href="#Why-using-gradient-descent-optimization-(TensorFlow)-if-closed-form-solution-exists-(SciKit)">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -11860,7 +11852,7 @@ SciKit learn Linear Regression model is a part of <a href="http://scikit-learn.o
   $\beta=(X^TX+I\lambda)^{-1}X^TY$ <br>
 With growing number of features simple linear model in SciKit becomes computationally inefficient comparing to gradient descent optimization algorithm. However there are many other optimization algorithms in SciKit that are mentioned in <a href="https://datascience.stackexchange.com/questions/24907/what-optimization-algorithms-are-used-in-scikit-learn?answertab=votes#tab-top">this</a> post.</li>
 </ol>
-<p>Becasue I use very small data set with small number of features only the first reason (data preprocessing impact on optimization outcome) is important to me know.</p>
+<p>Becasue I use very small data set with small number of features only the first reason (data preprocessing impact on optimization outcome) is important to me know. And TensorFlow with Tensorboard suits here perfectly.</p>
 
 </div>
 </div>
@@ -11869,7 +11861,7 @@ With growing number of features simple linear model in SciKit becomes computatio
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="What-is-the-main-take-away-from-that-note">What is the main take-away from that note<a class="anchor-link" href="#What-is-the-main-take-away-from-that-note">&#182;</a></h3>
+<h2 id="What-is-the-main-take-away-from-that-note">What is the main take-away from that note<a class="anchor-link" href="#What-is-the-main-take-away-from-that-note">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -11887,27 +11879,7 @@ That's it.<br></p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>This note is on basics of data preprocessing:</p>
-<ul>
-<li>Min-Max scaling</li>
-<li>Standardization</li>
-<li>Normalization</li>
-</ul>
-<p>The content of the note gives the answer for the following questions:</p>
-<ul>
-<li>Why using data preprocessing</li>
-<li>When to use a specific type of data preprocessing</li>
-<li>How to use a specific type of data preprocessing</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Boston-Housing-data-set">Boston Housing data set<a class="anchor-link" href="#Boston-Housing-data-set">&#182;</a></h3>
+<h2 id="Boston-Housing-data-set">Boston Housing data set<a class="anchor-link" href="#Boston-Housing-data-set">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -12089,7 +12061,7 @@ That's it.<br></p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Because I am interested in impact of preprocessing on optimization algorithm I want to check mean and standard deviation. Also I would like to see min and max value. Everything of the for each features separately.</p>
+<p>Because I am interested in impact of preprocessing on optimization algorithm I want to check mean and standard deviation. Also I would like to see min and max value. Everything for each features separately.</p>
 
 </div>
 </div>
@@ -12190,7 +12162,7 @@ That's it.<br></p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Haa, there are two features that stands out! This is what I am interested. What happens if I let it got the way it is. Actually at that moment I am not iterested in which features they are.</p>
+<p>Haa, there are two features that stands out! Actually at that moment I am not iterested in which features they are. It is important to me the fact that there are two features that are statistically different from all the other features. What happens if I use it for training the way it is (w/o preprocessing)? I will use TensorFlow/Tensorboard for that investigation.</p>
 
 </div>
 </div>
@@ -12310,7 +12282,7 @@ That's it.<br></p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="SciKit-Linear-Regression-model">SciKit Linear Regression model<a class="anchor-link" href="#SciKit-Linear-Regression-model">&#182;</a></h3>
+<h2 id="SciKit-Linear-Regression-model">SciKit Linear Regression model<a class="anchor-link" href="#SciKit-Linear-Regression-model">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -12459,7 +12431,8 @@ Number of test samples:      127
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Using test samples and predcted values now we can see how far plotted dots goes far away from a line</p>
+<p>Using test samples and predicted values now we can see how far plotted dots goes far away from a line. The perferc prediction means all the dots cover a line with a slope of 45 degrees. As shown on the figure it is not the case. MSE error is 27.2 which is quite large (comparing to absolute value of prediction). And the worst happens for highest price (value of 50).<br>
+In general, I will use this results as a refernece for my further analysis.</p>
 
 </div>
 </div>
@@ -12589,7 +12562,7 @@ Ratio 0.15 corresponds to 430.0 training samples and 76.0 test samples
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The smallest MSE error is reached for 85% training samples. I feel I could go the other way to check the best split data set into training and testing. For example I could look closer into distribution of training and testing set for each split ration. And then I could make sure that the way I split samples preserves the distribution. But this is not something to do now.</p>
+<p>The smallest MSE error is reached for 85% training samples. I feel I could go the other way to check the best split data set into training and testing. For example I could look closer into distribution of training and testing set for each split ration. And then I could make sure that the way I split samples preserves the distribution. It would be interesting to check it. But this is not something to do now.</p>
 
 </div>
 </div>
@@ -12598,7 +12571,7 @@ Ratio 0.15 corresponds to 430.0 training samples and 76.0 test samples
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Implementaton-of-Linear-Regresion-using-TensoFlow">Implementaton of Linear Regresion using TensoFlow<a class="anchor-link" href="#Implementaton-of-Linear-Regresion-using-TensoFlow">&#182;</a></h3>
+<h2 id="Implementaton-of-Linear-Regresion-using-TensoFlow">Implementaton of Linear Regresion using TensoFlow<a class="anchor-link" href="#Implementaton-of-Linear-Regresion-using-TensoFlow">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -12606,7 +12579,7 @@ Ratio 0.15 corresponds to 430.0 training samples and 76.0 test samples
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>In this part I use TensorFlow to traing a linear model. Main main focuse here is the check how data preprocessing affects result of training. Because I know that I need to prepared data first I am going to do so. And later on I will use oryginal data.</p>
+<p>In this part I use TensorFlow to create and train a linear model. Main focuse here is the check how data preprocessing affects result of training. First I am going to perform data preprocessing. And later on I will use oryginal data without preprocessing.</p>
 
 </div>
 </div>
@@ -12615,7 +12588,7 @@ Ratio 0.15 corresponds to 430.0 training samples and 76.0 test samples
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>As for the preprocessing I choose to use standardization as it can help me in case of outlier in the data set. Using Min-Max preprocessing an ouliser could destroy scaling of the feature (push most of the values into "corner" - very little value range) and make training difficult.<br>
+<p>As for the preprocessing I choose to use standardization as it can help me in case of outlier happens in the data set. Using Min-Max preprocessing an outlier could destroy scaling of the feature (push most of the values into "corner" - very little value range) and make training difficult.<br>
 Without feature scaling (here: standardization) the gradinet descen algorithm would require more time to get the same result.</p>
 
 </div>
@@ -12967,7 +12940,7 @@ I also set a seed her in order to make possible to reproduce the same results as
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>And visualization part showing how far we are from a line (ideally all dots should be placed on line)</p>
+<p>And visualization part showing how far we are from a line (ideally all dots should be placed on line with 45 degrees slope)</p>
 
 </div>
 </div>
@@ -13037,7 +13010,7 @@ I also set a seed her in order to make possible to reproduce the same results as
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[271]:</div>
+<div class="prompt input_prompt">In&nbsp;[296]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="k">import</span> <span class="n">datetime</span>   <span class="c1"># As the code can be run many time, each time </span>
@@ -13053,7 +13026,7 @@ I also set a seed her in order to make possible to reproduce the same results as
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[272]:</div>
+<div class="prompt input_prompt">In&nbsp;[297]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">LOGDIR_ROOT</span> <span class="o">=</span> <span class="s1">&#39;/home/damian/GitRepositories/DataPreprocessing/log_01&#39;</span>
@@ -13066,7 +13039,7 @@ I also set a seed her in order to make possible to reproduce the same results as
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[260]:</div>
+<div class="prompt input_prompt">In&nbsp;[298]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># X, Y are already used above. X, Y are pandas Data Frames</span>
@@ -13108,41 +13081,53 @@ I also set a seed her in order to make possible to reproduce the same results as
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[286]:</div>
+<div class="prompt input_prompt">In&nbsp;[299]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># X, Y are already used above. X, Y are pandas Data Frames</span>
-<span class="n">X_tf</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">placeholder</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">float32</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="n">n_dim</span> <span class="p">],</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;X&#39;</span><span class="p">)</span>
-<span class="n">Y_tf</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">placeholder</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">float32</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="p">[</span> <span class="kc">None</span><span class="p">,</span> <span class="mi">1</span> <span class="p">],</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Y&#39;</span><span class="p">)</span>
+<span class="c1"># define placeholder for inputs to network</span>
+<span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">name_scope</span><span class="p">(</span><span class="s1">&#39;Data&#39;</span><span class="p">):</span>
+    <span class="n">X_tf</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">placeholder</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">float32</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="n">n_dim</span> <span class="p">],</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;X&#39;</span><span class="p">)</span>
+    <span class="n">Y_tf</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">placeholder</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">float32</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="p">[</span> <span class="kc">None</span><span class="p">,</span> <span class="mi">1</span> <span class="p">],</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Y&#39;</span><span class="p">)</span>
 </pre></div>
 
 </div>
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Here I create parameters of the linear model. I have no prioir knowledge how to initialize them so to minimize MSE error so I arbitrally used initialization as seen below.</p>
-
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[287]:</div>
+<div class="prompt input_prompt">In&nbsp;[300]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">W</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">ones</span><span class="p">([</span><span class="n">n_dim</span><span class="p">,</span><span class="mi">1</span><span class="p">]),</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;weights&quot;</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">W</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">zeros</span><span class="p">([</span><span class="n">n_dim</span><span class="p">,</span><span class="mi">1</span><span class="p">]),</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;weights&quot;</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
 <span class="n">b</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;bias&quot;</span><span class="p">)</span>
 <span class="n">tf</span><span class="o">.</span><span class="n">summary</span><span class="o">.</span><span class="n">histogram</span><span class="p">(</span><span class="s2">&quot;weights&quot;</span><span class="p">,</span> <span class="n">W</span><span class="p">)</span>
-<span class="n">tf</span><span class="o">.</span><span class="n">summary</span><span class="o">.</span><span class="n">histogram</span><span class="p">(</span><span class="s2">&quot;biases&quot;</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
-<span class="n">summ</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">summary</span><span class="o">.</span><span class="n">merge_all</span><span class="p">()</span>
+<span class="n">tf</span><span class="o">.</span><span class="n">summary</span><span class="o">.</span><span class="n">histogram</span><span class="p">(</span><span class="s2">&quot;bias&quot;</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[300]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&lt;tf.Tensor &#39;bias_16:0&#39; shape=() dtype=string&gt;</pre>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -13158,12 +13143,14 @@ I also set a seed her in order to make possible to reproduce the same results as
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[288]:</div>
+<div class="prompt input_prompt">In&nbsp;[301]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Define an operation X*W + b</span>
-<span class="n">Xw</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">X_tf</span><span class="p">,</span> <span class="n">W</span><span class="p">)</span>
-<span class="n">Y_pred</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Xw</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
+<span class="c1"># NN model building</span>
+<span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">name_scope</span><span class="p">(</span><span class="s1">&#39;Linear_Model&#39;</span><span class="p">):</span>
+    <span class="n">Xw</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">X_tf</span><span class="p">,</span> <span class="n">W</span><span class="p">)</span>
+    <span class="n">Y_pred</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Xw</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -13171,25 +13158,21 @@ I also set a seed her in order to make possible to reproduce the same results as
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>I define MSE loss function and use simple gradient descent optimization algorithm (instead of AdamOptimizer I would go normally for).</p>
-
-</div>
-</div>
-</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[289]:</div>
+<div class="prompt input_prompt">In&nbsp;[302]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Define loss function for gradient descent optimization algorithm</span>
 <span class="n">learning_rate</span> <span class="o">=</span> <span class="mf">0.01</span>
-<span class="n">loss</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">reduce_mean</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">square</span><span class="p">(</span><span class="n">Y_tf</span> <span class="o">-</span> <span class="n">Y_pred</span><span class="p">))</span>
-<span class="n">optimizer</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">train</span><span class="o">.</span><span class="n">GradientDescentOptimizer</span><span class="p">(</span><span class="n">learning_rate</span><span class="p">)</span>
-<span class="n">training_op</span> <span class="o">=</span> <span class="n">optimizer</span><span class="o">.</span><span class="n">minimize</span><span class="p">(</span><span class="n">loss</span><span class="p">)</span>
+<span class="c1"># The error between prediciton and real data</span>
+<span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">name_scope</span><span class="p">(</span><span class="s1">&#39;loss&#39;</span><span class="p">):</span>
+    <span class="n">loss</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">reduce_mean</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">square</span><span class="p">(</span><span class="n">Y_tf</span> <span class="o">-</span> <span class="n">Y_pred</span><span class="p">))</span>
+<span class="c1"># The training optimization method</span>
+<span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">name_scope</span><span class="p">(</span><span class="s1">&#39;train&#39;</span><span class="p">):</span>
+    <span class="n">optimizer</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">train</span><span class="o">.</span><span class="n">GradientDescentOptimizer</span><span class="p">(</span><span class="n">learning_rate</span><span class="p">)</span>
+    <span class="n">training_op</span> <span class="o">=</span> <span class="n">optimizer</span><span class="o">.</span><span class="n">minimize</span><span class="p">(</span><span class="n">loss</span><span class="p">)</span>
+
 <span class="n">init</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">global_variables_initializer</span><span class="p">()</span>
 </pre></div>
 
@@ -13198,18 +13181,9 @@ I also set a seed her in order to make possible to reproduce the same results as
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Data transformation from data frames into numpy arrays. I change data type from float64 into float32.</p>
-
-</div>
-</div>
-</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[290]:</div>
+<div class="prompt input_prompt">In&nbsp;[303]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Chanage data frame into numpy array</span>
@@ -13255,7 +13229,7 @@ I also set a seed her in order to make possible to reproduce the same results as
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[291]:</div>
+<div class="prompt input_prompt">In&nbsp;[304]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">feature_standardization</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
@@ -13266,20 +13240,9 @@ I also set a seed her in order to make possible to reproduce the same results as
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>And here is the traning part. I use 200 epochs (before I have tried with 1000 but it was definitelly to much) and learning rate 0.01 (defined above). <br>
-Another parameters is number of samples for training. Here I made use of knowledge from using SciKit learn. Above I discoevered that 85% of all samples is a good choice for number of training samples.<br>
-I also set a seed her in order to make possible to reproduce the same results as I run it multimple times.</p>
-
-</div>
-</div>
-</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[292]:</div>
+<div class="prompt input_prompt">In&nbsp;[305]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">now</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">utcnow</span><span class="p">()</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%Y%m</span><span class="si">%d</span><span class="s2">%H%M&quot;</span><span class="p">)</span>
@@ -13299,18 +13262,17 @@ I also set a seed her in order to make possible to reproduce the same results as
 <span class="n">test_y</span> <span class="o">=</span> <span class="n">Y</span><span class="p">[</span><span class="o">~</span><span class="n">rnd_indices</span><span class="p">]</span>
 <span class="n">loss_change</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
 
+<span class="n">summ</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">summary</span><span class="o">.</span><span class="n">merge_all</span><span class="p">()</span>
 <span class="n">saver</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">train</span><span class="o">.</span><span class="n">Saver</span><span class="p">()</span>
-<span class="n">writer</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">summary</span><span class="o">.</span><span class="n">FileWriter</span><span class="p">(</span><span class="n">LOGDIR</span><span class="p">)</span>
-<span class="n">writer</span><span class="o">.</span><span class="n">add_graph</span><span class="p">(</span><span class="n">sess</span><span class="o">.</span><span class="n">graph</span><span class="p">)</span>
+<span class="n">writer</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">summary</span><span class="o">.</span><span class="n">FileWriter</span><span class="p">(</span><span class="n">LOGDIR</span><span class="p">,</span> <span class="n">sess</span><span class="o">.</span><span class="n">graph</span><span class="p">)</span>
 
 <span class="k">for</span> <span class="n">epoch</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">training_epochs</span><span class="p">):</span>
 
     <span class="k">if</span> <span class="n">epoch</span> <span class="o">%</span> <span class="mi">5</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
         <span class="n">_</span><span class="p">,</span><span class="n">_</span><span class="p">,</span><span class="n">s</span> <span class="o">=</span> <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="n">loss</span><span class="p">,</span> <span class="n">training_op</span><span class="p">,</span><span class="n">summ</span><span class="p">],</span> <span class="n">feed_dict</span><span class="o">=</span><span class="p">{</span><span class="n">X_tf</span><span class="p">:</span> <span class="n">train_x</span><span class="p">,</span> <span class="n">Y_tf</span><span class="p">:</span> <span class="n">train_y</span><span class="p">})</span>
         <span class="n">writer</span><span class="o">.</span><span class="n">add_summary</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">epoch</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">epoch</span> <span class="o">%</span> <span class="mi">50</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="c1">#sess.run(assignment, feed_dict={x: mnist.test.images[:1024], y: mnist.test.labels[:1024]})</span>
-        <span class="n">saver</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">sess</span><span class="p">,</span> <span class="n">join</span><span class="p">(</span><span class="n">LOGDIR</span><span class="p">,</span> <span class="s2">&quot;model.ckpt&quot;</span><span class="p">),</span> <span class="n">epoch</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">epoch</span> <span class="o">%</span> <span class="mi">15</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">saver</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">sess</span><span class="p">,</span> <span class="n">LOGDIR</span><span class="p">,</span> <span class="n">epoch</span><span class="p">)</span>
     
     <span class="n">loss_value</span><span class="p">,</span><span class="n">_</span> <span class="o">=</span> <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span> <span class="p">[</span><span class="n">loss</span><span class="p">,</span> <span class="n">training_op</span><span class="p">],</span> <span class="n">feed_dict</span><span class="o">=</span><span class="p">{</span><span class="n">X_tf</span><span class="p">:</span> <span class="n">train_x</span><span class="p">,</span> <span class="n">Y_tf</span><span class="p">:</span> <span class="n">train_y</span><span class="p">})</span>
     <span class="n">loss_change</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span> <span class="n">loss_value</span> <span class="p">])</span>
@@ -13334,7 +13296,7 @@ I also set a seed her in order to make possible to reproduce the same results as
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Log data is stored in:  /home/damian/GitRepositories/DataPreprocessing/log_01/201807151126
+<pre>Log data is stored in:  /home/damian/GitRepositories/DataPreprocessing/log_01/201807160444
 </pre>
 </div>
 </div>
@@ -13348,15 +13310,6 @@ I also set a seed her in order to make possible to reproduce the same results as
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>tensorboard --logdir=/home/damian/GitRepositories/TensorFlow_wormUp_gym/MNIST_TF_01/tmp</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>It is not finished yet. I want to spend the time withmy daugter now and I will continoue later with this note. Stay tuned :)</p>
 
 </div>
 </div>
