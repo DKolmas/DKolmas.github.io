@@ -11781,7 +11781,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Last update: 16.07.2018 <br>
+<p>Last update: 17.07.2018 <br>
 This is a draft version of the note. I have to share my time with other obligations :)</p>
 
 </div>
@@ -13010,7 +13010,7 @@ I also set a seed her in order to make possible to reproduce the same results as
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[296]:</div>
+<div class="prompt input_prompt">In&nbsp;[364]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="k">import</span> <span class="n">datetime</span>   <span class="c1"># As the code can be run many time, each time </span>
@@ -13026,10 +13026,10 @@ I also set a seed her in order to make possible to reproduce the same results as
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[297]:</div>
+<div class="prompt input_prompt">In&nbsp;[377]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">LOGDIR_ROOT</span> <span class="o">=</span> <span class="s1">&#39;/home/damian/GitRepositories/DataPreprocessing/log_01&#39;</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">LOGDIR_ROOT</span> <span class="o">=</span> <span class="s1">&#39;/home/damian/GitRepositories/DataPreprocessing/log_02&#39;</span>
 </pre></div>
 
 </div>
@@ -13039,7 +13039,7 @@ I also set a seed her in order to make possible to reproduce the same results as
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[298]:</div>
+<div class="prompt input_prompt">In&nbsp;[378]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># X, Y are already used above. X, Y are pandas Data Frames</span>
@@ -13070,6 +13070,20 @@ I also set a seed her in order to make possible to reproduce the same results as
 </div>
 
 </div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[379]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">tf</span><span class="o">.</span><span class="n">reset_default_graph</span><span class="p">()</span>  <span class="c1"># To avoid many duplicated nodes in the default grpah</span>
+<span class="n">sess</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -13081,7 +13095,7 @@ I also set a seed her in order to make possible to reproduce the same results as
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[299]:</div>
+<div class="prompt input_prompt">In&nbsp;[380]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># X, Y are already used above. X, Y are pandas Data Frames</span>
@@ -13098,13 +13112,14 @@ I also set a seed her in order to make possible to reproduce the same results as
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[300]:</div>
+<div class="prompt input_prompt">In&nbsp;[381]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">W</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">zeros</span><span class="p">([</span><span class="n">n_dim</span><span class="p">,</span><span class="mi">1</span><span class="p">]),</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;weights&quot;</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
 <span class="n">b</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;bias&quot;</span><span class="p">)</span>
-<span class="n">tf</span><span class="o">.</span><span class="n">summary</span><span class="o">.</span><span class="n">histogram</span><span class="p">(</span><span class="s2">&quot;weights&quot;</span><span class="p">,</span> <span class="n">W</span><span class="p">)</span>
-<span class="n">tf</span><span class="o">.</span><span class="n">summary</span><span class="o">.</span><span class="n">histogram</span><span class="p">(</span><span class="s2">&quot;bias&quot;</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+<span class="n">tf</span><span class="o">.</span><span class="n">summary</span><span class="o">.</span><span class="n">histogram</span><span class="p">(</span><span class="s2">&quot;W_h&quot;</span><span class="p">,</span> <span class="n">W</span><span class="p">)</span>
+<span class="n">tf</span><span class="o">.</span><span class="n">summary</span><span class="o">.</span><span class="n">histogram</span><span class="p">(</span><span class="s2">&quot;b_h&quot;</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+<span class="n">tf</span><span class="o">.</span><span class="n">summary</span><span class="o">.</span><span class="n">scalar</span><span class="p">(</span><span class="s2">&quot;b_val&quot;</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -13117,13 +13132,13 @@ I also set a seed her in order to make possible to reproduce the same results as
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[300]:</div>
+<div class="prompt output_prompt">Out[381]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;tf.Tensor &#39;bias_16:0&#39; shape=() dtype=string&gt;</pre>
+<pre>&lt;tf.Tensor &#39;b_val:0&#39; shape=() dtype=string&gt;</pre>
 </div>
 
 </div>
@@ -13143,14 +13158,13 @@ I also set a seed her in order to make possible to reproduce the same results as
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[301]:</div>
+<div class="prompt input_prompt">In&nbsp;[382]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Define an operation X*W + b</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Define an operation X*W + b. NOTE: there is no activation functoin (or the activation function is linear)</span>
 <span class="c1"># NN model building</span>
 <span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">name_scope</span><span class="p">(</span><span class="s1">&#39;Linear_Model&#39;</span><span class="p">):</span>
-    <span class="n">Xw</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">X_tf</span><span class="p">,</span> <span class="n">W</span><span class="p">)</span>
-    <span class="n">Y_pred</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Xw</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
+    <span class="n">Y_pred</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">X_tf</span><span class="p">,</span> <span class="n">W</span><span class="p">)</span> <span class="o">+</span> <span class="n">b</span>
 </pre></div>
 
 </div>
@@ -13160,7 +13174,7 @@ I also set a seed her in order to make possible to reproduce the same results as
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[302]:</div>
+<div class="prompt input_prompt">In&nbsp;[383]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Define loss function for gradient descent optimization algorithm</span>
@@ -13168,11 +13182,15 @@ I also set a seed her in order to make possible to reproduce the same results as
 <span class="c1"># The error between prediciton and real data</span>
 <span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">name_scope</span><span class="p">(</span><span class="s1">&#39;loss&#39;</span><span class="p">):</span>
     <span class="n">loss</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">reduce_mean</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">square</span><span class="p">(</span><span class="n">Y_tf</span> <span class="o">-</span> <span class="n">Y_pred</span><span class="p">))</span>
+    <span class="n">tf</span><span class="o">.</span><span class="n">summary</span><span class="o">.</span><span class="n">scalar</span><span class="p">(</span><span class="s2">&quot;Loss&quot;</span><span class="p">,</span><span class="n">loss</span><span class="p">)</span>
 <span class="c1"># The training optimization method</span>
 <span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">name_scope</span><span class="p">(</span><span class="s1">&#39;train&#39;</span><span class="p">):</span>
     <span class="n">optimizer</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">train</span><span class="o">.</span><span class="n">GradientDescentOptimizer</span><span class="p">(</span><span class="n">learning_rate</span><span class="p">)</span>
     <span class="n">training_op</span> <span class="o">=</span> <span class="n">optimizer</span><span class="o">.</span><span class="n">minimize</span><span class="p">(</span><span class="n">loss</span><span class="p">)</span>
-
+<span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">name_scope</span><span class="p">(</span><span class="s1">&#39;In_Out_Delta&#39;</span><span class="p">):</span>
+    <span class="n">io_delta</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">reduce_mean</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">Y_tf</span> <span class="o">-</span> <span class="n">Y_pred</span><span class="p">))</span>
+    <span class="n">tf</span><span class="o">.</span><span class="n">summary</span><span class="o">.</span><span class="n">scalar</span><span class="p">(</span><span class="s2">&quot;InOutDelta&quot;</span><span class="p">,</span><span class="n">io_delta</span><span class="p">)</span>
+    
 <span class="n">init</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">global_variables_initializer</span><span class="p">()</span>
 </pre></div>
 
@@ -13183,7 +13201,7 @@ I also set a seed her in order to make possible to reproduce the same results as
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[303]:</div>
+<div class="prompt input_prompt">In&nbsp;[384]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Chanage data frame into numpy array</span>
@@ -13229,7 +13247,7 @@ I also set a seed her in order to make possible to reproduce the same results as
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[304]:</div>
+<div class="prompt input_prompt">In&nbsp;[385]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">feature_standardization</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
@@ -13242,7 +13260,7 @@ I also set a seed her in order to make possible to reproduce the same results as
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[305]:</div>
+<div class="prompt input_prompt">In&nbsp;[386]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">now</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">utcnow</span><span class="p">()</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%Y%m</span><span class="si">%d</span><span class="s2">%H%M&quot;</span><span class="p">)</span>
@@ -13251,7 +13269,6 @@ I also set a seed her in order to make possible to reproduce the same results as
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Log data is stored in: &quot;</span><span class="p">,</span><span class="n">LOGDIR</span><span class="p">)</span>
 
 <span class="n">training_epochs</span> <span class="o">=</span> <span class="mi">200</span>
-<span class="n">sess</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span>
 <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">init</span><span class="p">)</span>
 
 <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
@@ -13263,20 +13280,17 @@ I also set a seed her in order to make possible to reproduce the same results as
 <span class="n">loss_change</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
 
 <span class="n">summ</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">summary</span><span class="o">.</span><span class="n">merge_all</span><span class="p">()</span>
-<span class="n">saver</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">train</span><span class="o">.</span><span class="n">Saver</span><span class="p">()</span>
 <span class="n">writer</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">summary</span><span class="o">.</span><span class="n">FileWriter</span><span class="p">(</span><span class="n">LOGDIR</span><span class="p">,</span> <span class="n">sess</span><span class="o">.</span><span class="n">graph</span><span class="p">)</span>
 
 <span class="k">for</span> <span class="n">epoch</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">training_epochs</span><span class="p">):</span>
 
+    <span class="c1"># For tensorflow visualisation</span>
     <span class="k">if</span> <span class="n">epoch</span> <span class="o">%</span> <span class="mi">5</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="n">_</span><span class="p">,</span><span class="n">_</span><span class="p">,</span><span class="n">s</span> <span class="o">=</span> <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="n">loss</span><span class="p">,</span> <span class="n">training_op</span><span class="p">,</span><span class="n">summ</span><span class="p">],</span> <span class="n">feed_dict</span><span class="o">=</span><span class="p">{</span><span class="n">X_tf</span><span class="p">:</span> <span class="n">train_x</span><span class="p">,</span> <span class="n">Y_tf</span><span class="p">:</span> <span class="n">train_y</span><span class="p">})</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">summ</span><span class="p">,</span> <span class="n">feed_dict</span><span class="o">=</span><span class="p">{</span><span class="n">X_tf</span><span class="p">:</span> <span class="n">train_x</span><span class="p">,</span> <span class="n">Y_tf</span><span class="p">:</span> <span class="n">train_y</span><span class="p">})</span>
         <span class="n">writer</span><span class="o">.</span><span class="n">add_summary</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">epoch</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">epoch</span> <span class="o">%</span> <span class="mi">15</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="n">saver</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">sess</span><span class="p">,</span> <span class="n">LOGDIR</span><span class="p">,</span> <span class="n">epoch</span><span class="p">)</span>
     
+    <span class="c1"># Training</span>
     <span class="n">loss_value</span><span class="p">,</span><span class="n">_</span> <span class="o">=</span> <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span> <span class="p">[</span><span class="n">loss</span><span class="p">,</span> <span class="n">training_op</span><span class="p">],</span> <span class="n">feed_dict</span><span class="o">=</span><span class="p">{</span><span class="n">X_tf</span><span class="p">:</span> <span class="n">train_x</span><span class="p">,</span> <span class="n">Y_tf</span><span class="p">:</span> <span class="n">train_y</span><span class="p">})</span>
-    <span class="n">loss_change</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span> <span class="n">loss_value</span> <span class="p">])</span>
-
 
 <span class="n">wcoeff</span><span class="p">,</span> <span class="n">bias</span> <span class="o">=</span> <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="n">W</span><span class="p">,</span> <span class="n">b</span><span class="p">])</span>
 <span class="n">sess</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
@@ -13296,7 +13310,7 @@ I also set a seed her in order to make possible to reproduce the same results as
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Log data is stored in:  /home/damian/GitRepositories/DataPreprocessing/log_01/201807160444
+<pre>Log data is stored in:  /home/damian/GitRepositories/DataPreprocessing/log_02/201807170501
 </pre>
 </div>
 </div>
@@ -13309,7 +13323,233 @@ I also set a seed her in order to make possible to reproduce the same results as
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>tensorboard --logdir=/home/damian/GitRepositories/TensorFlow_wormUp_gym/MNIST_TF_01/tmp</p>
+<p>Here is the example how to run tensorboard: <br>
+tensorboard --logdir=/home/damian/GitReposities/DataPreprocessing/log_02</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[363]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">tf</span><span class="o">.</span><span class="n">get_collection</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">GraphKeys</span><span class="o">.</span><span class="n">GLOBAL_VARIABLES</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[363]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[&lt;tf.Variable &#39;weights:0&#39; shape=(13, 1) dtype=float32_ref&gt;,
+ &lt;tf.Variable &#39;bias:0&#39; shape=() dtype=float32_ref&gt;]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This is how the graps looks like</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="blog/Graph.png"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>I am getting to the point. I want to show weights and bias during the trainig. For the values shown below data preprocessing was used.<br>
+First lets have a look on bias value change over time.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="blog/bias_value.png"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>TensorFlow offers visualisation using <a href="https://www.tensorflow.org/guide/tensorboard_histograms">histogram</a>. Below I show a figure of bias histogram. The value at the back are oldest (at the beggining of trainig) and value with index of 170 is the last one recorder. Tensorboard has its own way of creating histogram and it may create some artifacts. However, for visualisation purpose this histogram is very enough. And when compared with the figure above it is claear how bias changed over training epochs.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src='blog/Bias_Histogram.png'></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Now let's visualize weights. Have a look first for a second on final values of weights that were captured after training.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[390]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Final weigths values: &quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">wcoeff</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Final weigths values: 
+[[-0.46952525]
+ [ 0.6861486 ]
+ [-0.5618575 ]
+ [ 0.6960852 ]
+ [-0.7501001 ]
+ [ 2.9449751 ]
+ [-0.28158087]
+ [-2.0191853 ]
+ [ 0.6494194 ]
+ [-0.60570604]
+ [-1.9416533 ]
+ [ 0.84137684]
+ [-2.997105  ]]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Knowing the values presented above it is easier to interpret the histogram of weights shown below. On x axis we can see distribution of weights at a given (y axis) epoch. All the weights were intialize with zeros which can be seen on the hostogram at the back side of the figure. As the training progresses weights are taking diferent values and histogram show these changes nicely.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src='blog/Weights_Histogram.png'></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>If we look at the final recorded epoch (y axis = 170) we can see a certain histogram of weights. We can compare it and contrast with manally sotred weights. Let's focuse on the range of weights betwee -1 and 0.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[401]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="p">[</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">w</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">wcoeff</span> <span class="k">if</span> <span class="p">(</span><span class="n">w</span><span class="o">&gt;-</span><span class="mf">1.0</span> <span class="ow">and</span> <span class="n">w</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">)]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[401]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[array([-0.47], dtype=float32),
+ array([-0.56], dtype=float32),
+ array([-0.75], dtype=float32),
+ array([-0.28], dtype=float32),
+ array([-0.61], dtype=float32)]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>There are 5 values in that range and it makes a bin of the histogram accordingly larger (higher).</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Next, I will continous showing how lack of preprocessing affects training</p>
 
 </div>
 </div>
