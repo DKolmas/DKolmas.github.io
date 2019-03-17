@@ -16,10 +16,10 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Site Title"
+title                    : "Damian Kolmas"
 title_separator          : "-"
-name                     : "Your Name"
-description              : "An amazing website."
+name                     : "Damian Kolmas"
+description              : "Data Science Portfolio"
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -106,10 +106,10 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Name"
+  name             : "Damian Kolmas"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an amazing person."
-  location         : "Somewhere"
+  bio              : "Data Science Portfolio"
+  location         : "Stockholm"
   email            :
   links:
     - label: "Email"
@@ -126,10 +126,13 @@ author:
       # url: "https://facebook.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url: "https://github.com/"
+      url: "https://github.com/DKolmas"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"
+    - linkedin: "LinedIn"
+      icon: "fab fa-fw fa-linkedin"
+       url: "https://www.linkedin.com/in/damian-kolmas-1833334"
 
 # Site Footer
 footer:
@@ -142,7 +145,7 @@ footer:
       # url:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url:
+       url: "https://github.com/DKolmas"
     - label: "GitLab"
       icon: "fab fa-fw fa-gitlab"
       # url:
