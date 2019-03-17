@@ -126,13 +126,10 @@ author:
       # url: "https://facebook.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/DKolmas"
+      #url: "https://github.com/DKolmas"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"
-    - linkedin: "LinedIn"
-      icon: "fab fa-fw fa-linkedin"
-       url: "https://www.linkedin.com/in/damian-kolmas-1833334"
 
 # Site Footer
 footer:
@@ -145,7 +142,7 @@ footer:
       # url:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-       url: "https://github.com/DKolmas"
+      # url: "https://github.com/DKolmas"
     - label: "GitLab"
       icon: "fab fa-fw fa-gitlab"
       # url:
