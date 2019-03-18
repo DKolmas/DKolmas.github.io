@@ -111,6 +111,7 @@ author:
   bio              : "Data Science Portfolio"
   location         : "Stockholm"
   linkedin         : "Damian Kolmas"
+  github           : "DKolmas"
   email            :
   links:
     - label: "Email"
@@ -127,7 +128,7 @@ author:
       # url: "https://facebook.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url: "https://github.com/DKolmas"
+      url: "https://github.com/DKolmas"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"
