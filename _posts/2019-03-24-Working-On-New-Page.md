@@ -4,6 +4,7 @@ date: 2019-03-24
 tags: [general, AboutMe]
 excerpt: "How I change the way I present content"
 mathjax: "true"
+permalink: /machine-learning/new-Content
 ---
 
 I am preparing a new website to present the content. Temporarily the website damiankolmas.com is unavailable.

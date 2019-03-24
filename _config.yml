@@ -16,9 +16,9 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Damian Kolmas3"
+title                    : "Damian Kolmas"
 title_separator          : "-"
-name                     : "Damian Kolmas2"
+name                     : "Damian Kolmas"
 description              : "Data Science Portfolio"
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
@@ -106,7 +106,7 @@ analytics:
 
 # Site Author
 author:
-  name             : "Damian Kolmas4"
+  name             : "Damian Kolmas"       # this is the name under my photo 
   avatar           : "/images/Damian_4.JPG" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Data Science Portfolio"
   location         : "Stockholm"
