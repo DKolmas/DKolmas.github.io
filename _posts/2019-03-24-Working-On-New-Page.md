@@ -1,7 +1,7 @@
 ---
 title: "Things are changing - so do I"
 date: 2019-03-24
-permalink: /machine-learning/  # this is mine
+permalink: /machine-learning/changes/  # this is mine
 tags: [general, AboutMe]
 excerpt: "How I change the way I present content"
 mathjax: "true"
