@@ -1,10 +1,10 @@
 ---
 layout: archive
 permalink: /machine-learning/
-title: "Machine Learning Posts by Tags"
+title: "Machine Learning Posts"
 author_profile: true
 header:
-  image: "/images/me_myslef_I.jpg"
+  image: "/images/butterlfy_01.jpg"
 ---
 
 <ul>
