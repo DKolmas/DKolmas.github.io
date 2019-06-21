@@ -13,7 +13,7 @@ My intension is to make this desritpion general enough so the one can easly swit
 
 First, let's have assumption about Neural Network. It is simple network with two inputs, two outputs and one hidden layer with two nodes as shown on the figure bellow.
 
-image: /images/Simple_NN_01.png
+![image](/images/Simple_NN_01.png)
 
 Python code block (for test):
 ```python
