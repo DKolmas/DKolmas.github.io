@@ -7,7 +7,13 @@ mathjax: "true"
 
 ---
 
-This conent is ready but needs to be edited and adjusted.
+Here I desribe how to update weights in a simple Neural Network with one hidden layer and two outputs.
+
+My intension is to make this desritpion general enough so the one can easly switch to a different design of Neural Network (NN). It means NN with other number of hidden layers, nodes and number of inputs and outputs. Acitvation functions and a loss (cost) functions are not defined as well on purpose.
+
+First, let's have assumption about Neural Network. It is simple network with two inputs, two outputs and one hidden layer with two nodes as shown on the figure bellow.
+
+image: /images/Simple_NN_01.png
 
 Python code block (for test):
 ```python
