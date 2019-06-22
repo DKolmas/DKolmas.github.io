@@ -15,6 +15,9 @@ First, let's have assumption about Neural Network. It is simple network with two
 
 ![image](/images/Simple_NN_01.png)
 
+Below there are euqation desribing neural network in term of calcualtions in forward pass stage:
+$x_{0,1}$, $x_{0,2}$ - two inputs of neural network
+
 Python code block (for test):
 ```python
     import numpy as np
