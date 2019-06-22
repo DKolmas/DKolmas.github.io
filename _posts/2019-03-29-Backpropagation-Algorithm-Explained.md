@@ -17,8 +17,7 @@ First, let's have assumption about Neural Network. It is simple network with two
 
 Below there are euqation desribing neural network in term of calcualtions in forward pass stage:
 
-
-$$x_{0,1}$$, $$x_{0,2}$$ - two inputs of neural network
+	$$x_{0,1}$$, $$x_{0,2}$$ - two inputs of neural network
 
 $$h_1 = w_1 \cdot x_{0,1} + w_3 \cdot x_{0,2} + b_1 \cdot 1 $$
 
@@ -26,7 +25,7 @@ $$h_2 = w_2 \cdot x_{0,1} + w_4 \cdot x_{0,2} + b_2 \cdot 1 $$
 
 Outputs of two nodes of hidden layer ($$f_h$$ is an activation function used in hidden layer):
 
-  $$x_{1,1} = f_h(h_1)$$, 
+* $$x_{1,1} = f_h(h_1)$$, 
 
 $$x_{1,2} = f_h(h_2)$$
 
