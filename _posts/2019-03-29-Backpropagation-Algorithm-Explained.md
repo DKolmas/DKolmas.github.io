@@ -47,7 +47,7 @@ Each weight is update in the same way according to the following general formula
 
 $$ w_i = w_i + \Delta_i $$
 
-$$\Delta_i$$ represent value by which a given weight $$w_i$$ is updated. This $$\Delta_i$$ is different for each weight in a network. Backpropagation process is to determine the value of $$\Delta_i$$ for a specific weights $$w_i$$$.
+$$\Delta_i$$ represent value by which a given weight $$w_i$$ is updated. This $$\Delta_i$$ is different for each weight in a network. Backpropagation process is to determine the value of $$\Delta_i$$ for a specific weights $$w_i$$.
 
 Backpropgataion calculation process starts with ouput layer. $$\Delta_i$$ represent a derivative of loss function with respect to the weight $$w_i$$. As we move with calculation of $$\Delta_i$$ to different weights, a "location" in a network of the weight has to be taken into account and backpropagation is used for that.
 
@@ -65,6 +65,23 @@ This loss function typically is constructed in a way that we should achieve as s
 
 $$\Delta_i = \frac{\partial L}{\partial w_i} $$
 
+NOTE: derivative of loss function with respect to $$w_i$$ represent a fastest increase of the loss function. Our goal is to minimize a loss function therefore we need to take it into account and add $$\Delta_i$$ with a negative sign. -$$\Delta_i$$ represents fastest decrease of loss function. Effectively we need to update weight as follows (learning rate is ignored in the eqation):
+
+$$w_i = w_i - \Delta_i$$
+
+Assuming we have only one training data point the loss function can be calculated as following using an example of loss function a squared sum of difference between desired value of output ($$y_1, y_2$$) (called labels or targets) and the one which is calculated by neural network at the ouput ($$\hat{y_1}, \hat{y_2}$$):
+
+$$L = \frac{1}{2}\cdot\sum{(y_i - \hat{y_i})^2} =\frac{1}{2}\cdot[(y_1 - \hat{y_1})^2 + (y_2 - \hat{y_2})^2] = \frac{1}{2}\cdot L1 + \frac{1}{2}\cdot L2$$
+
+Lets consider the first step which is $$\Delta_5$$. Actually it could be any $$\Delta$$ of weights $$w_5$$, $$w_6$$, $$w_7$$ or $$w_8$$
+
+$$\Delta_5 = \frac{\partial L}{\partial w_5} $$
+
+As mentioned before $$\Delta_i$$ represents a sensitivity of loss function on weight $$w_i$$. In $$\Delta_5$$ case we want to calculate a sensitivity of loss function on $w_5$.
+
+The loss function is expressed as a function of calculated ouputs $$\hat{y_1}$$ and $$\hat{y_2}$$: $$L = f(\hat{y_1}, \hat{y_2})$$. In straigt forward way we can find  $$\frac{\partial L}{\hat{y_i}}$$. But that is only the first required step to calclate $$\Delta_5$$. Using chain rule applied to derivative calclation we can achieve it. It is helplfull to refer to a follwoing figure.
+
+![image](/images/delta_w_calculation_chain_rule_01.png)
 
 Python code block (for test):
 ```python
