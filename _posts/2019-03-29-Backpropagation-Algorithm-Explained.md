@@ -15,7 +15,7 @@ First, let's have assumption about Neural Network. It is simple network with two
 
 ![image](/images/Simple_NN_01.png)
 
-Below there are euqation desribing neural network in term of calcualtions in forward pass stage:
+Below there are euqations desribing neural network in term of calcualtions in forward pass stage:
 
 $$ x_{0,1}, x_{0,2} - \text{two inputs of neural network} \\
 
@@ -46,6 +46,25 @@ We want to update weights so we can minimize a given loss function (L) used for 
 Each weight is update in the same way according to the following general formula:
 
 $$ w_i = w_i + \Delta_i $$
+
+$$\Delta_i$$ represent value by which a given weight $$w_i$$ is updated. This $$\Delta_i$$ is different for each weight in a network. Backpropagation process is to determine the value of $$\Delta_i$$ for a specific weights $$w_i$$$.
+
+Backpropgataion calculation process starts with ouput layer. $$\Delta_i$$ represent a derivative of loss function with respect to the weight $$w_i$$. As we move with calculation of $$\Delta_i$$ to different weights, a "location" in a network of the weight has to be taken into account and backpropagation is used for that.
+
+In general $$\Delta_i$$ represents a sensitivity of a loss function with respect to a weight $$w_i$$ value. This sensitvity can be different depens which weight we consider ("location" of the weight). For example weight $$w_1$$ has different impact on loss function as compared to weitgh $$w_5$$
+
+A whole backpropgatation process starts with definition of loss function at hand:
+
+$$L=f(\hat{y_1}, \hat{y_2})$$
+
+According to the simple model of neural network shown above a loss function can be written in a following way:
+
+$$L = L_1 + L_2$$
+
+This loss function typically is constructed in a way that we should achieve as small loss function as possible when network is already trained. A training is performed by updating each weight $$w_i$$ with $$\Delta_i$$. And the goal of the backpropagation process is to calculate $$\Delta_i$$ for each weight:
+
+$$\Delta_i = \frac{\partial L}{\partial w_i} $$
+
 
 Python code block (for test):
 ```python
