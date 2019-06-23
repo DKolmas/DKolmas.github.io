@@ -79,7 +79,7 @@ Lets consider the first step which is $$\Delta_5$$. Actually it could be any $$\
 
 $$\Delta_5 = \frac{\partial L}{\partial w_5} $$
 
-As mentioned before $$\Delta_i$$ represents a sensitivity of loss function on weight $$w_i$$. In $$\Delta_5$$ case we want to calculate a sensitivity of loss function on $w_5$.
+As mentioned before $$\Delta_i$$ represents a sensitivity of loss function on weight $$w_i$$. In $$\Delta_5$$ case we want to calculate a sensitivity of loss function on $$w_5$$.
 
 The loss function is expressed as a function of calculated ouputs $$\hat{y_1}$$ and $$\hat{y_2}$$: $$L = f(\hat{y_1}, \hat{y_2})$$. In straigt forward way we can find  $$\frac{\partial L}{\hat{y_i}}$$. But that is only the first required step to calclate $$\Delta_5$$. Using chain rule applied to derivative calclation we can achieve it. It is helplfull to refer to a follwoing figure.
 
@@ -127,13 +127,13 @@ $$\delta = \frac{\partial L}{\partial \hat{y}} \cdot \frac{\partial \hat{y}}{\pa
 
 Finnaly a summary of weights update $$\Delta$$ values for $$w_5$$, $$w_7$$, $$w_6$$, $$w_8$$:
 
-$$\Delta_5 = \delta_\hat{y_1} \cdot w_5 = \frac{\partial L}{\partial \hat{y_1}}\cdot\frac{\partial \hat{y_1}}{\partial h_3} \cdot x_{1,1}\\
+$$\Delta_5 = \delta_\hat{y_1} \cdot w_5 = \frac{\partial L}{\partial \hat{y_1}}\cdot\frac{\partial \hat{y_1}}{\partial h_3} \cdot x_{1,1} \\
 
-\Delta_7 = \delta_\hat{y_1} \cdot w_7 = \frac{\partial L}{\partial \hat{y_1}}\cdot\frac{\partial \hat{y_1}}{\partial h_3} \cdot x_{1,2}\\
+\Delta_7 = \delta_\hat{y_1} \cdot w_7 = \frac{\partial L}{\partial \hat{y_1}}\cdot\frac{\partial \hat{y_1}}{\partial h_3} \cdot x_{1,2} \\
 
-\Delta_6 = \delta_\hat{y_2} \cdot w_6 = \frac{\partial L}{\partial \hat{y_2}}\cdot\frac{\partial \hat{y_2}}{\partial h_4} \cdot x_{1,1}\\
+\Delta_6 = \delta_\hat{y_2} \cdot w_6 = \frac{\partial L}{\partial \hat{y_2}}\cdot\frac{\partial \hat{y_2}}{\partial h_4} \cdot x_{1,1} \\
 
-\Delta_8 = \delta_\hat{y_2} \cdot w_8 = \frac{\partial L}{\partial \hat{y_2}}\cdot\frac{\partial \hat{y_2}}{\partial h_4} \cdot x_{1,2}&&
+\Delta_8 = \delta_\hat{y_2} \cdot w_8 = \frac{\partial L}{\partial \hat{y_2}}\cdot\frac{\partial \hat{y_2}}{\partial h_4} \cdot x_{1,2}$$
 
 And a summary of bias update for $$b_3$$ and $$b_4$$:
 
