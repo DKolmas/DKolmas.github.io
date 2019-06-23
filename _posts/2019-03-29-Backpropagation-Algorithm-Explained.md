@@ -17,7 +17,7 @@ First, let's have assumption about Neural Network. It is simple network with two
 
 Below there are euqation desribing neural network in term of calcualtions in forward pass stage:
 
-$$ \\indent x_{0,1}$$, $$x_{0,2} $$ - two inputs of neural network
+$$ x_{0,1}$$, $$x_{0,2} - two inputs of neural network $$
 
 $$ h_1 = w_1 \cdot x_{0,1} + w_3 \cdot x_{0,2} + b_1 \cdot 1 $$
 
