@@ -71,7 +71,9 @@ $$w_i = w_i - \Delta_i$$
 
 Assuming we have only one training data point the loss function can be calculated as following using an example of loss function a squared sum of difference between desired value of output ($$y_1, y_2$$) (called labels or targets) and the one which is calculated by neural network at the ouput ($$\hat{y_1}, \hat{y_2}$$):
 
-$$L = \frac{1}{2}\cdot\sum{(y_i - \hat{y_i})^2} =\frac{1}{2}\cdot[(y_1 - \hat{y_1})^2 + (y_2 - \hat{y_2})^2] = \frac{1}{2}\cdot L1 + \frac{1}{2}\cdot L2$$
+$$L = \frac{1}{2}\cdot\sum{(y_i - \hat{y_i})^2} =\\
+=\frac{1}{2}\cdot[(y_1 - \hat{y_1})^2 + (y_2 - \hat{y_2})^2] =\\
+=\frac{1}{2}\cdot L1 + \frac{1}{2}\cdot L2$$
 
 Lets consider the first step which is $$\Delta_5$$. Actually it could be any $$\Delta$$ of weights $$w_5$$, $$w_6$$, $$w_7$$ or $$w_8$$
 
@@ -82,6 +84,63 @@ As mentioned before $$\Delta_i$$ represents a sensitivity of loss function on we
 The loss function is expressed as a function of calculated ouputs $$\hat{y_1}$$ and $$\hat{y_2}$$: $$L = f(\hat{y_1}, \hat{y_2})$$. In straigt forward way we can find  $$\frac{\partial L}{\hat{y_i}}$$. But that is only the first required step to calclate $$\Delta_5$$. Using chain rule applied to derivative calclation we can achieve it. It is helplfull to refer to a follwoing figure.
 
 ![image](/images/delta_w_calculation_chain_rule_01.png)
+
+With a chain rule $$\frac{\partial L}{\partial w_5}$$ can be caclulated in a following way:
+
+$$\frac{\partial L}{\partial w_5} = \frac{\partial h_3}{\partial w_5} \cdot \frac{\partial \hat{y_1}}{\partial h_3} \cdot \frac{\partial L}{\partial \hat{y_1}}$$
+
+As mentioned above $$\frac{\partial L}{\hat{y_i}}$$ can be calculated in a stright forward way having defined a loss function. 
+
+To calculate $$\frac{\partial \hat{y_1}}{\partial h_3}$$ we need to consider an activation function of that particular node. There are many popular activation function like sigmoid, ReLu, leaked ReLu or even identity. For example for sigmoid activation function a derivative is:
+
+$$\frac{\partial \hat{y_1}}{\partial h_3} = (1-\hat{y_1})\hat{y_1}$$
+
+Finnaly we need to calculate $$\frac{\partial h_3}{\partial w_5}$$. The input of a node in neural network is calclated as a linear combination of weights and values of output from preceding layer. For $$w_5$$ it is:
+
+$$h_3 = w_5 \cdot x_{1,1} + w_7 \cdot x_{1,2} + b_3 \cdot 1 $$
+
+Therefore $$\frac{\partial h_3}{\partial w_5}$$ is equal output of the neuron which value is affected by weight $$w_5$$:
+
+$$\frac{\partial h_3}{\partial w_5} = x_{1,1}$$ 
+
+The formula for $$\Delta_5$$ can be written again in a form:
+
+$$\Delta_5 = \frac{\partial L}{\partial w_5} = \frac{\partial L}{\partial \hat{y_1}}\cdot\frac{\partial \hat{y_1}}{\partial h_3} \cdot x_{1,1}  $$
+
+To the above formula we can introduce "error term" $$\delta$$ which desribes an error L seen from perspective of input to a given node.
+
+For the output node (calculating $$\hat{y_1}$$) only L1 part of L error is visible. Error term for node calulcating $$\hat{y_1}$$:
+
+$$\delta_\hat{y_1} = \frac{\partial L}{\partial \hat{y_1}}\cdot\frac{\partial \hat{y_1}}{\partial h_3}$$
+
+Formula for $$\Delta_5$$ now can be written as follows:
+
+$$\Delta_5 = \delta_\hat{y_1} \cdot x_{1,1}$$
+
+Note that using error term $$\delta$$ we can observe a simple pattern in calculation of $$\Delta$$ value. For calculation of a given $$\Delta$$ we need to calclate delta error and multiply it by the outcome of the node that the weight refers to.
+
+$$\Delta = \delta \cdot x$$
+
+In general for the weights used in output layer $$\delta$$ depends on definition of Loss function and a type of activation function used of output node:
+
+$$\delta = \frac{\partial L}{\partial \hat{y}} \cdot \frac{\partial \hat{y}}{\partial h}$$
+
+Finnaly a summary of weights update $$\Delta$$ values for $$w_5$$, $$w_7$$, $$w_6$$, $$w_8$$:
+
+$$\Delta_5 = \delta_\hat{y_1} \cdot w_5 = \frac{\partial L}{\partial \hat{y_1}}\cdot\frac{\partial \hat{y_1}}{\partial h_3} \cdot x_{1,1}\\
+
+\Delta_7 = \delta_\hat{y_1} \cdot w_7 = \frac{\partial L}{\partial \hat{y_1}}\cdot\frac{\partial \hat{y_1}}{\partial h_3} \cdot x_{1,2}\\
+
+\Delta_6 = \delta_\hat{y_2} \cdot w_6 = \frac{\partial L}{\partial \hat{y_2}}\cdot\frac{\partial \hat{y_2}}{\partial h_4} \cdot x_{1,1}\\
+
+\Delta_8 = \delta_\hat{y_2} \cdot w_8 = \frac{\partial L}{\partial \hat{y_2}}\cdot\frac{\partial \hat{y_2}}{\partial h_4} \cdot x_{1,2}&&
+
+And a summary of bias update for $$b_3$$ and $$b_4$$:
+
+$$ \Delta_{b_3} = \delta_\hat{y_1} = \frac{\partial L}{\partial \hat{y_1}}\cdot\frac{\partial \hat{y_1}}{\partial h_3}\\
+
+\Delta_{b_4} = \delta_\hat{y_2} = \frac{\partial L}{\partial \hat{y_2}}\cdot\frac{\partial \hat{y_2}}{\partial h_4}$$
+
 
 Python code block (for test):
 ```python
