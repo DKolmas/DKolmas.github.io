@@ -1,7 +1,7 @@
 ---
 layout: archive
-permalink: /python-snipets/
-title: "Python snipets"
+permalink: /python-snippets/
+title: "Python snippets"
 author_profile: true
 header:
   image: "/images/butterlfy_01.jpg"
