@@ -119,6 +119,57 @@ And a summary of bias update for $$b_3$$ and $$b_4$$:
 
 ![image](/images/fig21.png)
 
+Now, backpropagation process starts with weigths on the right most site of the network and then moves to the weights of preceding layer. We have already calcuated update values of $$\Delta$$ for $$w_5$$, $$w_6$$, $$w_7$$, $$w_8$$. In the case of our simple neural network we need to move to weights used for calclation of inputs to hidden layer: $$w_1$$, $$w_2$$, $$w_3$$, $$w_4$$.
+
+Calculation of weights updates $$\Delta_1$$, $$\Delta_2$$, $$\Delta_3$$, $$\Delta_4$$ we start with $$\Delta_1$$. For visualisation of separate steps a following figure might be helpful.
+
+![image](/images/delta_w_hidden_01.png)
+
+We are interested in sensitivity of loss function $L$ on weight $w_1$ which is $\Delta_i$
+
+$$\Delta_i = \frac{\partial L }{\partial w_1}$$
+
+Using chain rule for derivatives we can write a following equation containig three components:
+
+$$ \frac{\partial L }{\partial w_1} = \frac{\partial L }{\partial x_{1,1}} \cdot \frac{\partial x_{1,1} }{\partial h_1} \cdot \frac{\partial h_1 }{\partial w_1} $$
+
+#### Calculation of the first components $$\frac{\partial L }{\partial x_{1,1}}$$
+
+Our total error consists of error L1 and L2:
+
+$$L = L_1 + L_2$$
+
+Therefore
+
+$$\frac{\partial L }{\partial x_{1,1}} = \frac{\partial L_1 }{\partial x_{1,1}} + \frac{\partial L_2 }{\partial x_{1,1}} \\
+
+\frac{\partial L_1 }{\partial x_{1,1}} = \frac{\partial L }{\partial h_3} \cdot \frac{\partial h_3 }{\partial x_{1,1}} = \frac{\partial L_1 }{\partial h_3} \cdot \frac{\partial h_3 }{\partial x_{1,1}} $$
+
+Note that derivative of loss function $$L$$ with respect to input $$h_3$$ is equivalent to derivative only that part of $$L$$ function $$L_1$$ which depends on $$h_3$$
+
+$$ \frac{\partial L }{\partial h_3} = \frac{\partial L }{\partial \hat{y_1}} \cdot \frac{\partial \hat{y_1} }{\partial h_3}$$
+
+Earlier an "error term" $$\delta_\hat{y_1}$$ was introduced which now can be used here as well:
+
+$$ \delta_\hat{y_1} = \frac{\partial L }{\partial h_3}$$
+
+To calculate $$\frac{\partial L_1 }{\partial x_{1,1}}$$ we need to calculate $$\frac{\partial h_3 }{\partial x_{1,1}}$$ as well:
+
+$$\frac{\partial h_3 }{\partial x_{1,1}} = w_5$$
+
+Putting things together:
+
+$$\frac{\partial L_1 }{\partial x_{1,1}} = \delta_\hat{y_1} \cdot w_5$$
+
+Simillarly:
+
+$$\frac{\partial L_2 }{\partial x_{1,1}} = \delta_\hat{y_2} \cdot w_6$ \\
+
+\delta_\hat{y_2} = \frac{\partial L }{\partial h_4} = \frac{\partial L {\partial \hat{y_2}} \cdot \frac{\partial \hat{y_2} }{\partial h_4} \\
+
+\frac{\partial h_4 }{\partial x_{1,1}} = w_6$$
+
+
 
 Python code block (for test):
 ```python
