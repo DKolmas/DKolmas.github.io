@@ -125,50 +125,43 @@ Calculation of weights updates $$\Delta_1$$, $$\Delta_2$$, $$\Delta_3$$, $$\Delt
 
 ![image](/images/delta_w_hidden_01.png)
 
-We are interested in sensitivity of loss function $L$ on weight $w_1$ which is $\Delta_i$
+We are interested in sensitivity of loss function $$L$$ on weight $$w_1$$ which is $$\Delta_i$$
 
-$$\Delta_i = \frac{\partial L }{\partial w_1}$$
+![image](/images/fig22.png)
 
 Using chain rule for derivatives we can write a following equation containig three components:
 
-$$ \frac{\partial L }{\partial w_1} = \frac{\partial L }{\partial x_{1,1}} \cdot \frac{\partial x_{1,1} }{\partial h_1} \cdot \frac{\partial h_1 }{\partial w_1} $$
+![image](/images/fig23.png)
 
 #### Calculation of the first components $$\frac{\partial L }{\partial x_{1,1}}$$
 
 Our total error consists of error L1 and L2:
 
-$$L = L_1 + L_2$$
+![image](/images/fig24.png)
 
 Therefore
 
-$$\frac{\partial L }{\partial x_{1,1}} = \frac{\partial L_1 }{\partial x_{1,1}} + \frac{\partial L_2 }{\partial x_{1,1}} \\
-
-\frac{\partial L_1 }{\partial x_{1,1}} = \frac{\partial L }{\partial h_3} \cdot \frac{\partial h_3 }{\partial x_{1,1}} = \frac{\partial L_1 }{\partial h_3} \cdot \frac{\partial h_3 }{\partial x_{1,1}} $$
+![image](/images/fig25.png)
 
 Note that derivative of loss function $$L$$ with respect to input $$h_3$$ is equivalent to derivative only that part of $$L$$ function $$L_1$$ which depends on $$h_3$$
 
-$$ \frac{\partial L }{\partial h_3} = \frac{\partial L }{\partial \hat{y_1}} \cdot \frac{\partial \hat{y_1} }{\partial h_3}$$
+![image](/images/fig26.png)
 
 Earlier an "error term" $$\delta_\hat{y_1}$$ was introduced which now can be used here as well:
 
-$$ \delta_\hat{y_1} = \frac{\partial L }{\partial h_3}$$
+![image](/images/fig27.png)
 
 To calculate $$\frac{\partial L_1 }{\partial x_{1,1}}$$ we need to calculate $$\frac{\partial h_3 }{\partial x_{1,1}}$$ as well:
 
-$$\frac{\partial h_3 }{\partial x_{1,1}} = w_5$$
+![image](/images/fig28.png)
 
 Putting things together:
 
-$$\frac{\partial L_1 }{\partial x_{1,1}} = \delta_\hat{y_1} \cdot w_5$$
+![image](/images/fig29.png)
 
 Simillarly:
 
-$$\frac{\partial L_2 }{\partial x_{1,1}} = \delta_\hat{y_2} \cdot w_6$$
-
-$$ \delta_\hat{y_2} = \frac{\partial L }{\partial h_4} = \frac{\partial L }{\partial \hat{y_2}} \cdot \frac{\partial \hat{y_2} }{\partial h_4}$$
-
-$$\frac{\partial h_4 }{\partial x_{1,1}} = w_6$$
-
+![image](/images/fig30.png)
 
 Python code block (for test):
 ```python
