@@ -163,12 +163,11 @@ $$\frac{\partial L_1 }{\partial x_{1,1}} = \delta_\hat{y_1} \cdot w_5$$
 
 Simillarly:
 
-$$\frac{\partial L_2 }{\partial x_{1,1}} = \delta_\hat{y_2} \cdot w_6 \\
+$$\frac{\partial L_2 }{\partial x_{1,1}} = \delta_\hat{y_2} \cdot w_6$$
 
-\delta_\hat{y_2} = \frac{\partial L }{\partial h_4} = \frac{\partial L {\partial \hat{y_2}} \cdot \frac{\partial \hat{y_2} }{\partial h_4} \\
+$$ \delta_\hat{y_2} = \frac{\partial L }{\partial h_4} = \frac{\partial L }{\partial \hat{y_2}} \cdot \frac{\partial \hat{y_2} }{\partial h_4}$$
 
-\frac{\partial h_4 }{\partial x_{1,1}} = w_6 $$
-
+$$\frac{\partial h_4 }{\partial x_{1,1}} = w_6$$
 
 
 Python code block (for test):
