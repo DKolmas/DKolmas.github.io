@@ -133,7 +133,7 @@ Using chain rule for derivatives we can write a following equation containig thr
 
 ![image](/images/fig23.png)
 
-#### Calculation of the first components $$\frac{\partial L }{\partial x_{1,1}}$$
+### Calculation of the first components $$\frac{\partial L }{\partial x_{1,1}}$$
 
 Our total error consists of error L1 and L2:
 
@@ -167,17 +167,17 @@ Now we have formula of how to calculate the first component $$\frac{\partial L }
 
 $$\frac{\partial L }{\partial x_{1,1}} = \delta_\hat{y_1} \cdot w_5 + \delta_\hat{y_2} \cdot w_6$$
 
-## Calculation of the second components $$\frac{\partial x_{1,1}}{\partial h_1}$$
+### Calculation of the second components $$\frac{\partial x_{1,1}}{\partial h_1}$$
 
 Another componenet is $$\frac{\partial x_{1,1} }{\partial h_1}$$. It is simply just a  derivatie of an activation function used in hidden layer. It depends on activation function type therefoe no further discussion is required here.
 
-## Calculation of the third components $$\frac{\partial h_1 }{\partial w_1}$$
+### Calculation of the third components $$\frac{\partial h_1 }{\partial w_1}$$
 
 $$h_1 = w_1 \cdot x_{0,1} + w_3 \cdot x_{0,2} + b_1 \cdot 1 $$
 
 $$\frac{\partial h_1 }{\partial w_1} = x_{0,1}$$
 
-## Finnaly putting all three componenets together
+### Finnaly putting all three componenets together
 
 $$ \frac{\partial L }{\partial w_1} = \frac{\partial L }{\partial x_{1,1}} \cdot \frac{\partial x_{1,1} }{\partial h_1} \cdot \frac{\partial h_1 }{\partial w_1} \\
 
@@ -193,7 +193,7 @@ Now the update to the weights $$w_1$$ has much simples form:
 
 $$ \frac{\partial L }{\partial w_1} = \delta_{x_{1,1}} \cdot x_{0,1} $$
 
-## Summary of update to all weights used in the hidden layer:
+### Summary of update to all weights used in the hidden layer:
 
 $$ \Delta_{w1} = \delta_{x_{1,1}} \cdot x_{0,1} = (\delta_\hat{y_1} \cdot w_5 + \delta_\hat{y_2} \cdot w_6) \cdot \frac{\partial x_{1,1}}{\partial h_1} \cdot x_{0,1} \\
 
