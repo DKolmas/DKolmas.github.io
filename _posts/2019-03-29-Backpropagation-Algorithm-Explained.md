@@ -163,6 +163,67 @@ Simillarly:
 
 ![image](/images/fig30.png)
 
+Now we have formula of how to calculate the first component $$\frac{\partial L }{\partial w_1}$$:
+
+$$\frac{\partial L }{\partial x_{1,1}} = \delta_\hat{y_1} \cdot w_5 + \delta_\hat{y_2} \cdot w_6$$
+
+## Calculation of the second components $$\frac{\partial x_{1,1}}{\partial h_1}$$
+
+Another componenet is $$\frac{\partial x_{1,1} }{\partial h_1}$$. It is simply just a  derivatie of an activation function used in hidden layer. It depends on activation function type therefoe no further discussion is required here.
+
+## Calculation of the third components $$\frac{\partial h_1 }{\partial w_1}$$
+
+$$h_1 = w_1 \cdot x_{0,1} + w_3 \cdot x_{0,2} + b_1 \cdot 1 $$
+
+$$\frac{\partial h_1 }{\partial w_1} = x_{0,1}$$
+
+## Finnaly putting all three componenets together
+
+$$ \frac{\partial L }{\partial w_1} = \frac{\partial L }{\partial x_{1,1}} \cdot \frac{\partial x_{1,1} }{\partial h_1} \cdot \frac{\partial h_1 }{\partial w_1} \\
+
+\frac{\partial L }{\partial w_1} = (\delta_\hat{y_1} \cdot w_5 + \delta_\hat{y_2} \cdot w_6) \cdot \frac{\partial x_{1,1} }{\partial h_1} \cdot x_{0,1} $$
+
+$$\delta_\hat{y_1}$$ is an error $$L$$ visible from perspective of input to the node with $$\hat{y_1}$$ at the output.
+
+In a similar way we can introduce a expression for an error $$L$$ visible from perspective of input to the node with $$x_{1,1}$$ at the output:
+
+$$\delta_{x_{1,1}} = (\delta_\hat{y_1} \cdot w_5 + \delta_\hat{y_2} \cdot w_6) \cdot \frac{\partial x_{1,1}}{\partial h_1}$$
+
+Now the update to the weights $$w_1$$ has much simples form:
+
+$$ \frac{\partial L }{\partial w_1} = \delta_{x_{1,1}} \cdot x_{0,1} $$
+
+## Summary of update to all weights used in the hidden layer:
+
+$$ \Delta_{w1} = \delta_{x_{1,1}} \cdot x_{0,1} = (\delta_\hat{y_1} \cdot w_5 + \delta_\hat{y_2} \cdot w_6) \cdot \frac{\partial x_{1,1}}{\partial h_1} \cdot x_{0,1} \\
+
+\Delta_{w3} = \delta_{x_{1,1}} \cdot x_{0,2} = (\delta_\hat{y_1} \cdot w_5 + \delta_\hat{y_2} \cdot w_6) \cdot \frac{\partial x_{1,1}}{\partial h_1} \cdot x_{0,2} \\
+
+\Delta_{w2} = \delta_{x_{1,2}} \cdot x_{0,1} = (\delta_\hat{y_1} \cdot w_5 + \delta_\hat{y_2} \cdot w_6) \cdot \frac{\partial x_{1,2}}{\partial h_2} \cdot x_{0,1} \\
+
+\Delta_{w4} = \delta_{x_{1,2}} \cdot x_{0,2} = (\delta_\hat{y_1} \cdot w_5 + \delta_\hat{y_2} \cdot w_6) \cdot \frac{\partial x_{1,2}}{\partial h_2} \cdot x_{0,2}$$
+
+And a summary of bias update for $$b_1$$ and $$b_2$$:
+
+$$ \Delta_{b_1} = \delta_{x_{1,1}} = (\delta_\hat{y_1} \cdot w_5 + \delta_\hat{y_2} \cdot w_6) \cdot \frac{\partial x_{1,1}}{\partial h_1} \\
+
+\Delta_{b_2} = \delta_{x_{1,2}} = (\delta_\hat{y_1} \cdot w_5 + \delta_\hat{y_2} \cdot w_6) \cdot \frac{\partial x_{1,2}}{\partial h_2}$$
+
+## Summary
+
+Introduction of error term greatly simplifies interpreatation of how error calclated at the output of the netowork $L$ propagates back to all weights during the update process
+
+The general formula for weight update can be written as:
+
+$$\Delta_w = \delta \cdot x \\
+
+\Delta_b = \delta$$
+
+Error term depends on type of error function $$L$$ and activation functions in nodes on the way to a specific weights and biases
+
+It is important to remember in calcualtions what activation function is used in a given layer. It can happen that output layer has different activation function than hidden layer. For example output layer have identity activation function while other layers have for example sigmoid activatin function.
+
+
 Python code block (for test):
 ```python
     import numpy as np
