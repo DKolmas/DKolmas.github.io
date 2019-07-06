@@ -8,7 +8,7 @@ header:
 ---
 
 <ul>
-  {% for post in site.posts %}
+  {% for post in site.snippets %}
     {% unless post.next %}
       <font color="#778899"><h2>{{ post.date | date: '%Y %b' }}</h2></font>
     {% else %}
