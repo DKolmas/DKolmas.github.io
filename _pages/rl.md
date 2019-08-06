@@ -1,13 +1,13 @@
 ---
 layout: archive
-permalink: /python-snippets/
+permalink: /rl/
 title: "Python snippets"
 author_profile: true
 header:
   image: "/images/butterlfy_01.jpg"
 ---
 
-{% assign posts = site.posts | where: "categories","PySnippet" %}
+{% assign posts = site.posts | where: "categories","RL" %}
 <ul>
   {% for post in posts %}
     {% unless post.next %}
