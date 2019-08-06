@@ -8,5 +8,8 @@ header:
 ---
 
 <ul>
-{% assign post = site.posts | where: "categories","PySnippet" %}
+  {% assign sorted-post = site.posts | where: "categories","PySnippet" %}
+  {% for post in sorted-posts limit: 5 %}
+    {{post.title}}
+  {% endfor %}
 </ul>
