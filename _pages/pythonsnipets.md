@@ -1,6 +1,6 @@
 ---
 layout: archive
-permalink: /snippets/
+permalink: /python-snippets/
 title: "Python snippets"
 author_profile: true
 header:
