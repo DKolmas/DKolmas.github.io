@@ -7,8 +7,9 @@ header:
   image: "/images/butterlfy_01.jpg"
 ---
 
+{% assign posts = site.posts | where: "categories","PySnippet" %}
 <ul>
-  {% for post in site.posts %}
+  {% for post in posts %}
     {% unless post.next %}
       <font color="#778899"><h2>{{ post.date | date: '%Y %b' }}</h2></font>
     {% else %}
