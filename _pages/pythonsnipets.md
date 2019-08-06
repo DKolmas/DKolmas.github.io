@@ -8,14 +8,14 @@ header:
 ---
 
 <ul>
-  {% for page in site.snippets %}
-    {% unless page.next %}
-      <font color="#778899"><h2>{{ page.date | date: '%Y %b' }}</h2></font>
+  {% for post in site.snippets %}
+    {% unless post.next %}
+      <font color="#778899"><h2>{{ post.date | date: '%Y %b' }}</h2></font>
     {% else %}
-      {% capture year %}{{ page.date | date: '%Y %b' }}{% endcapture %}
-      {% capture nyear %}{{ page.next.date | date: '%Y %b' }}{% endcapture %}
+      {% capture year %}{{ post.date | date: '%Y %b' }}{% endcapture %}
+      {% capture nyear %}{{ post.next.date | date: '%Y %b' }}{% endcapture %}
       {% if year != nyear %}
-        <font color="#778899"><h2>{{ page.date | date: '%Y %b' }}</h2></font>
+        <font color="#778899"><h2>{{ post.date | date: '%Y %b' }}</h2></font>
       {% endif %}
 
     {% endunless %}
