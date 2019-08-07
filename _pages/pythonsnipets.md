@@ -7,7 +7,7 @@ header:
   image: "/images/butterlfy_01.jpg"
 ---
 
-{% assign posts = site.posts | where: "categories","PySnippet" %}
+{% assign posts = site.posts | where: "categories","Snippet" %}
 <ul>
   {% for post in posts %}
     {% unless post.next %}
@@ -23,5 +23,3 @@ header:
    {% include archive-single.html %}
   {% endfor %}
 </ul>
-
-# https://stackoverflow.com/questions/24701557/why-doesnt-this-jekyll-liquid-where-filter-filter

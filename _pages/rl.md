@@ -1,7 +1,7 @@
 ---
 layout: archive
 permalink: /rl/
-title: "Python snippets"
+title: "Reinforcement Learning "
 author_profile: true
 header:
   image: "/images/butterlfy_01.jpg"
@@ -23,5 +23,3 @@ header:
    {% include archive-single.html %}
   {% endfor %}
 </ul>
-
-# https://stackoverflow.com/questions/24701557/why-doesnt-this-jekyll-liquid-where-filter-filter
