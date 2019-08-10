@@ -32,8 +32,8 @@ $$ q_*(a) \doteq \mathbb{E}[R_t \mid A_t = a ] $$   $$ \forall a \in {1,..,k} $$
 
 In practive sample average method can be used for estimating action value - becasue each estimate is an average of the sample of relevant rewards. So one natural way to estimate action value is by averaging the rewards actually received. This is just one way to estimate action value, and not necessarily the best one. 
 
-$$ Q_t(a) \doteq \frac{sum of rewards when a is taken prior to t}{number of times a taken priot to t} \\
-   = \fraq{ \sum_{i=1}^{t-1} R_i \cdot \mathbb{1}_{A_i = a} }{ \sum_{i=1}^{t-1} \mathbb{1}_{A_i = a} } $$
+$$ Q_t(a) \doteq \frac{\text{sum of rewards when a is taken prior to t}}{text{number of times a taken priot to t}} \\
+   = \frac{ \sum_{i=1}^{t-1} R_i \cdot \mathbb{1}_{A_i = a} }{ \sum_{i=1}^{t-1} \mathbb{1}_{A_i = a} } $$lm
 
 2.
 How the estimates might be used for action selection?
