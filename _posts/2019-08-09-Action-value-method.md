@@ -15,12 +15,12 @@ Note about:
 
 Source: Reinforcement Learning: An Introduction, Richard S. Sutton and Andrew G. Barto
 
-About gready actions
+## gready actions
 If you maintain estimates of the action values, then at any time step there is at least one acion whose estimated value is greatest. We call these gready actions. When you select one of these actions, we say that you are exploiting your current knowledge of the values of the actions. If instead you select one of nongready actions, then we say you are exploring, becasue this enables you to improve your estimate on the nongready action's value. 
 
 Exploitation is the right thing to do to maximize the expected reward on the one step, but exploration may produce the greater total reward in the ong run. 
 
-About action-value methods
+## Action-value methods
 1. Estimate of action value for each action
 2. Use estimates for action selection
 
