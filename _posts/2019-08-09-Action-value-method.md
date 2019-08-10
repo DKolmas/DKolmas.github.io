@@ -24,9 +24,10 @@ Exploitation is the right thing to do to maximize the expected reward on the one
 1. Estimate of action value for each action
 2. Use estimates for action selection
 
-1.
-The value of the action is an expected reward
-$$ q_*(a) \doteq \mathbb{E}[R_t \mid A_t = a ] $$ \forall a \in {1,..,k} $$
+
+### Estimation of action value
+The value of the action is defined as an expected reward. This conditional expectation is defined as a sum over all possible rewards: 
+$$ q_*(a) \doteq \mathbb{E}[R_t \mid A_t = a ] $$   $$ \forall a \in {1,..,k} $$
 
 Sample average method for estimating action value - becasue each estimate is an average of the sample of relevant rewards. This is just one way to estimate action value, and not necessarily the best one. 
 Equation 2.1, page 49 in PDF, 
