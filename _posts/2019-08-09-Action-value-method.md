@@ -5,9 +5,10 @@ categories: [RL]
 tags: [Reinforcement Learning, Theory]
 excerpt: "Explanation of action-value method, greedy action and epsilon greed method"
 mathjax: "true"
+---
+
 \usepackage{amsmath}
 \DeclareMathOperator*{\argmax}{argmax}
----
 
 What differientate Reinforcemnt Learning from supervised learning is the way training data is used for. In supervised learning training data is to give the best action, which is instructive feedback. In RL training data is used to evalute action that was taken. This is evaluative feedback.
 
