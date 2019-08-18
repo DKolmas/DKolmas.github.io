@@ -15,16 +15,21 @@ I think the way the problem is explained in Sutton book is so good that I am goi
 This is the original form of the k-armed bandit problem, so named by analogy to a slot
 machine, or “one-armed bandit,” except that it has k levers instead of one. Each action
 selection is like a play of one of the slot machine’s levers, and the rewards are the payo↵s
-for hitting the jackpot. Through repeated action selections you are to maximize your
-winnings by concentrating your actions on the best levers"
+for hitting the jackpot. **Through repeated action selections you are to maximize your
+winnings by concentrating your actions on the best levers**"
 
-Now, below there is simple simulation of k-armed problem with only 3 slot machines. The point of that simulation is to show what is the immediate reward (points) that the agent can get by using a specific machine. 
+Now, below there is simple simulation of k-armed problem with only 3 slot machines. The point of that simulation is to show what is the immediate reward (points) that the agent can get by using a specific machine. Eeach slot machine generates samples from a given true distribution. 
 
 ![image](/images/k-armed-show.gif)
 
-And here there is summary of the simulation from the above animation. Have a look on the real distribution of points the agent can get from each machine.
+In the simulation above there are 3 levers (3-armed bandit problem): one on the left, one in the middle and one on the right. Each lever corresponds to one action type, let's say: 0 (left lever), 1 (middle lever) and 2 (right lever).
+
+Selecting one of three levers is equvalent to taking one of three actions. In the simulation above there were 30 actions taken in total: action 0 x10, action 1 x10 and action 2 x10.
+
+Each of three actions has an expected or mean reward given that the action is selected. This is called **value of the action**. In the simulation we kwnow this expected reward as value of reward is generated from known distribtion. A summary given blow shows known distribution for each lever (each action).
 
 ![image](/images/k-armed-show-summary.png)
+
 
 ### Why armed problem helps us in decision making problem?
 
