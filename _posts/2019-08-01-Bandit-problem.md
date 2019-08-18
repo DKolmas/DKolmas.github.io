@@ -45,8 +45,11 @@ If you knew the value of each action (that is: expected reward), then it would b
 
 We assume we do not know the action values with certainty, although we may have estimates. We denote estimated value of action $$a$$ at time step $$t$$ as $$Q_t(a)$$. We would like $$Q_t(a)$$ to be close to $$q_*(a)$$.
 
-In the summary pictured above of the simulation, "Sample Average" is $$Q_t(a)$$. And "Expected Reward" (in green box for each action) is $$q_*(a)$$.
+In the summary pictured above of the simulation, "Sample Average" is $$Q_t(a)$$. And "Expected Reward" (in green box for each action) is $$q_*(a)$$. After selecting 10 times of each action our estimates let us know which action is the best one. That is the action 2 (lever on the right site).
 
+So if you maintain estimates of action values, that at any time steps there is at least one action whose estimated value is greatest (estimated expected reward -> in our case "Sample Average"). We call these **gready actions**. In our example above the action 2 is the gready action.
+
+When you select gready action (or one of the gready actions), we say that you are **exploiting** your current knowledge. 
 
 ### Why armed problem helps us in decision making problem?
 
