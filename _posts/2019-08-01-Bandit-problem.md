@@ -56,6 +56,8 @@ Exploitation is the right thing to do to maximize the expected reward on the one
 ### Summary
 
  * k-armed bandit problem is a useful tool to formalize decison making problem
+ * In k-armed bandit problem we have an agent (decision maker) who chooses between k actions and receives reward based on the action it chooses 
+ * the goal of the agent is to maximize the expected reward 
  * bandit problem matters in Reinfocement Learninig problem because it intorduces a conept of reward, time step and value of action
  * bandit problem introduces also to us what is exploration-exploitation tradeoff
 
