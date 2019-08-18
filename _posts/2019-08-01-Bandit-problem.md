@@ -51,16 +51,10 @@ So if you maintain estimates of action values, that at any time steps there is a
 
 When you select greedy action (or one of the greedy actions), we say that you are **exploiting** your current knowledge of the values of the actions. If instead you select one of the nongreedy actions, then we say you are **exporing**, because this enables you to improve your estimate of the nongreedy action's value. 
 
-Exploitation is the right thing to do to maximize the expected reward on the one
-step, but exploration may produce the greater total reward in the long run.
+Exploitation is the right thing to do to maximize the expected reward on the one step, but exploration may produce the greater total reward in the long run. Because it is not possible both to explore and to exploit with any single action selection, one often refers to the “conflict” between exploration and exploitation. This is **exploration - exploitation tradeoff**.
 
 
-
-
-
-### Why armed problem helps us in decision making problem?
-
-Summary
- * k-armed problem is a useful tool to formalize decison making 
- * bandit problem matters in Reinfocement Learninig problem because...
+### Summary
+ * k-armed bandit problem is a useful tool to formalize decison making problem
+ * bandit problem matters in Reinfocement Learninig problem because it intorduces a conept of value of action and exploration-exploitation tradeoff
 
