@@ -47,9 +47,16 @@ We assume we do not know the action values with certainty, although we may have 
 
 In the summary pictured above of the simulation, "Sample Average" is $$Q_t(a)$$. And "Expected Reward" (in green box for each action) is $$q_*(a)$$. After selecting 10 times of each action our estimates let us know which action is the best one. That is the action 2 (lever on the right site).
 
-So if you maintain estimates of action values, that at any time steps there is at least one action whose estimated value is greatest (estimated expected reward -> in our case "Sample Average"). We call these **gready actions**. In our example above the action 2 is the gready action.
+So if you maintain estimates of action values, that at any time steps there is at least one action whose estimated value is greatest (estimated expected reward -> in our case "Sample Average"). We call these **greedy actions**. In our example above the action 2 is the gready action.
 
-When you select gready action (or one of the gready actions), we say that you are **exploiting** your current knowledge. 
+When you select greedy action (or one of the greedy actions), we say that you are **exploiting** your current knowledge of the values of the actions. If instead you select one of the nongreedy actions, then we say you are **exporing**, because this enables you to improve your estimate of the nongreedy action's value. 
+
+Exploitation is the right thing to do to maximize the expected reward on the one
+step, but exploration may produce the greater total reward in the long run.
+
+
+
+
 
 ### Why armed problem helps us in decision making problem?
 
