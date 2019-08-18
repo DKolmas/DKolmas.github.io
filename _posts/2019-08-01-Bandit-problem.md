@@ -53,8 +53,9 @@ When you select greedy action (or one of the greedy actions), we say that you ar
 
 Exploitation is the right thing to do to maximize the expected reward on the one step, but exploration may produce the greater total reward in the long run. Because it is not possible both to explore and to exploit with any single action selection, one often refers to the “conflict” between exploration and exploitation. This is **exploration - exploitation tradeoff**.
 
-
 ### Summary
+
  * k-armed bandit problem is a useful tool to formalize decison making problem
- * bandit problem matters in Reinfocement Learninig problem because it intorduces a conept of value of action and exploration-exploitation tradeoff
+ * bandit problem matters in Reinfocement Learninig problem because it intorduces a conept of reward, time step and value of action
+ * bandit problem introduces also to us what is exploration-exploitation tradeoff
 
