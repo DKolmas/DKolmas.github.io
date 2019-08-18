@@ -22,14 +22,19 @@ Now, below there is simple simulation of k-armed problem with only 3 slot machin
 
 ![image](/images/k-armed-show.gif)
 
-In the simulation above there are 3 levers (3-armed bandit problem): one on the left, one in the middle and one on the right. Each lever corresponds to one action type, let's say: 0 (left lever), 1 (middle lever) and 2 (right lever).
+In the simulation above there are 3 levers (3-armed bandit problem): one on the left, one in the middle and one on the right. Each lever corresponds to one action, let's say: 0 (left lever), 1 (middle lever) and 2 (right lever).
 
 Selecting one of three levers is equvalent to taking one of three actions. In the simulation above there were 30 actions taken in total: action 0 x10, action 1 x10 and action 2 x10.
 
-Each of three actions has an expected or mean reward given that the action is selected. This is called **value of the action**. In the simulation we kwnow this expected reward as value of reward is generated from known distribtion. A summary given blow shows known distribution for each lever (each action).
+Each of three actions has an expected or mean reward given that the action is selected. This is called **value of the action**. In the simulation we know this expected reward as value of reward is generated from known distribtion. A summary given blow shows known distribution for each action (each lever) in green box.
 
 ![image](/images/k-armed-show-summary.png)
 
+### Formalization of k-armed bandit problem (bandit problem)
+
+We denote the action selected on time step $$t$$ as $$A_t$$, and the corresponding reward as $$R_t$$. The value then of an arbitrary action $$a$$, denoted $$q_*(a), is the expected reward given that $$a$$ is selected:
+$$\\$$
+$$ q_*(a) \doteq \mathbb{E}[R_t \mid A_t = a ] $$
 
 ### Why armed problem helps us in decision making problem?
 
