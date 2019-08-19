@@ -31,7 +31,7 @@ In the simulation above there are 3 levers (3-armed bandit problem): one on the 
 
 Selecting one of three levers is equvalent to taking one of three actions. In the simulation above there were 30 actions taken in total: action 0 x10, action 1 x10 and action 2 x10.
 
-Each of three actions has an **expected or mean reward** given that the action is selected. This is called **value of the action**. In the simulation we know this expected reward as value of reward is generated from known distribtion. A summary given blow shows known distribution for each action (each lever) in green box.
+Each of three actions has an **expected or mean reward** given that the action is selected. This is called **value of the action**. In the simulation we know this expected reward as a value of reward at a step is generated from known distribtion. A summary given below shows known distribution for each action (each lever) in green box.
 
 ![image](/images/k-armed-show-summary.png)
 
@@ -58,6 +58,7 @@ Exploitation is the right thing to do to maximize the expected reward on the one
  * k-armed bandit problem is a useful tool to formalize decison making problem
  * In k-armed bandit problem we have an agent (decision maker) who chooses between k actions and receives reward based on the action it chooses 
  * the goal of the agent is to maximize the expected reward 
+ * the value of an action $$a$$ is the expected reward given the the action $$a$$ is chosen
  * bandit problem matters in Reinfocement Learninig problem because it intorduces a conept of reward, time step and value of action
- * bandit problem introduces also to us what is exploration-exploitation tradeoff
+ * bandit problem introduces also to us what is exploration-exploitation dilleam: at a given time step agent can either choose greedy action (action with highest value, then agent exploits) or one of nongreedy actions (the agent explores)
 
