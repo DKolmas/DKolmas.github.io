@@ -55,7 +55,7 @@ Exploitation is the right thing to do to maximize the expected reward on the one
 
 ### Summary
 
- * k-armed bandit problem is a useful tool to formalize decison making problem
+ * k-armed bandit problem is a useful tool to formalize decison making problem under uncertaininty
  * In k-armed bandit problem we have an agent (decision maker) who chooses between k actions and receives reward based on the action it chooses 
  * the goal of the agent is to maximize the expected reward 
  * the value of an action $$a$$ is the expected reward given the the action $$a$$ is chosen
