@@ -7,6 +7,12 @@ excerpt: "Bandit problem is a way to formalize the problem of decision making un
 mathjax: "true"
 ---
 
+#### What you can find in this note?
+1. What is k-armed problem
+2. What is the value of action
+3. How we define greedy action
+4. How k-armed problem referes to Reinforcement Learning 
+
 ### What is the k-armed problem?
 I think the way the problem is explained in Sutton book is so good that I am going to put it here. 
 
@@ -21,7 +27,9 @@ winnings by concentrating your actions on the best levers**"
 Once again, k-armed bandit problem:
 Your goal is to maximize accumulated wiinings by concentrating your actions on the best lever.
 
-So, in order to achieve it you need to know which lever offers the best wiining over time.
+So, in order to achieve it you need to know which lever offers the best winning over time.
+
+### Value of action
 
 Now, below there is simple simulation of k-armed problem with only 3 slot machines. The point of that simulation is to show what is the immediate reward (points) that the agent can get by using a specific machine. Eeach slot machine generates samples from a given true distribution. 
 
@@ -49,16 +57,16 @@ In the summary pictured above of the simulation, "Sample Average" is $$Q_t(a)$$.
 
 So if you maintain estimates of action values, that at any time steps there is at least one action whose estimated value is greatest (estimated expected reward -> in our case "Sample Average"). We call these **greedy actions**. In our example above the action 2 is the gready action.
 
-When you select greedy action (or one of the greedy actions), we say that you are **exploiting** your current knowledge of the values of the actions. If instead you select one of the nongreedy actions, then we say you are **exporing**, because this enables you to improve your estimate of the nongreedy action's value. 
+When you select greedy action (or one of the greedy actions), we say that you are **exploiting** your current knowledge of the values of the actions. If instead you select one of the nongreedy actions, then we say you are **exploring**, because this enables you to improve your estimate of the nongreedy action's value. 
 
 Exploitation is the right thing to do to maximize the expected reward on the one step, but exploration may produce the greater total reward in the long run. Because it is not possible both to explore and to exploit with any single action selection, one often refers to the “conflict” between exploration and exploitation. This is **exploration - exploitation tradeoff**.
 
 ### Summary
 
  * k-armed bandit problem is a useful tool to formalize decison making problem under uncertaininty
+ * bandit problem matters in Reinfocement Learninig problem because it intorduces a conept of **reward**, time step and **value of action** 
  * In k-armed bandit problem we have an agent (decision maker) who chooses between k actions and receives reward based on the action it chooses 
  * the goal of the agent is to maximize the expected reward 
  * the value of an action $$a$$ is the expected reward given the the action $$a$$ is chosen
- * bandit problem matters in Reinfocement Learninig problem because it intorduces a conept of reward, time step and value of action
  * bandit problem introduces also to us what is exploration-exploitation dilleam: at a given time step agent can either choose greedy action (action with highest value, then agent exploits) or one of nongreedy actions (the agent explores)
 
