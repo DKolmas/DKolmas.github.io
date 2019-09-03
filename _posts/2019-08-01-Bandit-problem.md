@@ -7,12 +7,12 @@ excerpt: "Bandit problem is a way to formalize the problem of decision making un
 mathjax: "true"
 ---
 
-#### What you can find in this note?
-1. What is k-armed problem
-2. How we define reward
-3. What is the value of action (action value)
-4. How we define greedy actions
-5. How k-armed problem referes to Reinforcement Learning 
+### What you can find in this note?
+2. What is k-armed problem
+1. How k-armed problem referes to Reinforcement Learning 
+3. How we define reward
+4. What is the value of action (action value)
+5. How we define greedy actions
 
 ### What is the k-armed problem?
 I think the way the problem is explained in Sutton book is so good that I am going to put it here. 
@@ -21,13 +21,12 @@ I think the way the problem is explained in Sutton book is so good that I am goi
 
 This is the original form of the k-armed bandit problem, so named by analogy to a slot
 machine, or “one-armed bandit,” except that it has k levers instead of one. Each action
-selection is like a play of one of the slot machine’s levers, and the rewards are the payo↵s
+selection is like a play of one of the slot machine’s levers, and the rewards are the payoffs
 for hitting the jackpot. **Through repeated action selections you are to maximize your
-winnings by concentrating your actions on the best levers**"
+winnings by concentrating your actions on the best levers**". In our k-armed problem each of k actions has an expected or mean reward given that action is selected. Lets us call this the value of the action. 
 
 Once again, k-armed bandit problem:
-Your goal is to maximize accumulated wiinings by concentrating your actions on the best lever.
-
+Your goal is to maximize accumulated winnings by concentrating your actions on the best lever.
 So, in order to achieve it you need to know which lever offers the best winning over time.
 
 ### Value of action
