@@ -9,9 +9,10 @@ mathjax: "true"
 
 #### What you can find in this note?
 1. What is k-armed problem
-2. What is the value of action
-3. How we define greedy action
-4. How k-armed problem referes to Reinforcement Learning 
+2. How we define reward
+3. What is the value of action (action value)
+4. How we define greedy actions
+5. How k-armed problem referes to Reinforcement Learning 
 
 ### What is the k-armed problem?
 I think the way the problem is explained in Sutton book is so good that I am going to put it here. 
