@@ -8,13 +8,13 @@ mathjax: "true"
 ---
 
 ### What you can find in this note?
-2. What is k-armed problem
-1. How k-armed problem referes to Reinforcement Learning 
+1. What is k-armed problem
+2. How k-armed problem referes to Reinforcement Learning 
 3. How we define reward
 4. What is the value of action (action value)
 5. How we define greedy actions
 
-### What is the k-armed problem?
+### What is the k-armed bandits problem?
 I think the way the problem is explained in Sutton book is so good that I am going to put it here. 
 
 "Consider the following learning problem. You are faced repeatedly with a choice among k different options, or actions. After each choice you receive a numerical reward chosen from a stationary probability distribution that depends on the action you selected. Your objective is to maximize the expected total reward over some time period, for example, over 1000 action selections, or time steps.
@@ -27,10 +27,17 @@ winnings by concentrating your actions on the best levers**". In our k-armed pro
 
 Once again, k-armed bandit problem:
 Your goal is to maximize accumulated winnings by concentrating your actions on the best lever.
-So, in order to achieve it you need to know which lever offers the best winning over time.
+So, in order to achieve it you need to know which lever offers the best winning over time. You know the roght lever by experiencing what payoff you can get from levers you have used so far.
+
+### How k-armed bandits problem referes to Reinforcement Learning 
+In Reinforcement Learning, the agent generates its own training data by interacting with the world. The agent must learn the consequences of his own actions through trial and error, rather than being told the correct action. In order to learn the consequences there mast be a way to evaluate the action that was taken. The consequence of action is a numerical reward which is a subjcet of evaluation. 
+In the k-armed bandit problem, we have a decision-maker or agent, who chooses between k different actions, and receives a reward based on the action he chooses. K-armed bandits problem (called bandits problem) is a simplified setup we can use to introduce fundamental concepts of RL:
+ - reward
+ - evalation of action
+ - time-step
+The smplficiation which is offerd by using bandits problem is the nature of reward. In k-armed bandits problem reward has only 'immediate' nature. It means that the action taken with respect to a given lever does not affect what reward in the future can be expected. In RL problem action taken at a given time can affect expected reward in the future. 
 
 ### Value of action
-
 Now, below there is simple simulation of k-armed problem with only 3 slot machines. The point of that simulation is to show what is the immediate reward (points) that the agent can get by using a specific machine. Eeach slot machine generates samples from a given true distribution. 
 
 ![image](/images/k-armed-show.gif)

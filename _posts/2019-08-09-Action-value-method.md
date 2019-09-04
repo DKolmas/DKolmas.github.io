@@ -10,6 +10,7 @@ mathjax: "true"
 What differientate Reinforcemnt Learning from supervised learning is the way training data is used for. In supervised learning training data is to give the best action, which is instructive feedback. In RL training data is used to evalute action that was taken. This is evaluative feedback.
 
 In order to evaluate action we need to somehow estimate a value of action. Methods for estimating values of actions and for using these estimates to make action selection (decision) are collectively called **action-value methods**.
+We define the value of selecting an action as the expected reward we receive when taking bad action.
 
 With respect to action-value methods following topics are mentioned in the text:
 * greedy action
