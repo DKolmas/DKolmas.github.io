@@ -35,6 +35,7 @@ In the k-armed bandit problem, we have a decision-maker or agent, who chooses be
  - reward
  - evalation of action
  - time-step
+
 The smplficiation which is offerd by using bandits problem is the nature of reward. In k-armed bandits problem reward has only 'immediate' nature. It means that the action taken with respect to a given lever does not affect what reward in the future can be expected. In RL problem action taken at a given time can affect expected reward in the future. 
 
 ### Value of action
