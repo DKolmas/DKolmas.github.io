@@ -70,7 +70,7 @@ In the summary pictured above of the simulation, "Sample Average" is $$Q_t(a)$$.
 
 Through action selection the goal of the agent is to maximize the expected reward. In order to do so agent needs to select actions with the highest action value 
 
-$$ \doteq \text{argmax}_a q_*(a)\ $$
+$$ \text{argmax}_a q_*(a)\ $$
 
 So if agent maintains estimates of action values, therefore at any time steps there is at least one action whose estimated value is greatest (estimated expected reward -> in our case "Sample Average"). We call these **greedy actions**. In our example above the action 2 is the gready action.
 
