@@ -56,7 +56,9 @@ Each of three actions has an **expected or mean reward** given that the action i
 
 We denote the action selected on time step $$t$$ as $$A_t$$, and the corresponding reward as $$R_t$$. The value then of an arbitrary action $$a$$, denoted $$q_*(a)$$, is the expected reward given that $$a$$ is selected:
 $$\\$$
-$$ q_*(a) \doteq \mathbb{E}[R_t \mid A_t = a ] $$
+$$ q_*(a) \doteq \mathbb{E}[R_t \mid A_t = a ] \forall a \in {1,...,k} $$
+
+$$ q_*(a) = \sum_{r} p(r|a)r $$
 
 If you knew the value of each action (that is: expected reward), then it would be trivial to solve k-armed bandit problem: you would always select the action with the highest expected reward (action with highest value).
 
