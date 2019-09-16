@@ -56,7 +56,7 @@ Each of three actions has an **expected or mean reward** given that the action i
 
 We denote the action selected on time step $$t$$ as $$A_t$$, and the corresponding reward as $$R_t$$. The value then of an arbitrary action $$a$$, denoted $$q_*(a)$$, is the expected reward given that $$a$$ is selected:
 $$\\$$
-$$ q_*(a) \doteq \mathbb{E}[R_t \mid A_t = a ] \forall a \in {1,...,k} $$
+$$ q_*(a) \doteq \mathbb{E}[R_t \mid A_t = a ] \text{   } \forall a \in {1,...,k} $$
 
 $$ q_*(a) = \sum_{r} p(r|a)r $$
 
@@ -68,7 +68,11 @@ In the summary pictured above of the simulation, "Sample Average" is $$Q_t(a)$$.
 
 ### Greedy actions
 
-So if you maintain estimates of action values, that at any time steps there is at least one action whose estimated value is greatest (estimated expected reward -> in our case "Sample Average"). We call these **greedy actions**. In our example above the action 2 is the gready action.
+Through action selection the goal of the agent is to maximize the expected reward. In order to do so agent needs to select actions with the highest action value 
+
+&& \doteq \text{argmax}_a q_*(a)\ &&
+
+So if agent maintains estimates of action values, therefore at any time steps there is at least one action whose estimated value is greatest (estimated expected reward -> in our case "Sample Average"). We call these **greedy actions**. In our example above the action 2 is the gready action.
 
 When you select greedy action (or one of the greedy actions), we say that you are **exploiting** your current knowledge of the values of the actions. If instead you select one of the nongreedy actions, then we say you are **exploring**, because this enables you to improve your estimate of the nongreedy action's value. By exploratin the agent can acquire more knowledge of non-greedy actions. And at some point non-greedy action can become greedy action as the effect of exploration.
 
