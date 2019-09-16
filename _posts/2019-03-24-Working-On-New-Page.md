@@ -7,15 +7,9 @@ mathjax: "true"
 
 ---
 
-I am preparing a new website to present the content. Temporarily the website damiankolmas.com is unavailable.
+I am preparing a new website to present the content.
 
-Python code block (for test):
-```python
-    import numpy as np
+Here is the the LaTex style for [NeurIPS 2019][1]
 
-    def newFun():
-      return 0
-```
-Here is some math:
 
-$$z=x+y$$
+[1]:{{ site.url }}/download/neurips-2019.pdf
