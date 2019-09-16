@@ -33,9 +33,9 @@ In the k-armed bandit problem, we have a decision-maker or agent, who chooses be
 ### How k-armed bandits problem referes to Reinforcement Learning 
 K-armed bandit problem offers simplified envrinment in which evaluative aspect of reinforcement learning can be studied. In Reinforcement Learning, the agent generates its own training data by interacting with the world. The agent must learn the consequences of his own actions through trial and error, rather than being told the correct action. In order to learn the consequences there must be a way to evaluate the action that was taken. The consequence of action is a **numerical reward** which is a subjcet of evaluation. 
 K-armed bandits problem (called bandits problem) is a simplified setup we can use to introduce fundamental concepts of RL:
+ - actions
  - reward (the value of just taken action)
  - the process of evalation of action
- - time-steps
 
 The smplficiation which is offered by using bandits problem is the nature of reward (action value). In k-armed bandits problem the reward has only 'immediate' nature. It means that the action taken with respect to a given lever does not affect what reward in the future can be expected. In RL problem action taken at a given time can affect expected reward in the future. This immediate nature of action in bandit problem simplifies introductio to Reinforcement Leanring.
 
@@ -81,7 +81,7 @@ Exploitation is the right thing to do to maximize the expected reward on the one
 ### Summary
 
  * k-armed bandit problem is a useful tool to formalize sequencial decison making problem under uncertaininty
- * bandit problem matters in Reinfocement Learninig problem because it intorduces a conept of **reward**, **time step** and **value of action** 
+ * bandit problem matters in Reinfocement Learninig problem because it intorduces a conept of **action**,  **reward** and **value of action** 
  * In k-armed bandit problem we have an agent (decision maker) who chooses between k actions and receives reward based on the action it chooses 
  * the value of an action $$a$$ is the expected reward given the the action $$a$$ is chosen
  * the goal of the agent is to maximize the total expected reward out of all actions taken in sequence (in time-steps)
