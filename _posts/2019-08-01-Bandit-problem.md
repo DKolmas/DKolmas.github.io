@@ -23,18 +23,20 @@ This is the original form of the k-armed bandit problem, so named by analogy to 
 machine, or “one-armed bandit,” except that it has k levers instead of one. Each action
 selection is like a play of one of the slot machine’s levers, and the rewards are the payoffs
 for hitting the jackpot. **Through repeated action selections you are to maximize your
-winnings by concentrating your actions on the best levers**". In our k-armed problem each of k actions has an expected or mean reward given that action is selected. Lets us call this the value of the action. 
+winnings by concentrating your actions on the best levers**". 
+
+In our k-armed problem each of k actions has an expected or mean reward given that action is selected. Lets us call this the **value of the action**. 
 
 Once again, k-armed bandit problem:
 Your goal is to maximize accumulated winnings by concentrating your actions on the best lever.
-So, in order to achieve it you need to know which lever offers the best winning over time. You know the roght lever by experiencing what payoff you can get from levers you have used so far.
+So, in order to achieve it you need to know which lever offers the best winning over time. You know the right lever by experiencing what payoff you can get from levers you have used so far.
 
 ### How k-armed bandits problem referes to Reinforcement Learning 
-In Reinforcement Learning, the agent generates its own training data by interacting with the world. The agent must learn the consequences of his own actions through trial and error, rather than being told the correct action. In order to learn the consequences there mast be a way to evaluate the action that was taken. The consequence of action is a numerical reward which is a subjcet of evaluation. 
+In Reinforcement Learning, the agent generates its own training data by interacting with the world. The agent must learn the consequences of his own actions through trial and error, rather than being told the correct action. In order to learn the consequences there must be a way to evaluate the action that was taken. The consequence of action is a **numerical reward** which is a subjcet of evaluation. 
 In the k-armed bandit problem, we have a decision-maker or agent, who chooses between k different actions, and receives a reward based on the action he chooses. K-armed bandits problem (called bandits problem) is a simplified setup we can use to introduce fundamental concepts of RL:
- - reward
- - evalation of action
- - time-step
+ - reward (the value of just taken action)
+ - the process of evalation of action
+ - time-steps
 
 The smplficiation which is offerd by using bandits problem is the nature of reward. In k-armed bandits problem reward has only 'immediate' nature. It means that the action taken with respect to a given lever does not affect what reward in the future can be expected. In RL problem action taken at a given time can affect expected reward in the future. 
 
