@@ -38,9 +38,9 @@ In the k-armed bandit problem, we have a decision-maker or agent, who chooses be
  - the process of evalation of action
  - time-steps
 
-The smplficiation which is offerd by using bandits problem is the nature of reward. In k-armed bandits problem reward has only 'immediate' nature. It means that the action taken with respect to a given lever does not affect what reward in the future can be expected. In RL problem action taken at a given time can affect expected reward in the future. 
+The smplficiation which is offerd by using bandits problem is the nature of reward (action value). In k-armed bandits problem reward has only 'immediate' nature. It means that the action taken with respect to a given lever does not affect what reward in the future can be expected. In RL problem action taken at a given time can affect expected reward in the future. 
 
-### Value of action
+### Reward (value of action)
 Now, below there is simple simulation of k-armed problem with only 3 slot machines. The point of that simulation is to show what is the immediate reward (points) that the agent can get by using a specific machine. Eeach slot machine generates samples from a given true distribution. 
 
 ![image](/images/k-armed-show.gif)
