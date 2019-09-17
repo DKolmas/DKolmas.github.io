@@ -7,6 +7,14 @@ excerpt: "Explanation of action-value method, greedy action and epsilon greed me
 mathjax: "true"
 ---
 
+## What you can find in this note
+
+ * This note is dedicated to action value and the way it can be used when choosing the action. 
+ * First I have metnioed about action value in [bandit problem](http://www.damiankolmas.com/rl/Bandit-problem/) note. 
+ * Here I will write about two methods of actions selection which use action value. The first one is greede action selection method and the second one is epsilon-greed action selection method.
+
+## Introduction
+
 What differientate Reinforcemnt Learning from supervised learning is the way training data is used for. In supervised learning training data is to give the best action, which is instructive feedback. In RL training data is used to evalute action that was taken. This is evaluative feedback.
 
 In order to evaluate action we need to somehow estimate a value of action. Methods for estimating values of actions and for using these estimates to make action selection (decision) are collectively called **action-value methods**.
