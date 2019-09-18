@@ -26,3 +26,5 @@ After each action agents can observe new state and also receives reward. Depends
 
 We can formalize the above interaction of agent with an environment in the following framework. At each time step agent observe state $$S_t$$. Based on that state $$S_t$$ he selects the action $$A_t$$ and observe reward $$R_{t+1}$$. Agent also experience a transition to another state $$S_{t+1}$$. 
 
+![image](/images/MDP_framework_v1.png)
+
