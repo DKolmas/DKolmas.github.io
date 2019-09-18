@@ -28,3 +28,8 @@ We can formalize the above interaction of agent with an environment in the follo
 
 ![image](/images/MDP_framework_v1.png)
 
+Markov Property:
+Future state and reward depends only on curent state and action. It means that the present state is suficient and remebering earlier states would not improve prediction about the future. In other words the present state contains all the information necessary to predict the future.
+
+![image](/images/Dynamics_of_MDP.png)
+
