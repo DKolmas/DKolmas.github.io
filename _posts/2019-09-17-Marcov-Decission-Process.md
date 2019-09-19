@@ -14,13 +14,17 @@ mathjax: "true"
 
 ### Motivation
 
-In simplfied envirnment which is [Bandit Problem](http://www.damiankolmas.com/rl/Bandit-problem/) agent constantly faces the same situation in which it chooses the action. By the same situation I mean the fact that always the same action is optimal. In many real word applications different situtation requires different actions in order to maximize accumulated rewards over long run. In real word applications the actions chosen at time step t affect the amount of reward he can get in the future. Contrary, in bandit problem, agent only cares about immediate reward without "looking" into the future.
+In simplfied envirnment which is [Bandit Problem](http://www.damiankolmas.com/rl/Bandit-problem/) agent constantly faces the same situation in which it chooses the action. By the same situation I mean the fact that always the same action is optimal. In many real word applications different situtation requires different actions in order to maximize accumulated rewards over long run. In real word applications the actions chosen at time step $$t$$ affect the amount of reward he can get in the future. 
 
-The Markov Decission Process capture this two aspects of real-world problems:
- - change of a state (situation) in which agent can find itself after taking a specific action
+This note is devoted to introduce formal problem of finit Markov Decssion Process (finit MDP). This problem involves **evaluative feedback**, as in [Bandit Problem](http://www.damiankolmas.com/rl/Bandit-problem/), but also **associative aspect** - choosing differn actions in different situations.
+
+MDPs are a classical formalization of sequential decision making, where actions affects not just immediate rewards, but also subsequent situations (states), and through this future rewards.
+
+The Markov Decission Process capture two aspects of real-world problems:
+ - change of a state (situation) as a result of taken action
  - different states calls for different actions 
 
-After each action agents can observe new state and also receives reward. Depends on the action he chooses there may be different following state. In new state agent also chooses action which affect another state and received reward. This process goes on and sequence of state (S), action (A) and reward (R) is generated with time steps. Agent can experience different sequences depends on action he chooses at each time step.
+MDPs invole delayed reward and the need to tradeoff immediate and delayed rewards. Whereas in bandit problems we estimated the value $$q_{*}(a)$$ of each action $$a$$, in MDPs we estimate the value $$q_{*}(s,a)$$ of each action $$a$$ in each state $$s$$, or we estimate the value $$v_{*}(s)$$ of each state given optimal action selection.
 
 ### Definition of Markov Decision Process
 
