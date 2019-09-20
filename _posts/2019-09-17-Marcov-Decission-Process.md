@@ -35,12 +35,17 @@ We can formalize the above interaction of agent with an environment in the follo
 The MDP and agent togehter give the rise to a sequence or **trajectory** that begins like this:
 $$S_0,A_0,R_1,S_1,A_1,R_2,S_2,A_2,R_3,....$$
 
-Markov Property:
-Future state and reward depends only on curent state and action. It means that the present state is suficient and remebering earlier states would not improve prediction about the future. In other words the present state contains all the information necessary to predict the future.
-
 ### Dynamics of Markov Decision Process
 
-In finite MDP the sets of states, actions and rewards ($$\mathbb{S}$$, $$\mathbb{A}$$, $$\mathbb{R}$$) all have finite number of elements. In this case, the random variable $$R_t$$ and $$S_t$$ have well defined discrete probability distributions depending only on the preceding state and action. 
+In finite MDP the sets of states, actions and rewards ($$\mathbb{S}$$, $$\mathbb{A}$$, $$\mathbb{R}$$) all have finite number of elements. In this case, the random variable $$R_t$$ and $$S_t$$ have well defined discrete probability distributions depending only on the preceding state and action. That is, for particular values of these variables, $$s'\in\mathbb{S}$$ and $$r\in\mathbb{R}$$, there is a probability of those values occuring at time $$t$$, given particular values of preceding state and action:
+
+$$p(s',r|s,a)\doteq Pr {S_t=s',R_t=r | S_{t-1}=s, A_{t-1}=a }
+
+for all $$s',s\in\mathbb{S}$$, $$r\in\mathbb{R}$$ and $$a\in\mathbb{A}$$
+
+**Markov Property:**
+
+Future state and reward depends only on curent state and action. It means that the present state is suficient and remebering earlier states would not improve prediction about the future. In other words the present state contains all the information necessary to predict the future.
 
 ![image](/images/Dynamics_of_MDP.png)
 
