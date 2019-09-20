@@ -28,14 +28,19 @@ MDPs invole delayed reward and the need to tradeoff immediate and delayed reward
 
 ### Definition of Markov Decision Process
 
-We can formalize the above interaction of agent with an environment in the following framework. At each time step $$t=0,1,2,3,...$$ agent observes state $$S_t\in\mathbb{S}$$. Based on that state $$S_t$$ he selects the action $$A_t$$ and observe reward $$R_{t+1}$$. Agent also experience a transition to another state $$S_{t+1}$$. 
+We can formalize the above interaction of agent with an environment in the following framework. At each time step $$t=0,1,2,3,...$$ agent observes state $$S_t\in\mathbb{S}$$. Based on that state $$S_t$$ he selects the action $$A_t\in\mathbb{A}$$ and one time step later $$t+1$$ observes reward $$R_{t+1}$$. Agent also experience a transition to another state $$S_{t+1}$$. 
 
 ![image](/images/MDP_framework_v1.png)
 
-Agent interacts with environment at each time step $$t=0,1,2,3,...$$.
+The MDP and agent togehter give the rise to a sequence or **trajectory** that begins like this:
+$$S_0,A_0,R_1,S_1,A_1,R_2,S_2,A_2,R_3,....$$
 
 Markov Property:
 Future state and reward depends only on curent state and action. It means that the present state is suficient and remebering earlier states would not improve prediction about the future. In other words the present state contains all the information necessary to predict the future.
+
+### Dynamics of Markov Decision Process
+
+In finite MDP the sets of states, actions and rewards ($$\mathbb{S}$$, $$\mathbb{A}$$, $$\mathbb{R}$$) all have finite number of elements. In this case, the random variable $$R_t$$ and $$S_t$$ have well defined discrete probability distributions depending only on the preceding state and action. 
 
 ![image](/images/Dynamics_of_MDP.png)
 
