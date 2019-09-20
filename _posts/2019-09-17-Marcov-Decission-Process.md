@@ -43,8 +43,7 @@ $$p(s',r|s,a)\doteq Pr {S_t=s',R_t=r | S_{t-1}=s, A_{t-1}=a } $$
 
 for all $$s',s\in\mathbb{S}$$, $$r\in\mathbb{R}$$ and $$a\in\mathbb{A}$$
 
-**Markov Property:**
-
+*Markov Property:*
 Future state and reward depends only on curent state and action. It means that the present state is suficient and remebering earlier states would not improve prediction about the future. In other words the present state contains all the information necessary to predict the future.
 
 ![image](/images/Dynamics_of_MDP.png)
