@@ -7,10 +7,10 @@ excerpt: "Markov Decission Process or MDP is described in the note. What we can 
 mathjax: "true"
 ---
 
-> Key points in this note  
-> * bla bla 1  
-> * bla bla 2  
-> * bla bla 3  
+> Key points in this note
+> * bla bla 1
+> * bla bla 2
+> * bla bla 3 
 
 <span style="background-color:light-grey">Bla bla bla 4</span>
 
@@ -42,7 +42,7 @@ We can formalize the above interaction of agent with an environment in the follo
 The MDP and agent togehter give the rise to a sequence or **trajectory** that begins like this:
 $$S_0,A_0,R_1,S_1,A_1,R_2,S_2,A_2,R_3,....$$
 
-### Dynamics of Markov Decision Process
+## Dynamics of Markov Decision Process
 
 In finite MDP the sets of states, actions and rewards ($$\mathbb{S}$$, $$\mathbb{A}$$, $$\mathbb{R}$$) all have finite number of elements. In this case, the random variable $$R_t$$ and $$S_t$$ have well defined discrete probability distributions depending only on the preceding state and action. That is, for particular values of these variables, $$s'\in\mathbb{S}$$ and $$r\in\mathbb{R}$$, there is a probability of those values occuring at time $$t$$, given particular values of preceding state and action:
 
@@ -50,8 +50,18 @@ $$p(s',r|s,a)\doteq Pr\{S_t=s',R_t=r | S_{t-1}=s, A_{t-1}=a \} $$
 
 for all $$s',s\in\mathbb{S}$$, $$r\in\mathbb{R}$$ and $$a\in\mathbb{A}$$
 
+The probability of each possible value of $$S_t$$ and $$R_t$$ depends only on immediate preceding state and action $$S_{t-1}$$ and $$A_{t-1}$$. The state must include information about all aspect of the past agent-environment interacton that makes the difference for the future. If it does, then the state is said to have **Markov Proporty**.
+
 *Markov Property:*
 Future state and reward depends only on curent state and action. It means that the present state is suficient and remebering earlier states would not improve prediction about the future. In other words the present state contains all the information necessary to predict the future.
 
 ![image](/images/Dynamics_of_MDP.png)
+
+From the four-argument dynamics function, p, one can compute anything else one might want to know about the environment, such as **state transition probabilities**:
+
+$$p(s'|s,a)\doteq Pr\{S_t=s'|S_{t-1}=s, A_{t-1}=a\}=\sum_{r\in\mathbb{R}}p(s',r|s,a)$$
+
+We can also calculate **expected reward**:
+
+
 
