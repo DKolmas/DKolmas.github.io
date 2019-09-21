@@ -9,9 +9,9 @@ mathjax: "true"
 
 > <span style="background-color:gainsboro">Key points in this note</span>
 > * <span style="background-color:gainsboro">State transition probability:</span>  
-$$p(s'|s,a) = \sum_{r\in\mathbb{R}}p(s',r|s,a)$$
+$$p(s'|s,a) = \sum_{r\in\mathbb{R}}^{}p(s',r|s,a)$$
 > * <span style="background-color:gainsboro">Expected reward:</span>  
-$$r(s,a) = \sum_{r\in\mathbb{R}}r\sum_{s'\in\mathbb{S}}p(s',r|s,a)$$
+$$r(s,a) = \sum_{r\in\mathbb{R}}^{}r\sum_{s'\in\mathbb{S}}^{}p(s',r|s,a)$$
 
 ### What is the content in the note about?
 1. Motivation - why we need model of real word (in form of Markov Decission Process)
