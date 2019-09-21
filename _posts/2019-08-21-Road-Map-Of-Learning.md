@@ -16,6 +16,7 @@ So far I have covered following topics:
 Next I will focus on following topics:
  * Marcov Decission Process - the way to represent (dynamics of) environment (in progress)
  * Returns and Episodes - sounds less important then they are in fact
+ * Backup diagrams 
  * Bellman Equations
  * Dynamic Programming - a family of algorithms desing with assumption of full knowledge of the environment (MDP is priveded)
  * Monte Carlo methods
