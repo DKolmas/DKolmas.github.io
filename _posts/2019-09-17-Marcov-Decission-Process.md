@@ -7,10 +7,12 @@ excerpt: "Markov Decission Process or MDP is described in the note. What we can 
 mathjax: "true"
 ---
 
->> Key points in this note
+---
+> Key points in this note
 > * bla bla 1
 > * bla bla 2
 > * bla bla 3
+---
 
 ### What is the content in the note about?
 1. Motivation - why we need model of real word (in form of Markov Decission Process)
