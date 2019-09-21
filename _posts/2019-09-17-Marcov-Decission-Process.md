@@ -7,10 +7,10 @@ excerpt: "Markov Decission Process or MDP is described in the note. What we can 
 mathjax: "true"
 ---
 
-### What you can find in this note?
-1. Motivation - why we need model of real word (in form of Markov Decission Process)
-2. Definition of Markov Decision Process (MDP)
-3. Description of how the dynamics of an MmDP are defined
+> ### What you can find in this note?
+> 1. Motivation - why we need model of real word (in form of Markov Decission Process)
+> 2. Definition of Markov Decision Process (MDP)
+> 3. Description of how the dynamics of an MmDP are defined
 
 ### Motivation
 
