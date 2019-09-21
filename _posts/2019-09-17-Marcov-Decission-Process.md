@@ -12,7 +12,7 @@ mathjax: "true"
 > * bla bla 2
 > * bla bla 3 
 
-<span style="background-color:light-grey">Bla bla bla 4</span>
+<span style="background-color:gainsboro">Bla bla bla 4</span>
 
 ### What is the content in the note about?
 1. Motivation - why we need model of real word (in form of Markov Decission Process)
