@@ -7,8 +7,9 @@ excerpt: "Markov Decission Process or MDP is described in the note. What we can 
 mathjax: "true"
 ---
 
-> Key points in this note
-> * bla bla 1
+> <span style="background-color:gainsboro">Key points in this note</span>
+> * <span style="background-color:gainsboro">State transition probability:</span>  
+$$p(s'|s,a) = \sum_{r\in\mathbb{R}}p(s',r|s,a)$$
 > * bla bla 2
 > * bla bla 3 
 
