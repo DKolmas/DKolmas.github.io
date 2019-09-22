@@ -8,9 +8,9 @@ mathjax: "true"
 ---
 
 > <span style="color:dodgerblue">**Take away message from the note:**</span>
-> * <span style="color:dodgerblue">**Finit Marcov Decision Processes is a framework for sequential dcission making**</span>
+> * <span style="color:dodgerblue">**Finit Marcov Decision Processes is a framework for sequential dcission making. It can be applied to many different problems in many different ways**</span>
 > * <span style="color:dodgerblue">**State transition probability** </span>
-<span style="color:dodgerblue">$$p(s'|s,a) = \sum_{r\in\mathbb{R}}p(s',r|s,a)$$</span>
+$$p(s'|s,a) = \sum_{r\in\mathbb{R}}p(s',r|s,a)$$
 > * <span style="color:dodgerblue">**Expected reward** </span>
 $$r(s,a) = \sum_{r\in\mathbb{R}}r\sum_{s'\in\mathbb{S}}p(s',r|s,a)$$
 
