@@ -1,16 +1,17 @@
 ---
-title: "Markov Decision Process"
+title: "Markov Decision Processes"
 date: 2019-09-17
 categories: [RL]
 tags: [Reinforcement Learning]
-excerpt: "Markov Decission Process or MDP is described in the note. What we can really benefit from having MDP available?"
+excerpt: "Markov Decision Processes or MDP is described in the note. Why do we need MDP framework and for what reason?"
 mathjax: "true"
 ---
 
-> <span style="background-color:gainsboro">Key points in this note</span>
-> * <span style="background-color:gainsboro">State transition probability:</span>  
+> <span style="color:dodgerblue">Key points in this note</span>
+> * <span style="color:dodgerblue">Finit Marcov Decision Processes is a framework for sequential dcission making</span>  
+> * <span style="color:dodgerblue">State transition probability:</span>  
 $$p(s'|s,a) = \sum_{r\in\mathbb{R}}p(s',r|s,a)$$
-> * <span style="background-color:gainsboro">Expected reward:</span>  
+> * <span style="color:dodgerblue">Expected reward:</span>  
 $$r(s,a) = \sum_{r\in\mathbb{R}}r\sum_{s'\in\mathbb{S}}p(s',r|s,a)$$
 
 ### What is the content in the note about?
