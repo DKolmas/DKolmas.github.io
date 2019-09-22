@@ -8,7 +8,7 @@ mathjax: "true"
 ---
 
 > <span style="color:dodgerblue">**Take away message from the note:**</span>
-> * <span style="color:dodgerblue">**Finit Marcov Decision Processes is a framework for sequential dcission making. It can be applied to many different problems in many different ways**</span>
+> * <span style="color:dodgerblue">**Finit Marcov Decision Processes is a framework for sequential dcission making**</span>
 > * <span style="color:dodgerblue">**State transition probability** </span>
 $$p(s'|s,a) = \sum_{r\in\mathbb{R}}p(s',r|s,a)$$
 > * <span style="color:dodgerblue">**Expected reward** </span>
@@ -65,3 +65,7 @@ We can also calculate **expected reward**:
 
 $$r(s,a) \doteq \mathbb{E}[R_t | S_{t-1}=s, A_{t-1} = a ] = \sum_{r\in\mathbb{R}}r\sum_{s'\in\mathbb{S}}p(s',r|s,a)$$
 
+## Summary
+
+MDP is very flexible framework which can be used to many dofferent ptoblems and in many different ways.
+It offers extenstion from Bandit Problem in a way that we can observe change of a state as an effect of action taken. We can also model with MDP an effect of delayed reward.
