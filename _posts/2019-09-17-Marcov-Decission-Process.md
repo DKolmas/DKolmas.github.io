@@ -7,10 +7,12 @@ excerpt: "Markov Decision Processes or MDP is described in the note. Why do we n
 mathjax: "true"
 ---
 
-> <span style="color:dodgerblue">**Take away message from the note**</span>
-> * <span style="color:dodgerblue">**Finit Marcov Decision Processes is a framework for sequential dcission making**</span>  
-> * <span style="color:dodgerblue">**State transition probability:** </span> $$p(s'|s,a) = \sum_{r\in\mathbb{R}}p(s',r|s,a)$$
-> * <span style="color:dodgerblue">**Expected reward:** </span> $$r(s,a) = \sum_{r\in\mathbb{R}}r\sum_{s'\in\mathbb{S}}p(s',r|s,a)$$
+> <span style="color:dodgerblue">**Take away message from the note:**</span>
+> * <span style="color:dodgerblue">**Finit Marcov Decision Processes is a framework for sequential dcission making**</span>
+> * <span style="color:dodgerblue">**State transition probability** </span>
+$$p(s'|s,a) = \sum_{r\in\mathbb{R}}p(s',r|s,a)$$
+> * <span style="color:dodgerblue">**Expected reward** </span>
+$$r(s,a) = \sum_{r\in\mathbb{R}}r\sum_{s'\in\mathbb{S}}p(s',r|s,a)$$
 
 ### What is the content in the note about?
 1. Motivation - why we want different model from the one introduced in [Bandit Problem](http://www.damiankolmas.com/rl/Bandit-problem/)
