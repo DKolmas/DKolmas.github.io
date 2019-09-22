@@ -10,14 +10,14 @@ mathjax: "true"
 > <span style="color:dodgerblue">**Take away message from the note:**</span>
 > * <span style="color:dodgerblue">**Finit Marcov Decision Processes is a framework for sequential dcission making**</span>
 > * <span style="color:dodgerblue">**State transition probability** </span>
-$$p(s'|s,a) = \sum_{r\in\mathbb{R}}p(s',r|s,a)$$
+<span style="color:dodgerblue">$$p(s'|s,a) = \sum_{r\in\mathbb{R}}p(s',r|s,a)$$</span>
 > * <span style="color:dodgerblue">**Expected reward** </span>
 $$r(s,a) = \sum_{r\in\mathbb{R}}r\sum_{s'\in\mathbb{S}}p(s',r|s,a)$$
 
 ### What is the content in the note about?
 1. Motivation - why we want different model from the one introduced in [Bandit Problem](http://www.damiankolmas.com/rl/Bandit-problem/)
-2. Definition of Markov Decision Process (MDP)
-3. Description of how the dynamics of an MmDP are defined
+2. Definition of Markov Decision Processes (MDP)
+3. Description of how the dynamics of an MDP are defined
 
 ## Motivation
 
@@ -33,7 +33,7 @@ The Markov Decission Process capture two aspects of real-world problems:
 
 MDPs invole delayed reward and the need to tradeoff immediate and delayed rewards. Whereas in bandit problems we estimated the value $$q_{*}(a)$$ of each action $$a$$, in MDPs we estimate the value $$q_{*}(s,a)$$ of each action $$a$$ in each state $$s$$, or we estimate the value $$v_{*}(s)$$ of each state given optimal action selection.
 
-## Definition of Markov Decision Process
+## Definition of Markov Decision Processes
 
 We can formalize the above interaction of agent with an environment in the following framework. At each time step $$t=0,1,2,3,...$$ agent observes state $$S_t\in\mathbb{S}$$. Based on that state $$S_t$$ he selects the action $$A_t\in\mathbb{A}$$ and one time step later $$t+1$$ observes reward $$R_{t+1}$$. Agent also experience a transition to another state $$S_{t+1}$$. 
 
@@ -42,7 +42,7 @@ We can formalize the above interaction of agent with an environment in the follo
 The MDP and agent togehter give the rise to a sequence or **trajectory** that begins like this:
 $$S_0,A_0,R_1,S_1,A_1,R_2,S_2,A_2,R_3,....$$
 
-## Dynamics of Markov Decision Process
+## Dynamics of Markov Decision Processes
 
 In finite MDP the sets of states, actions and rewards ($$\mathbb{S}$$, $$\mathbb{A}$$, $$\mathbb{R}$$) all have finite number of elements. In this case, the random variable $$R_t$$ and $$S_t$$ have well defined discrete probability distributions depending only on the preceding state and action. That is, for particular values of these variables, $$s'\in\mathbb{S}$$ and $$r\in\mathbb{R}$$, there is a probability of those values occuring at time $$t$$, given particular values of preceding state and action:
 
