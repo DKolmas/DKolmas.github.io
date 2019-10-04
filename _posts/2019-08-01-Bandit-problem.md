@@ -7,6 +7,10 @@ excerpt: "Bandit problem is a way to formalize the problem of decision making un
 mathjax: "true"
 ---
 
+> <span style="color:dodgerblue">**Take away message from the note:**</span>
+> * <span style="color:dodgerblue">**Bandit problems is a framework that introduces a framework in which we observe immediate reward**</span>
+> * <span style="color:dodgerblue">**There is no delayed reward in bandit problems** </span>
+
 ### What you can find in this note?
 1. What is k-armed problem
 2. How k-armed problem referes to Reinforcement Learning 
