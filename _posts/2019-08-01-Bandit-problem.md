@@ -8,8 +8,10 @@ mathjax: "true"
 ---
 
 > <span style="color:dodgerblue">**Take away message from the note:**</span>
-> * <span style="color:dodgerblue">**Bandit problems is a framework that introduces a framework in which we observe immediate reward**</span>
-> * <span style="color:dodgerblue">**There is no delayed reward in bandit problems** </span>
+> * <span style="color:dodgerblue">**Bandit problems (bandits) is a framework in which we observe immediate reward as a consequence of taking a decision**</span>
+> * <span style="color:dodgerblue">**We focus in bandits on evaluative aspect of decision (how good/band was the taken decssion**</span>
+> * <span style="color:dodgerblue">**There is no delayed reward in bandit problems which is a large simplificiation in the model** </span>
+> * <span style="color:dodgerblue">**Bandits intorduce fundamental in Reinforcement Learninig concepts of action, reward and value of action** </span>
 
 ### What you can find in this note?
 1. What is k-armed problem
