@@ -4,7 +4,7 @@ main:
     url: /rl/
   - title: "Machine Learning"
     url: /machine-learning/
-  - title: "Snippets"
+  - title: "Python"
     url: /python-snippets/
   - title: "About"
     url: /about/
