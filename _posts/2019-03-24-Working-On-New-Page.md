@@ -11,5 +11,8 @@ I am preparing a new website to present the content.
 
 Here is the the LaTex style for [NeurIPS 2019][1]
 
+And here is how to manage [tags][2] of your pages
+
 
 [1]:{{ site.url }}/download/neurips-2019.pdf
+[2]:https://longqian.me/2017/02/09/github-jekyll-tag/
