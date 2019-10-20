@@ -1,13 +1,13 @@
 # main links
 main:
-  - title: "About"
-    url: /about/
-  - title: "Machine Learning"
-    url: /machine-learning/
   - title: "Reinforcement Learning"
     url: /rl/
+  - title: "Machine Learning"
+    url: /machine-learning/
   - title: "Snippets"
     url: /python-snippets/
+  - title: "About"
+    url: /about/
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
   # - title: "Sample Posts"
