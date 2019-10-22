@@ -1,6 +1,7 @@
 ---
 title: "Things are changing - so do I"
 date: 2019-03-24
+categories: [ML]
 tags: [general, AboutMe]
 excerpt: "How I change the way I present content"
 mathjax: "true"
