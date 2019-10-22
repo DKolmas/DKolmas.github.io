@@ -15,7 +15,7 @@ Here is the the LaTex style for [NeurIPS 2019][1].
 And here is how to manage [tags][2] of your pages.
 More information about [tags and filters in Jekyll][4].
 Information about [Liquid][5] language used by Jekyll.
-
+How to adjust Jekyll post order? [Here][6] is answer about how it.
 How to search for phrase (Linux) in files ([source][3]):
 grep -iRl "your-text-to-find" ./
 
@@ -25,3 +25,4 @@ grep -iRl "your-text-to-find" ./
 [3]:https://winaero.com/blog/find-files-containing-text-linux/
 [4]:https://jekyllrb.com/docs/liquid/
 [5]:https://shopify.github.io/liquid/basics/introduction/
+[6]:https://stackoverflow.com/questions/26196559/how-to-adjust-jekyll-post-order
