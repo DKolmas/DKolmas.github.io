@@ -5,6 +5,7 @@ categories: [RL]
 tags: [Reinforcement Learning]
 excerpt: "Markov Decision Processes or MDP is described in the note. Why do we need MDP framework and for what reason?"
 mathjax: "true"
+order: 5
 ---
 
 > <span style="color:dodgerblue">**Take away message from the note:**</span>

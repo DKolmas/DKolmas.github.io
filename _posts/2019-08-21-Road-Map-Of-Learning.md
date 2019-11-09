@@ -5,6 +5,7 @@ categories: [RL]
 tags: [Reinforcement Learning]
 excerpt: "What are reasonable step in learning process of Reinforcement Learning"
 mathjax: "true"
+order: 1
 ---
 
 So far I have covered following topics:

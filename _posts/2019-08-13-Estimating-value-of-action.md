@@ -5,6 +5,7 @@ categories: [RL]
 tags: [Reinforcement Learning, Theory]
 excerpt: "Derivation of general rule for updating an estimate of action's value in an incremental way"
 mathjax: "true"
+order: 4
 ---
 
 In description of action value method it is esential to cary on estimation of action values. In its simplest form it can be done as an average of all collected rewards after given action was taken. 
