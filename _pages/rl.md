@@ -7,7 +7,8 @@ header:
   image: "/images/butterlfy_01.jpg"
 ---
 
-{% assign posts = site.posts | where: "categories","RL" %}
+{% assign postsRL = site.posts | where: "categories","RL" %}
+{% assign posts = postsRL | sort: "order" %}
 <ul>
   {% for post in posts %}
     {% unless post.next %}
