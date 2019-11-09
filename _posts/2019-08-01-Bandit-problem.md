@@ -5,7 +5,7 @@ categories: [RL]
 tags: [Reinforcement Learning, Theory]
 excerpt: "Bandit problem is a way to formalize the problem of decision making under uncertainity"
 mathjax: "true"
-order: 7
+order: 2
 ---
 
 > <span style="color:dodgerblue">**Take away message from the note:**</span>
