@@ -4,7 +4,7 @@ permalink: /rl/
 title: "Reinforcement Learning "
 author_profile: true
 header:
-  image: "/images/butterlfy_01.jpg"
+  image: "/images/RL_TheRoad_03.jpg"
 ---
 
 {% assign postsRL = site.posts | where: "categories","RL" %}
