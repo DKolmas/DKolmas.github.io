@@ -15,7 +15,13 @@ order: 7
 ### What you can find in this note?
 1. What is Bellman equation?
 2. What Bellman equation brings to us?
- 
+
+### What Bellman equation gives to us?
+
+Bellman equation helps us to formialize connection between value of current state and value of following state without the need for waiting to observe all the futture rewards.
+In other words Bellman equstion relates current and future values.
+
+
 
 
 
