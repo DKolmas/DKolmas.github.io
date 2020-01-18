@@ -13,13 +13,26 @@ order: 7
 > * <span style="color:dodgerblue">**There is bellman (optimality) equation for both value of a state and q-value of a state**</span>
 
 ### What you can find in this note?
-1. What is Bellman equation?
-2. What Bellman equation brings to us?
+1. What Bellman equation can offer to us
+2. Dervivative of Bellman equation for state value
 
-### What Bellman equation gives to us?
+### What Bellman equation can offer to us?
 
-Bellman equation helps us to formialize connection between value of current state and value of following state without the need for waiting to observe all the futture rewards.
+Bellman equation helps us to formialize connection between value of current state and value of following states without the need for waiting to observe all the futture rewards.
 In other words Bellman equstion relates current and future values.
+
+### Dervivative of Bellman equation for state value?
+
+First recall return definitiion at a given time step $$t$$
+
+![image](/images/return_Bellman_01.png)
+
+Bellman equation derivative
+
+![image](/images/state_value_Bellman_01.png)
+
+Note that $$R_{t+1} is a random varible, wherease $$r$$ possible reward outcome (sepcific value for a given state). The expected return $$\mathbb{E}[G_t|S_t=s]$$ depends on states and rewards infitilely far into future.
+
 
 
 
