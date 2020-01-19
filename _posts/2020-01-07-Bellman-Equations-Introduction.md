@@ -31,9 +31,9 @@ Bellman equation derivative
 
 ![image](/images/state_value_Bellman_01.png)
 
-Note that $$R_{t+1}$$ is a random varible, wherease $$r$$ possible reward outcome (sepcific value for a given state). The expected return $$\mathbb{E}[G_t|S_t=s]$$ depends on states and rewards infinitely far into future.
+Note that $$R_{t+1}$$ is a random varible, wherease $$r$$ possible reward outcome (sepcific value for a given state). The expectation of return G_t depends on states and rewards infinitely far into future.
 
-
+ 
 
 
 
