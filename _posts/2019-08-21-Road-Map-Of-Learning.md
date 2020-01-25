@@ -16,8 +16,9 @@ So far I have covered following topics:
  * [Reward and Returns in Reinforcement Learning](http://www.damiankolmas.com/rl/Rewards/#) - sounds less important then it is in fact (in progress)
 
 Next I will focus on following topics:
- * Value functions
- * Bellman Equations
+ * Value functions and policies (in progress)
+ * Bellman Equations (in progress)
+ * Reinforcement Learning cheatsheet (in preparation of draft document)
  * Backup diagrams 
  * Dynamic Programming - a family of algorithms desing with assumption of full knowledge of the environment (MDP is priveded)
  * Monte Carlo methods

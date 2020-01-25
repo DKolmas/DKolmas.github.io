@@ -9,10 +9,8 @@ order: 7
 ---
 
 > <span style="color:dodgerblue">**Take away message from the note:**</span>
-> * <span style="color:dodgerblue">**Intuitively, the Bellman optimality equation expresses the fact that the value of a state under and optimal policy must equal the expected return for the best action from that state  $$t$$**</span>
+> * <span style="color:dodgerblue">**Intuitively, the Bellman optimality equation expresses the fact that the value of a state under and optimal policy must equal the expected return for he best action from that state  $$t$$**</span>
 > * <span style="color:dodgerblue">**There is bellman (optimality) equation for both value of a state and q-value of a state**</span>
-
-Last update: 25th of Janauary, 2020
 
 ### What you can find in this note?
 1. What Bellman equation can offer to us
