@@ -27,4 +27,4 @@ $$ Q_{n+1} = \frac{1}{n} \sum_{i=1}^{n} R_i \\
        = \frac{1}{n} (R_n + nQ_n - Q_n) \\
        = Q_n + \frac{1}{n}[R_n - Q_n] $$
 
-The calucation above in implementation requires memory only for $$Q_n$$ and $$n$$ 
+The calucation above in implementation requires memory only for storing value of $$Q_n$$ and value of $$n$$. 

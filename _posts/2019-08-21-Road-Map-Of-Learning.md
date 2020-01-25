@@ -12,11 +12,11 @@ So far I have covered following topics:
  * K-armed bandit problem (bandits problem). I have epxplained what is bandit problem and why it matters on the way to Reinforcement Learning. See [Bandit Problem](http://www.damiankolmas.com/rl/Bandit-problem/) note.
  * How action value can be used in general. This topic is covered in [Action Value - An Overivew](http://www.damiankolmas.com/rl/Action-value-method/) note
  * How action value can be estiamted. This topic is covered in [Estimating Value of Action](http://www.damiankolmas.com/rl/Estimating-value-of-action/#) note.
-
+ * [Marcov Decission Process](http://www.damiankolmas.com/rl/Marcov-Decission-Process/) - the way to represent (dynamics of) environment
+ * [Reward and Returns in Reinforcement Learning](http://www.damiankolmas.com/rl/Rewards/#) - sounds less important then it is in fact (in progress)
 
 Next I will focus on following topics:
- * Marcov Decission Process - the way to represent (dynamics of) environment (in progress)
- * Returns and Episodes - sounds less important then they are in fact
+ * Value functions
  * Bellman Equations
  * Backup diagrams 
  * Dynamic Programming - a family of algorithms desing with assumption of full knowledge of the environment (MDP is priveded)
