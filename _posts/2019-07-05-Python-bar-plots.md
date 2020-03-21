@@ -67,7 +67,7 @@ p2 = ax1.bar(x1, track3, barWidth, color='#2d7f5e', bottom=track12, edgecolor='w
 ax1.set_xlabel('Tracks in different scenarios',fontsize=15, color='gray')
 ax1.set_ylabel('Track intensity [%]',fontsize=14, color='gray')
 a=ax1.set_xticks(x1)
-a=ax1.set_xticklabels({'scenario 1','scenario 2','scenario 3','scenario 4'})
+a=ax1.set_xticklabels(['scenario 1','scenario 2','scenario 3','scenario 4'])
 #a=ax1.set_yscale("log")
 a=ax1.legend()
 plt.show()
