@@ -3,6 +3,7 @@ layout: archive
 permalink: /python-snippets/
 title: "Python snippets"
 author_profile: true
+classes: wide
 header:
   image: "/images/butterlfy_01.jpg"
 ---
