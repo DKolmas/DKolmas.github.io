@@ -5,7 +5,7 @@ categories: [Snippet]
 tags: [Python, plot]
 excerpt: "A simple Python code pattern of how to plot a bar plot"
 mathjax: "true"
-
+classes: wide
 ---
 
 ```python
