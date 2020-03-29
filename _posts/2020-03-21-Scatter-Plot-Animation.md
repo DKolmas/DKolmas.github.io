@@ -89,7 +89,7 @@ Video('scatterPlotAnimation_v1.mp4')
 ```
 
 ![video](/images/scatterPlotAnimation_v1.mp4)
-
+![](/images/scatterPlotAnimation_v1.mp4)
 
 <video src="scatterPlotAnimation_v1.mp4" controls  >
       Your browser does not support the <code>video</code> element.
