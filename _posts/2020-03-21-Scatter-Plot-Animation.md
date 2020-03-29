@@ -88,15 +88,9 @@ anim.save('scatterPlotAnimation_v1.mp4', writer=writer)
 Video('scatterPlotAnimation_v1.mp4')
 ```
 
-![video](/images/scatterPlotAnimation_v1.mp4)
-![](/images/scatterPlotAnimation_v1.mp4)
 <video width="320" height="240" controls>
   <source src="/images/scatterPlotAnimation_v1.mp4" type="video/mp4">
 </video>
-
-<video src="scatterPlotAnimation_v1.mp4" controls  >
-      Your browser does not support the <code>video</code> element.
-    </video>
 
 
 Other interesting plots (joint scatter and histogram combined)
