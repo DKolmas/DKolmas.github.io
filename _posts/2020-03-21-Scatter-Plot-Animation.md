@@ -88,7 +88,7 @@ anim.save('scatterPlotAnimation_v1.mp4', writer=writer)
 Video('scatterPlotAnimation_v1.mp4')
 ```
 
-<video width="320" height="240" controls>
+<video width="512" height="288" controls>
   <source src="/images/scatterPlotAnimation_v1.mp4" type="video/mp4">
 </video>
 
