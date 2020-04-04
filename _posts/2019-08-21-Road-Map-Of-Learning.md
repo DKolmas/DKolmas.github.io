@@ -17,7 +17,7 @@ So far I have covered following topics:
 
 Next I will focus on following topics:
  * Value functions and policies (in progress)
- * Bellman Equations (in progress)
+ * Bellman Equations (first draft available)
  * Reinforcement Learning cheatsheet (in preparation of draft document)
  * Backup diagrams 
  * Dynamic Programming - a family of algorithms desing with assumption of full knowledge of the environment (MDP is priveded)
@@ -31,6 +31,7 @@ Next I will focus on following topics:
    * Q-learning
    * SARSA and Expected Sarsa
  * Sample effificient learning - Dyna architecture for Planninig and Learning
+ * Upper confidence bound - what is that in the context of reinforcement and why we need it to consider (what type of the tool is that so we need it)
 
 Other topics are on the way as well...
 
