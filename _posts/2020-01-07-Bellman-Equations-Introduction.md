@@ -13,7 +13,7 @@ classes: wide
 > * <span style="color:dodgerblue">**Intuitively, the Bellman optimality equation expresses the fact that the value of a state under and optimal policy must equal the expected return for the best action from that state  $$t$$**</span>
 > * <span style="color:dodgerblue">**There is bellman (optimality) equation for both value of a state and q-value of a state**</span>
 
-Last update: 25th of Janauary, 2020
+Last update: 5th of April, 2020
 
 ### What you can find in this note?
 1. What Bellman equation can offer to us
@@ -22,7 +22,9 @@ Last update: 25th of Janauary, 2020
 ### What Bellman equation can offer to us?
 
 Bellman equation helps us to formialize connection between value of current state and value of following states without the need for waiting to observe all the futture rewards.
-In other words Bellman equstion relates current and future values.
+In other words Bellman equstion relates current and future values. Simplified way of presenting this relation is shown below on the drawing.
+
+![image](/images/Bellman_eq_drawing_01.jpg)
 
 ### Dervivative of Bellman equation for state value?
 
