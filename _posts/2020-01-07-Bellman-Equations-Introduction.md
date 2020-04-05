@@ -24,7 +24,7 @@ Last update: 5th of April, 2020
 Bellman equation helps us to formialize connection between value of current state and value of following states without the need for waiting to observe all the futture rewards.
 In other words Bellman equstion relates current and future values. Simplified way of presenting this relation is shown below on the drawing.
 
-![image](/images/Bellman_eq_drawing_01.jpg)
+![image](/images/Bellman_eq_drawing_01.jpg){:height=75% width=75%}
 
 ### Dervivative of Bellman equation for state value?
 
