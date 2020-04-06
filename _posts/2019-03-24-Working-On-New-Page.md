@@ -11,7 +11,8 @@ mathjax: "true"
 I am preparing a new website to present the content.
 
 Here is the the LaTex style for [NeurIPS 2019][1].
-
+Here is a list of [LaTex symbols][9]
+ 
 And here is how to manage [tags][2] of your pages.
 
 More information about [tags and filters in Jekyll][4].
@@ -36,3 +37,4 @@ Liquid filters reference is [here][8].
 [6]:https://stackoverflow.com/questions/26196559/how-to-adjust-jekyll-post-order
 [7]:https://stackoverflow.com/questions/45651759/is-there-a-way-to-sort-lists-in-jekyll-by-two-fields
 [8]:https://help.shopify.com/en/themes/liquid/filters/array-filters#sort
+[9]:https://artofproblemsolving.com/wiki/index.php/LaTeX:Symbols
