@@ -17,13 +17,25 @@ So far I have covered following topics:
  * [Reward and Returns in Reinforcement Learning](http://www.damiankolmas.com/rl/Rewards/#) - sounds less important then it is in fact (in progress)
 
 Next I will focus on following topics:
+ * My observation of what should be assumption for creting efficienc learning algoritms:
+   * sample efficiency 
+   * MAnaged RIsk Avoidance (MARIA)
+   * hybrid archictecture: combining expert knowledge with part of the state space to be learned. This gives a head start for the algorithm
+   * Atention mechanism for input feature space - not all features should be used all the way during a learning process (this could be combined with automatic feature compostion - features are automatically added to the model)
  * Value functions and policies (in progress)
  * Bellman Equations (first draft available)
  * Reinforcement Learning cheatsheet (in preparation of draft document)
  * Backup diagrams 
+ * What do we call prediction and control methods in reinforcement learning
  * Dynamic Programming - a family of algorithms desing with assumption of full knowledge of the environment (MDP is priveded)
+ * When model is given three approaches can be used using Dynamic Programming:
+   * If we have control problem at heand:
+     * Value iteration and Policy iteration
+   * If we deal with non-control problem at heand
+     * Iterative Policy evaluation
+    * The review of all three methods is given by showing similaritied and difference and how they fit into a larger picture of RL in general
  * Monte Carlo methods
- * Temporal Difference Learning methods
+ * Temporal Difference Learning methods (all methods for control problems):
    * SARSA, Q-learning and Expected SARSA
  * Generalized Policy Iteration
  * Review of major learning approaches (algorithms). Comparison of similarities and differetneces:
@@ -35,6 +47,9 @@ Next I will focus on following topics:
  * Upper confidence bound - what is that in the context of reinforcement learning and why we need it to consider (what type of the tool is that so we need it)
 
 Other topics are on the way as well...
+
+And here is new way of creating in a fast way content for my blog. I use for it Tablet and produce picture ouf of my notes. The picture below is the outcome.
+![image](/images/VisualContent_test_01.jpg)
 
 The next one topic I am working on is **Returns and Episodes**:
 
