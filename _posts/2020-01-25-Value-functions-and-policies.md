@@ -23,4 +23,6 @@ Reinformcement learning methods specify how the agents's policyis changed as a r
 The value function of a state $$s$$ under policy $$\pi$$, denoted as $$\upsilon_{\pi}(s)$$, is the expected return when starting in $$s$$ and following $$\pi$$ thereafter (see separate note on [reward and return](http://www.damiankolmas.com/rl/Rewards/#)). For MDP (see the note on [MDP](http://www.damiankolmas.com/rl/Marcov-Decission-Process/#)), we can define $$\upsilon_{\pi}$$ formally by 
 
 
+$$\upsilon_{\pi}(s) \doteq \mathbb{E}[G_t \mid S_t = s ] = \mathbb{E}[ \sum_{k=0}^{\infty} \gamma^k R_{t+k+1} \mid S_t = s ]$$
+
 
