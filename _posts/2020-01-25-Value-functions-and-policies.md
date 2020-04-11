@@ -11,8 +11,8 @@ classes: wide
 
 > <span style="color:dodgerblue">**Take away message from the note:**</span>
 > * <span style="color:dodgerblue">**Policy is a mapping from given state to probabilities of selecting each action. It is written as $$\pi(a \mid s)$$**</span>
-> * <span style="color:dodgerblue">**Value function $$\upsilon_{\pi}(s)$$ is expected return cacluated when starting from state s and following policy $$\pi$$ thereafter**</span>
-> * <span style="color:dodgerblue">**Action-value function $$\upsilon_{\pi}(s)$$ is expected return cacluated when starting from state s and following policy $$\pi$$ thereafter**</span>
+> * <span style="color:dodgerblue">**Value function $$\upsilon_{\pi}(s)$$ is defined as the value of expected return when being in state s and following policy $$\pi$$ thereafter**</span>
+> * <span style="color:dodgerblue">**Action-value function $$q_{\pi}(s)$$ of taking action $$a$$ in state $$s$$ under policy $$\pi$$ is defined as expected return cacluated when starting from state $$s$$, taking action $$a$$ and following policy $$\pi$$ thereafter**</span>
 
 ### What is a policy?
 
@@ -31,4 +31,4 @@ and we call $$\upsilon_{\pi}$$ the state-value function for policy $$\pi$$. The 
 
 ### What is the value-action function?
 
-
+Similarly, we define the value of 
