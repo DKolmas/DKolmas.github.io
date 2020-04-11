@@ -11,7 +11,8 @@ classes: wide
 
 > <span style="color:dodgerblue">**Take away message from the note:**</span>
 > * <span style="color:dodgerblue">**Policy is a mapping from given state to probabilities of selecting each action. It is written as $$\pi(a \mid s)$$**</span>
-> * <span style="color:dodgerblue">**Value functions $$\upsilon_{\pi}(s)$$ is expected return cacluated when stating from state s and following policy $$\pi$$ thereafter**</span>
+> * <span style="color:dodgerblue">**Value function $$\upsilon_{\pi}(s)$$ is expected return cacluated when starting from state s and following policy $$\pi$$ thereafter**</span>
+> * <span style="color:dodgerblue">**Action-value function $$\upsilon_{\pi}(s)$$ is expected return cacluated when starting from state s and following policy $$\pi$$ thereafter**</span>
 
 ### What is a policy?
 
@@ -20,13 +21,13 @@ Reinformcement learning methods specify how the agents's policyis changed as a r
 
 ### What is a value function?
 
-The value function of a state $$s$$ under policy $$\pi$$, denoted as $$\upsilon_{\pi}(s)$$, is the expected return when starting in $$s$$ and following $$\pi$$ thereafter (see separate note on [reward and return](http://www.damiankolmas.com/rl/Rewards/#)). For MDP (see the note on [MDP](http://www.damiankolmas.com/rl/Marcov-Decission-Process/#)), we can define $$\upsilon_{\pi}$$ formally by 
+The value function of a state $$s$$ under policy $$\pi$$, denoted as $$\upsilon_{\pi}(s)$$, is the expected return when starting in $$s$$ and following $$\pi$$ thereafter (see separate note on [reward and return](http://www.damiankolmas.com/rl/Rewards/#)). For [MDP](http://www.damiankolmas.com/rl/Marcov-Decission-Process/#), we can define $$\upsilon_{\pi}$$ formally by 
 
 
 $$\upsilon_{\pi}(s) \doteq \mathbb{E}[G_t \mid S_t = s ] = \mathbb{E}[ \sum_{k=0}^{\infty} \gamma^k R_{t+k+1} \mid S_t = s ]$$
 
 
-and we call $$\upsilon_{\pi}$$ the state-value function for policy $$\pi$$. The expected return is calculating with respect to state $$s$$ and assumig policy $$\pi$$ is followed thereafter. Note, that state-value function do not differentiate between actions. We have access to value only with the resolution down to particular state. Which sometimes might be enough but sometimes we wish to have even better resoultion of value definition. Therefore we can define function offering resouliton not only with respect to state but also to all possible actions in a given state.
+and we call $$\upsilon_{\pi}$$ the state-value function for policy $$\pi$$. The expected return is calculated with respect to state $$s$$ and assumig policy $$\pi$$ is followed thereafter. Note, that state-value function do not differentiate between actions. We have access to value only with the resolution down to particular state. Which sometimes might be enough but sometimes we wish to have even better resoultion. Therefore we can define function offering resouliton with respect to state and all possible actions in a given state.
 
 ### What is the value-action function?
 
