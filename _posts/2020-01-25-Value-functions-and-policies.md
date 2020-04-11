@@ -11,7 +11,7 @@ classes: wide
 
 > <span style="color:dodgerblue">**Take away message from the note:**</span>
 > * <span style="color:dodgerblue">**Policy is a mapping from given state to probabilities of selecting each action. It is written as $$\pi(a \mid s)$$**</span>
-> * <span style="color:dodgerblue">**Value functions ....  $$t$$**</span>
+> * <span style="color:dodgerblue">**Value functions $$\upsilon_{\pi}(s)$$ is expected return cacluated when stating from state s and following policy $$\pi$$ thereafter**</span>
 
 ### What is a policy in Reinforcement Learning?
 
@@ -24,5 +24,8 @@ The value function of a state $$s$$ under policy $$\pi$$, denoted as $$\upsilon_
 
 
 $$\upsilon_{\pi}(s) \doteq \mathbb{E}[G_t \mid S_t = s ] = \mathbb{E}[ \sum_{k=0}^{\infty} \gamma^k R_{t+k+1} \mid S_t = s ]$$
+
+
+and we call $$\upsilon_{\pi}$$ the state-value function for policy $$\pi$$. The expected return is calculating with respect to state $$s$$ and assumig policy $$\pi$$ is followed thereafter.
 
 
