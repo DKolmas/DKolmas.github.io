@@ -36,4 +36,9 @@ Similarly, we define the value of taking an action $$a$$ in state $$s$$ under po
 
 $$q_{\pi}(s,a) \doteq \mathbb{E}[G_t \mid S_t = s, A_t = a ] = \mathbb{E}[ \sum_{k=0}^{\infty} \gamma^k R_{t+k+1} \mid S_t = s, A_t = a ]$$
 
-$$q_{\pi}(s,a) \doteq \mathbb{E}[G_t \mid S_t=s,At=a] = \mathbb{E}[\sum_{k=0}^{\infty} \gamma^k R_{t+k+1} \mid S_t = s]$$
+
+We call $$q_{\pi}(s,a)$$ the action-value function for policy $$\pi$$.
+
+The value functions $$\upsilon_{\pi}(s)$$ and $$q_{\pi}(s,a)$$ can be estimated from experience. For example, if an agent follows policy $$\pi$$ and maintains an average, foreach state encountered, of the actual returns that have followed that state, then the average will converge to the stateäs value $$\upsilon_{\pi}(s)$$, as the number of times that state is encountered approaches infinity. If separate averages are kept for each action taken in each state, then these averages will similarly converge to the action values, $$q_{\pi}(s,a)$$. 
+
+We call estimation methods of this kind [Monte Carlo methods](http://www.damiankolmas.com/rl/) because they involve averaging over many random stamples of actual returns (note the difference between [reward and return](http://www.damiankolmas.com/rl/Rewards/)).
