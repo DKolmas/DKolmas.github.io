@@ -6,6 +6,7 @@ tags: [Reinforcement Learning, Theory]
 excerpt: "Explanation of action-value method, greedy action and epsilon greed method"
 mathjax: "true"
 order: 3
+classes: wide
 ---
 
 ## What you can find in this note
