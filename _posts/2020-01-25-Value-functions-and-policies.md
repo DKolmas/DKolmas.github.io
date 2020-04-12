@@ -48,4 +48,4 @@ If there are many states it may not be practical to keep separate averages for e
 
 ### General properites of value functions
 
-A fundamental property of value functions used throughout reinforcement learning and dynamic proramming is that they satisfy recursive relationships similar to that which are establised for [return](http://www.damiankolmas.com/rl/Rewards/)).
+A fundamental property of value functions used throughout reinforcement learning and dynamic proramming is that they satisfy recursive relationships similar to that which are establised for [return](http://www.damiankolmas.com/rl/Rewards/)). But more details about this relation is discussed in [Bellman equation post](http://www.damiankolmas.com/rl/Bellman-Equations-Introduction/).
