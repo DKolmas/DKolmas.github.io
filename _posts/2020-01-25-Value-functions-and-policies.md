@@ -13,6 +13,7 @@ classes: wide
 > * <span style="color:dodgerblue">**Policy is a mapping from given state to probabilities of selecting each action. It is written as $$\pi(a \mid s)$$**</span>
 > * <span style="color:dodgerblue">**Value function $$\upsilon_{\pi}(s)$$ is defined as the value of expected return when being in state s and following policy $$\pi$$ thereafter**</span>
 > * <span style="color:dodgerblue">**Action-value function $$q_{\pi}(s,a)$$ of taking action $$a$$ in state $$s$$ under policy $$\pi$$ is defined as expected return cacluated when starting from state $$s$$, taking action $$a$$ and following policy $$\pi$$ thereafter**</span>
+> * <span style="color:dodgerblue">**A fundamental property of value functions used throughout reinforcement learning and dynamic proramming is that they satisfy recursive relationship**</span>
 
 ### What is a policy?
 
@@ -42,3 +43,9 @@ We call $$q_{\pi}(s,a)$$ the action-value function for policy $$\pi$$.
 The value functions $$\upsilon_{\pi}(s)$$ and $$q_{\pi}(s,a)$$ can be estimated from experience. For example, if an agent follows policy $$\pi$$ and maintains an average, foreach state encountered, of the actual returns that have followed that state, then the average will converge to the stateäs value $$\upsilon_{\pi}(s)$$, as the number of times that state is encountered approaches infinity. If separate averages are kept for each action taken in each state, then these averages will similarly converge to the action values, $$q_{\pi}(s,a)$$. 
 
 We call estimation methods of this kind [Monte Carlo methods](http://www.damiankolmas.com/rl/) because they involve averaging over many random stamples of actual returns (note the difference between [reward and return](http://www.damiankolmas.com/rl/Rewards/)).
+
+If there are many states it may not be practical to keep separate averages for each state individually. Instead, the agent would have to maintain $$\upsilon_{\pi}$$ and $$q_{\pi}$$ as parametrized functions and adjust parameters to better match the observed returns.
+
+### General properites of value functions
+
+A fundamental property of value functions used throughout reinforcement learning and dynamic proramming is that they satisfy recursive relationships similar to that which are establised for [return](http://www.damiankolmas.com/rl/Rewards/)).
