@@ -31,4 +31,9 @@ and we call $$\upsilon_{\pi}$$ the state-value function for policy $$\pi$$. The 
 
 ### What is the value-action function?
 
-Similarly, we define the value of 
+Similarly, we define the value of taking an action $$a$$ in state $$s$$ under policy $$\pi$$, denoted as $$q_{\pi}(s,a)$$, as the expected return starting from $$s$$, takking the action $$a$$, and thereafter following policy $$\pi$$:
+
+
+$$q_{\pi}(s,a) \doteq \mathbb{E}[G_t \mid S_t = s, A_t = a ] = \mathbb{E}[ \sum_{k=0}^{\infty} \gamma^k R_{t+k+1} \mid S_t = s, A_t = a ]$$
+
+$$q_{\pi}(s,a) \doteq \mathbb{E}[G_t \mid S_t=s,At=a] = \mathbb{E}[\sum_{k=0}^{\infty} \gamma^k R_{t+k+1} \mid S_t = s]$$
