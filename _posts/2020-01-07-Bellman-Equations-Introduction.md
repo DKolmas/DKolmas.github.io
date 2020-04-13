@@ -42,7 +42,7 @@ The final expression can be read easily as an expected value. It is a sum overll
 
 Backup diagram can be used to understand how the calculation takes place. Each open circle represents a state and each solid circle reoresents a state-action pair. Under given policy $$\pi$$ particular action is selected when being in state $$s$$. This action and state form state-action pair. From each state-action pair environment responds with one of several next states, $$s'$$ (two are shown in figure), alongs with a reward $$r$$, depending on its dynamics given by the functon $$p$$.
 
-![image](/images/backup_diagram_for_v.png
+![image](/images/backup_diagram_for_v.png)
 
 The Bellman equation averages over all possibilities, weighting wach by its probability of occuring. It states that the value of the srart state must equal the (discounted) value of the expected next state, plus the reward expected along the way.
 
