@@ -53,11 +53,17 @@ The value function $$\upsilon_{\pi}$$ is the unique solution to its Bellman equa
 These update (backup) operations transfer value information $$back$$ to a state (or state-action pair) from its sucessro states (or state-action pairs)
 
 
-### More on backup diagrams
+### Other backup diagrams and corresponding Bellman equations
 
+Backup diagram state value - action value
 The value of a state depends on the values of the actions possible in that state and on how likely each action is to be taken under current policy $$q_{\pi}(s,a)$$. The backup diagram shown above can be reforumalted into more compact form which also starts with a state, but combines value into succesor state $$s'$$ into action state $$q_{\pi}(s,a)$$:
 
 ![image](/images/backup_diagram_stateValue_actionValue.png)
 
-There is another way to represents how update can be perceived. 
+The corresponding Bellman equation for the above backup diagram:
+
+Backup diagram action value - state value
+Instead of state value at the root node, the value of action $$q_{\pi}(s,a)$$ can be used. The value of an actions, $$q_{\pi}(s,a)$$, depends on the expected next reward and the expected sum of the remaining rewards (value of state, $$\upilon_{\pi}(s')$$. Again, we can think of that in terms of small backup diagram, this one rooted at an action (state-action pair) and branching to the possible next states:
+
+![image](/images/backup_diagram_actionValue_stateValue.png)
 
