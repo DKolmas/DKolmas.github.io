@@ -31,6 +31,9 @@ $$\upsilon_{\pi}(s) \doteq \mathbb{E}[G_t \mid S_t = s ]\\
 = \sum_{a}\pi(a\mid s)\sum_{s'}\sum_{r}p(s',r\mid s,a)[r+\gamma \mathbb{E}[G_{t+1} \mid S_{t+1} = s' ]]\\
 = \sum_{a}\pi(a\mid s)\sum_{s',r}p(s',r\mid s,a)[r+\gamma \upsilon_{\pi}(s')],\text(for all )s \in S$$
 
+The final expression can be read easily as an expected value. It is a sim overll all values of the three variables: $$a, s, s'$$.
+
+
 ### What you can find in this note?
 1. What Bellman equation can offer to us
 2. Dervivative of Bellman equation for state value
