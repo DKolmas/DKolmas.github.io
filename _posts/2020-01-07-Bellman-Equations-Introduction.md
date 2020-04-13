@@ -20,11 +20,16 @@ Last update: 13th of April, 2020
 
 A fundamental property of value functions used throughout reinforcement learning and dynamic proramming is that they satisfy recursive relationships similar to that which are establised for [return](http://www.damiankolmas.com/rl/Rewards/)).
 
+First recall recursive property for return:
+
+$$G_t = R_{t+1} + \gamma G_{t+1}$$
+
 For any policy $$\pi$$ and any state $$s$$, the following consistency condition holds between the value of $$s$$ and the value of its possible sucessor state:
 
 $$\upsilon_{\pi}(s) \doteq \mathbb{E}[G_t \mid S_t = s ]\\
 = \mathbb{E}[G_{t+1}+\gamma G_{t+1} \mid S_t = s ]\\
-= \sum_{a}\pi(a\mid s)\sum_{s'}\sum_{r}p(s',r\mid s,a)[r+\gamma \mathbb{E}[G_{t+1} \mid S_{t+1} = s' ]]$$
+= \sum_{a}\pi(a\mid s)\sum_{s'}\sum_{r}p(s',r\mid s,a)[r+\gamma \mathbb{E}[G_{t+1} \mid S_{t+1} = s' ]]\\
+= \sum_{a}\pi(a\mid s)\sum_{s',r}p(s',r\mid s,a)[r+\gamma \upsilon_{\pi}(s')],\text(for all )s \in S$$
 
 ### What you can find in this note?
 1. What Bellman equation can offer to us
