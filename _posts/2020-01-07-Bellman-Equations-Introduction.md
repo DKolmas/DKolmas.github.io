@@ -31,7 +31,11 @@ $$\upsilon_{\pi}(s) \doteq \mathbb{E}[G_t \mid S_t = s ]\\
 = \sum_{a}\pi(a\mid s)\sum_{s'}\sum_{r}p(s',r\mid s,a)[r+\gamma \mathbb{E}[G_{t+1} \mid S_{t+1} = s' ]]\\
 = \sum_{a}\pi(a\mid s)\sum_{s',r}p(s',r\mid s,a)[r+\gamma \upsilon_{\pi}(s')] \text{, for all }s \in S$$
 
-The final expression can be read easily as an expected value. It is a sim overll all values of the three variables: $$a, s, s'$$.
+The final expression can be read easily as an expected value. It is a sum overll all values of the three variables: $$a, s, s'$$. For each triple we compute its probability, $$pi(a\mid s)p(s',r\mid s,a)$$, weight the quantity in brackets by that probability, then sum over all possibilities of triples to get expected value.
+
+### Backup diagram
+
+Backup diagram can be used to understand how the calculation takes place. Each open circle represents a state and each solid circle reoresents a state-action pair. Under given policy $$\pi$$ particular action is selected when being in state $$s$$. This action and state form state-action pair. From each state-action pair environment responds with one of several next states, $$s'$$ (two are shown in figure), alongs with a reward $$r$$, depending on its dynamics given by the functon $$p$$.
 
 
 ### What you can find in this note?
