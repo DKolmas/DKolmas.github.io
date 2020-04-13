@@ -20,6 +20,11 @@ Last update: 13th of April, 2020
 
 A fundamental property of value functions used throughout reinforcement learning and dynamic proramming is that they satisfy recursive relationships similar to that which are establised for [return](http://www.damiankolmas.com/rl/Rewards/)).
 
+Bellman equation helps us to formialize connection between value of current state and value of following states without the need for waiting to observe all the futture rewards.
+In other words Bellman equstion relates current and future values. Simplified way of presenting this relation is shown below on the drawing.
+
+![image](/images/Bellman_eq_drawing_01.jpg)
+
 First recall recursive property for return:
 
 $$G_t = R_{t+1} + \gamma G_{t+1}$$
@@ -37,34 +42,7 @@ The final expression can be read easily as an expected value. It is a sum overll
 
 Backup diagram can be used to understand how the calculation takes place. Each open circle represents a state and each solid circle reoresents a state-action pair. Under given policy $$\pi$$ particular action is selected when being in state $$s$$. This action and state form state-action pair. From each state-action pair environment responds with one of several next states, $$s'$$ (two are shown in figure), alongs with a reward $$r$$, depending on its dynamics given by the functon $$p$$.
 
-
-### What you can find in this note?
-1. What Bellman equation can offer to us
-2. Dervivative of Bellman equation for state value
-
-### What Bellman equation can offer to us?
-
-Bellman equation helps us to formialize connection between value of current state and value of following states without the need for waiting to observe all the futture rewards.
-In other words Bellman equstion relates current and future values. Simplified way of presenting this relation is shown below on the drawing.
-
-![image](/images/Bellman_eq_drawing_01.jpg)
-
-### Dervivative of Bellman equation for state value?
-
-First recall return definitiion at a given time step $$t$$
-
-![image](/images/return_Bellman_01.png)
-
-Bellman equation derivative
-
-![image](/images/state_value_Bellman_01.png)
-
-where:
-
-Note that $$R_{t+1}$$ is a random varible, wherease $$r$$ possible reward outcome (sepcific value for a given state). The expectation of return G_t depends on states and rewards infinitely far into future.
-
- 
-
+![image](/images/backup_diagram_for_v.png
 
 
 
