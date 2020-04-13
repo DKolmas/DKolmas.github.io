@@ -69,3 +69,9 @@ Instead of state value at the root node, the value of action $$q_{\pi}(s,a)$$ ca
 
 ![image](/images/backup_diagram_actionValue_stateValue.png)
 
+*Backup diagram action value - action value*
+
+This backup diagram start with action value and terminates also with action value. It is possible to express action value $$q_{\pi}(s,a)$$ in terms of the action values $$q_{\pi}(s',a')$$ of possible sucessors to the state-action pair (s,a).
+
+![image](/images/backupDiagram_actionValue_actionValue.png)
+
