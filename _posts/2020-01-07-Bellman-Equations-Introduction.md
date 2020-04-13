@@ -44,5 +44,10 @@ Backup diagram can be used to understand how the calculation takes place. Each o
 
 ![image](/images/backup_diagram_for_v.png
 
+The Bellman equation averages over all possibilities, weighting wach by its probability of occuring. It states that the value of the srart state must equal the (discounted) value of the expected next state, plus the reward expected along the way.
 
+### Discussion
 
+The value function $$\upsilon_{\pi}$$ is the unique solution to its Bellman equation. Bellman equation forms the basis of a number of ways to compute, approximate, and learn $$\upsilon_{\pi}$$. We call the diagrams like that above backup diagrams because they diagram relationship that form the basis of the updateo pr backup operations that are at the heart of reinforcement learning methods.
+
+Thes update (backup) operations transfer value information $$back$$ to a state (or state-action pair) from its sucessro states (or state-action pairs]
