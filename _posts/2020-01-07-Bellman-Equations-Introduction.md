@@ -22,8 +22,9 @@ A fundamental property of value functions used throughout reinforcement learning
 
 For any policy $$\pi$$ and any state $$s$$, the following consistency condition holds between the value of $$s$$ and the value of its possible sucessor state:
 
-$$\upsilon_{\pi}(s) \doteq \mathbb{E}[G_t \mid S_t = s ] = \\
-\mathbb{E}[G_{t+1}+\gamma G_{t+1} \mid S_t = s ]$$
+$$\upsilon_{\pi}(s) \doteq \mathbb{E}[G_t \mid S_t = s ]\\
+= \mathbb{E}[G_{t+1}+\gamma G_{t+1} \mid S_t = s ]\\
+= \sum_{a}\pi(a\mid s)\sum_{s'}\sum_{r}p(s',r\mid s,a)[r+\gamma \mathbb{E}[G_{t+1} \mid S_{t+1} = s' ]]$$
 
 ### What you can find in this note?
 1. What Bellman equation can offer to us
