@@ -11,8 +11,15 @@ mathjax: "true"
 I am preparing a new website to present the content.
 
 Here is the the LaTex style for [NeurIPS 2019][1].
+
 Here is a list of [LaTex symbols][9]
  
+Interesting blog post on [convergence in Q-learning][10]
+
+Berkeley Introduction to Articifcial Inteligence [CS188][11] Spring 2020
+
+MIT [Artificial Inteligence][12] 
+
 And here is how to manage [tags][2] of your pages.
 
 More information about [tags and filters in Jekyll][4].
@@ -38,3 +45,6 @@ Liquid filters reference is [here][8].
 [7]:https://stackoverflow.com/questions/45651759/is-there-a-way-to-sort-lists-in-jekyll-by-two-fields
 [8]:https://help.shopify.com/en/themes/liquid/filters/array-filters#sort
 [9]:https://artofproblemsolving.com/wiki/index.php/LaTeX:Symbols
+[10]:https://towardsdatascience.com/convergence-of-reinforcement-learning-algorithms-3d917f66b3b7
+[11]:https://inst.eecs.berkeley.edu/~cs188/sp20/
+[12]:https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-034-artificial-intelligence-fall-2010/
