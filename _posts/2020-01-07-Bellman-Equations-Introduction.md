@@ -11,12 +11,12 @@ classes: wide
 
 > <span style="color:dodgerblue">**Take away message from the note:**</span>
 > * <span style="color:dodgerblue">**Reminder: Value of action says how good is to perform a given action in a given state. Therefore value of action depends on policy. The value of action is expected return under given policy**</span>
-> * <span style="color:dodgerblue">**Bellman equation makes the connection between value at a given state and value of state in future under given policy$$t$$. It demonstrates recursive property of value function.**</span>
+> * <span style="color:dodgerblue">**Bellman equation makes the connection between value at a given state and value of state in future under given policy$$t$$. It demonstrates recursive property of value functions**</span>
 > * <span style="color:dodgerblue">**There is bellman (optimality) equation for both value of a state and q-value of a state**</span>
 
 Last update: 13th of April, 2020
 
-### Bellman equation for $$\upsilon_{\pi}$$
+### Bellman equation for value of state $$\upsilon_{\pi}$$
 
 A fundamental property of value functions used throughout reinforcement learning and dynamic proramming is that they satisfy recursive relationships similar to that which are establised for [return](http://www.damiankolmas.com/rl/Rewards/)).
 
@@ -34,9 +34,9 @@ For any policy $$\pi$$ and any state $$s$$, the following consistency condition 
 $$\upsilon_{\pi}(s) \doteq \mathbb{E}[G_t \mid S_t = s ]\\
 = \mathbb{E}[G_{t+1}+\gamma G_{t+1} \mid S_t = s ]\\
 = \sum_{a}\pi(a\mid s)\sum_{s'}\sum_{r}p(s',r\mid s,a)[r+\gamma \mathbb{E}[G_{t+1} \mid S_{t+1} = s' ]]\\
-= \sum_{a}\pi(a\mid s)\sum_{s',r}p(s',r\mid s,a)[r+\gamma \upsilon_{\pi}(s')] \text{, for all }s \in S$$
+= \sum_{a}\pi(a\mid s)\sum_{s',r}p(s',r\mid s,a)[r+\gamma \upsilon_{\pi}(s')] \text{,   for all }s \in S$$
 
-The final expression can be read easily as an expected value. It is a sum overll all values of the three variables: $$a, s, s'$$. For each triple we compute its probability, $$pi(a\mid s)p(s',r\mid s,a)$$, weight the quantity in brackets by that probability, then sum over all possibilities of triples to get expected value.
+The final expression can be read easily as an expected value. It is a sum over all values of the three variables: $$a, s, s'$$. For each triple we compute its probability, $$\pi(a\mid s)p(s',r\mid s,a)$$, weight the quantity in brackets by that probability, and then sum over all possible triples to get expected value.
 
 ### Backup diagram
 
@@ -50,4 +50,14 @@ The Bellman equation averages over all possibilities, weighting wach by its prob
 
 The value function $$\upsilon_{\pi}$$ is the unique solution to its Bellman equation. Bellman equation forms the basis of a number of ways to compute, approximate, and learn $$\upsilon_{\pi}$$. We call the diagrams like that above backup diagrams because they diagram relationship that form the basis of the updateo pr backup operations that are at the heart of reinforcement learning methods.
 
-Thes update (backup) operations transfer value information $$back$$ to a state (or state-action pair) from its sucessro states (or state-action pairs]
+These update (backup) operations transfer value information $$back$$ to a state (or state-action pair) from its sucessro states (or state-action pairs)
+
+
+### More on backup diagrams
+
+The value of a state depends on the values of the actions possible in that state and on how likely each action is to be taken under current policy $$q_{\pi}(s,a)$$. The backup diagram shown above can be reforumalted into more compact form which also starts with a state, but combines value into succesor state $$s'$$ into action state $$q_{\pi}(s,a)$$:
+
+![image](/images/backup_diagram_stateValue_actionValue.png)
+
+There is another way to represents how update can be perceived. 
+
