@@ -65,7 +65,7 @@ The corresponding Bellman equation for the above backup diagram:
 
 *Backup diagram action value - state value*
 
-Instead of state value at the root node, the value of action $$q_{\pi}(s,a)$$ can be used. The value of an actions, $$q_{\pi}(s,a)$$, depends on the expected next reward and the expected sum of the remaining rewards (value of state, $$\upilon_{\pi}(s')$$. Again, we can think of that in terms of small backup diagram, this one rooted at an action (state-action pair) and branching to the possible next states:
+Instead of state value at the root node, the value of action $$q_{\pi}(s,a)$$ can be used. The value of an actions, $$q_{\pi}(s,a)$$, depends on the expected next reward and the expected sum of the remaining rewards (value of state, $$\upsilon_{\pi}(s')$$. Again, we can think of that in terms of small backup diagram, this one rooted at an action (state-action pair) and branching to the possible next states:
 
 ![image](/images/backup_diagram_actionValue_stateValue.png)
 
