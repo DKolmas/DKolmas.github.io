@@ -5,7 +5,7 @@ categories: [RL]
 tags: [Reinforcement Learning, Theory]
 excerpt: "What is value function in RL"
 mathjax: "true"
-order: 8
+order: 7
 classes: wide
 ---
 

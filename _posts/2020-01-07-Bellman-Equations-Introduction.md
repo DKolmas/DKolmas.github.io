@@ -5,7 +5,7 @@ categories: [RL]
 tags: [Reinforcement Learning, Theory]
 excerpt: "Relation of value in cunrrent state to the expected value in following states. What is the Bellman eqation"
 mathjax: "true"
-order: 7
+order: 8
 classes: wide
 ---
 
