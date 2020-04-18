@@ -1,6 +1,6 @@
 ---
 title: "Bellman Optimality Equation"
-date: 2020-01-07
+date: 2020-04-18
 categories: [RL]
 tags: [Reinforcement Learning, Theory]
 excerpt: "Bellman equation can be defined for opitmal policy. How it looks like?"
