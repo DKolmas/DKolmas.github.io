@@ -55,6 +55,12 @@ These update (backup) operations transfer value information $$back$$ to a state 
 
 ### Other backup diagrams and corresponding Bellman equations
 
+***Backup diagram action value - action value***  
+This backup diagram start with action value and terminates also with action value. It is possible to express action value $$q_{\pi}(s,a)$$ in terms of the action values $$q_{\pi}(s',a')$$ of possible sucessors to the state-action pair (s,a).
+
+![image](/images/backupDiagram_actionValue_actionValue.png)
+
+
 *Backup diagram state value - action value*
 
 The value of a state depends on the values of the actions possible in that state and on how likely each action is to be taken under current policy $$q_{\pi}(s,a)$$. The backup diagram shown above can be reforumalted into more compact form which also starts with a state, but combines value into succesor state $$s'$$ into action state $$q_{\pi}(s,a)$$:
@@ -69,9 +75,4 @@ Instead of state value at the root node, the value of action $$q_{\pi}(s,a)$$ ca
 
 ![image](/images/backup_diagram_actionValue_stateValue.png)
 
-*Backup diagram action value - action value*
-
-This backup diagram start with action value and terminates also with action value. It is possible to express action value $$q_{\pi}(s,a)$$ in terms of the action values $$q_{\pi}(s',a')$$ of possible sucessors to the state-action pair (s,a).
-
-![image](/images/backupDiagram_actionValue_actionValue.png)
 
