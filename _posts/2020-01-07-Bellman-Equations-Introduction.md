@@ -11,7 +11,7 @@ classes: wide
 
 > <span style="color:dodgerblue">**Take away message from the note:**</span>
 > * <span style="color:dodgerblue">**Reminder: Value of action says how good is to perform a given action in a given state. Therefore value of action depends on policy. The value of action is expected return under given policy**</span>
-> * <span style="color:dodgerblue">**Bellman equation makes the connection between value at a given state and value of state in future under given policy$$t$$. It demonstrates recursive property of value functions**</span>
+> * <span style="color:dodgerblue">**Bellman equation makes the connection between value at a given state and value of state in future under given policy. It demonstrates recursive property of value functions**</span>
 > * <span style="color:dodgerblue">**There is bellman (optimality) equation for both value of a state and q-value of a state**</span>
 
 Last update: 13th of April, 2020
@@ -55,6 +55,7 @@ These update (backup) operations transfer value information $$back$$ to a state 
 
 ### Other backup diagrams and corresponding Bellman equation
 
+
 ***Backup diagram action value - action value***  
 This backup diagram starts at the root with action value and terminates also with action value. It is possible to express action value $$q_{\pi}(s,a)$$ in terms of the action values $$q_{\pi}(s',a')$$ of possible sucessors to the state-action pair $$(s,a)$$.
 
@@ -62,19 +63,19 @@ This backup diagram starts at the root with action value and terminates also wit
 
 And here is the corresponding Bellman equation to express the relation between action state and its possible succesor in term of their values:
 
-$$q_{\pi}(s,a) = \sum_{s',r}p(s',r\mid s,a)[r+\gamma \sum_{a'} pi(a'\mid s') q_{\pi}(s',a')]$$
+$$q_{\pi}(s,a) = \sum_{s',r}p(s',r\mid s,a)[r+\gamma \sum_{a'}\pi(a'\mid s') q_{\pi}(s',a')]$$
 
-*Backup diagram state value - action value*
-
+***Backup diagram state value - action value***  
 The value of a state depends on the values of the actions possible in that state and on how likely each action is to be taken under current policy $$q_{\pi}(s,a)$$. The backup diagram shown above can be reforumalted into more compact form which also starts with a state, but combines value into succesor state $$s'$$ into action state $$q_{\pi}(s,a)$$:
 
 ![image](/images/backup_diagram_stateValue_actionValue.png)
 
-The corresponding Bellman equation for the above backup diagram:
+The equation corresponding to this intuition and the above diagram:
 
-*Backup diagram action value - state value*
+$$\upsilon_{\pi}(s) = \sum_{a}\pi(a\mid s)q_{\pi}(s,a)$$
 
-Instead of state value at the root node, the value of action $$q_{\pi}(s,a)$$ can be used. The value of an actions, $$q_{\pi}(s,a)$$, depends on the expected next reward and the expected sum of the remaining rewards (value of state, $$\upsilon_{\pi}(s')$$. Again, we can think of that in terms of small backup diagram, this one rooted at an action (state-action pair) and branching to the possible next states:
+***Backup diagram action value - state value***  
+Instead of state value at the root node, the value of action $$q_{\pi}(s,a)$$ can be used. The value of an actions, $$q_{\pi}(s,a)$$, depends on the expected next reward and the expected sum of the remaining rewards (value of state, $$\uthispsilon_{\pi}(s')$$. Again, we can think of that in terms of small backup diagram, this one rooted at an action (state-action pair) and branching to the possible next states:
 
 ![image](/images/backup_diagram_actionValue_stateValue.png)
 
