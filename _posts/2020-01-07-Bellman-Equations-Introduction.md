@@ -14,7 +14,7 @@ classes: wide
 > * <span style="color:dodgerblue">**Bellman equation makes the connection between value at a given state and value of state in future under given policy. It demonstrates recursive property of value functions**</span>
 > * <span style="color:dodgerblue">**There is bellman (optimality) equation for both value of a state and q-value of a state**</span>
 
-Last update: 13th of April, 2020
+Last update: 18th of April, 2020
 
 ### Bellman equation for value of state $$\upsilon_{\pi}$$
 
@@ -32,7 +32,7 @@ $$G_t = R_{t+1} + \gamma G_{t+1}$$
 For any policy $$\pi$$ and any state $$s$$, the following consistency condition holds between the value of $$s$$ and the value of its possible sucessor state:
 
 $$\upsilon_{\pi}(s) \doteq \mathbb{E}[G_t \mid S_t = s ]\\
-= \mathbb{E}[G_{t+1}+\gamma G_{t+1} \mid S_t = s ]\\
+= \mathbb{E}[R_{t+1}+\gamma G_{t+1} \mid S_t = s ]\\
 = \sum_{a}\pi(a\mid s)\sum_{s'}\sum_{r}p(s',r\mid s,a)[r+\gamma \mathbb{E}[G_{t+1} \mid S_{t+1} = s' ]]\\
 = \sum_{a}\pi(a\mid s)\sum_{s',r}p(s',r\mid s,a)[r+\gamma \upsilon_{\pi}(s')] \text{,   for all }s \in S$$
 
@@ -48,9 +48,9 @@ The Bellman equation averages over all possibilities, weighting wach by its prob
 
 ### Discussion
 
-The value function $$\upsilon_{\pi}$$ is the unique solution to its Bellman equation. Bellman equation forms the basis of a number of ways to compute, approximate, and learn $$\upsilon_{\pi}$$. We call the diagrams like that above backup diagrams because they diagram relationship that form the basis of the updateo pr backup operations that are at the heart of reinforcement learning methods.
+The value function $$\upsilon_{\pi}$$ is the unique solution to its Bellman equation. Bellman equation forms the basis of a number of ways to compute, approximate, and learn $$\upsilon_{\pi}$$. We call the diagrams like that above backup diagrams because they diagram relationship that form the basis of the update or backup operations that are at the heart of reinforcement learning methods.
 
-These update (backup) operations transfer value information $$back$$ to a state (or state-action pair) from its sucessro states (or state-action pairs)
+These update (backup) operations transfer value information $$back$$ to a state (or state-action pair) from its sucessor states (or state-action pairs)
 
 
 ### Other backup diagrams and corresponding Bellman equation
@@ -75,7 +75,7 @@ Equation corresponding to this intuition and the above diagram:
 $$\upsilon_{\pi}(s) = \sum_{a}\pi(a\mid s)q_{\pi}(s,a)$$
 
 ***Backup diagram action value - state value***  
-Instead of state value at the root node, the value of action $$q_{\pi}(s,a)$$ can be used. The value of an actions, $$q_{\pi}(s,a)$$, depends on the expected next reward and the expected sum of the remaining rewards (value of state, $$\uthispsilon_{\pi}(s')$$. Again, we can think of that in terms of small backup diagram, this one rooted at an action (state-action pair) and branching to the possible next states:
+Instead of state value at the root node, the value of action $$q_{\pi}(s,a)$$ can be used. The value of an actions, $$q_{\pi}(s,a)$$, depends on the expected next reward and the expected sum of the remaining rewards (value of state, $$\upsilon_{\pi}(s')$$. Again, we can think of that in terms of small backup diagram, this one rooted at an action (state-action pair) and branching to the possible next states:
 
 ![image](/images/backup_diagram_actionValue_stateValue.png)
 
