@@ -70,7 +70,7 @@ The value of a state depends on the values of the actions possible in that state
 
 ![image](/images/backup_diagram_stateValue_actionValue.png)
 
-The equation corresponding to this intuition and the above diagram:
+Equation corresponding to this intuition and the above diagram:
 
 $$\upsilon_{\pi}(s) = \sum_{a}\pi(a\mid s)q_{\pi}(s,a)$$
 
@@ -78,5 +78,9 @@ $$\upsilon_{\pi}(s) = \sum_{a}\pi(a\mid s)q_{\pi}(s,a)$$
 Instead of state value at the root node, the value of action $$q_{\pi}(s,a)$$ can be used. The value of an actions, $$q_{\pi}(s,a)$$, depends on the expected next reward and the expected sum of the remaining rewards (value of state, $$\uthispsilon_{\pi}(s')$$. Again, we can think of that in terms of small backup diagram, this one rooted at an action (state-action pair) and branching to the possible next states:
 
 ![image](/images/backup_diagram_actionValue_stateValue.png)
+
+Equation corresponding to the diagram above:
+
+$$q_{\pi}(s,a) = \sum_{s',r}p(s',r\mid s,a)[r+\gamma \upsilon_{\pi}(s')]$$
 
 
