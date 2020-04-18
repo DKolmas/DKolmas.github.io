@@ -5,7 +5,7 @@ categories: [RL]
 tags: [Reinforcement Learning, Theory]
 excerpt: "Selected details about reinforcement learning"
 mathjax: "true"
-order: 9
+order: 10
 ---
 
 > <span style="color:dodgerblue">**Take away message from the note:**</span>
