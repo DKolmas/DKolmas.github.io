@@ -3,7 +3,7 @@ title: "Bellman Equation"
 date: 2020-01-07
 categories: [RL]
 tags: [Reinforcement Learning, Theory]
-excerpt: "Relation of value in cunrrent state to the expected value in following states. What is the Bellman eqation"
+excerpt: "Relation of value in current state to the expected value in following states. What is the Bellman eqation"
 mathjax: "true"
 order: 8
 classes: wide

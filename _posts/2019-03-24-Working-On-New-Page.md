@@ -13,6 +13,8 @@ I am preparing a new website to present the content.
 Here is the the LaTex style for [NeurIPS 2019][1].
 
 Here is a list of [LaTex symbols][9]
+
+Working with [markdown content][13]
  
 Interesting blog post on [convergence in Q-learning][10]
 
@@ -48,3 +50,4 @@ Liquid filters reference is [here][8].
 [10]:https://towardsdatascience.com/convergence-of-reinforcement-learning-algorithms-3d917f66b3b7
 [11]:https://inst.eecs.berkeley.edu/~cs188/sp20/
 [12]:https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-034-artificial-intelligence-fall-2010/
+[13]:https://www.markdownguide.org/basic-syntax/
