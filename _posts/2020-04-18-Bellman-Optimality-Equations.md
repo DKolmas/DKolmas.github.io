@@ -24,12 +24,5 @@ There is always at least one policy that is better than or equal to all other po
 
 Although there may be more than one, we denote all the optimal policies by $$\pi_{*}$$. They share the same state-value function, called the *optimal state-value function*, denoted $$\upsilon_{*}$$, and defined as:
 
-$$\upsilon_{*}(s) \doteq $$
-
-### My open question
-
-
-
-### Bellman optimality equation for value of state $$\upsilon_{\pi}$$
-
-
+$$\upsilon_{*}(s) \doteq \max_{\pi}\upsilon_{\pi}(s)$$  
+for all $$s\inS$$.
