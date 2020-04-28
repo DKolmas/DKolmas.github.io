@@ -32,7 +32,7 @@ Optimal policies also share the same *optimal action-value function*, deonted by
 $$q_{*}(s,a) \doteq \max_{\pi}q_{\pi}(s,a)$$  
 for all $$s\in S$$ and $$a \in A(s)$$.
 
-For the state-action pair (s,a), this function gives the expected return for taking action a in state s and thereafter following an optimal policy. Thus, we can wrtie $$q_*$$ in terms of $$\upsilon_*$$ as follows:
+For the state-action pair *(s,a)*, this function gives the expected return for taking action *a* in state *s* and thereafter following an optimal policy. Thus, we can wrtie $$q_*$$ in terms of $$\upsilon_*$$ as follows:
 
 $$q_{*}(s,a) = \mathbb{E}[R_{t+1} + \gamma\upsilon_{*}(S_{t+1}) \mid S_t = s, A_t = a ] $$
 
