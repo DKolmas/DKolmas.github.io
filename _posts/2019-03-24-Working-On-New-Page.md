@@ -10,6 +10,8 @@ mathjax: "true"
 
 I am preparing a new website to present the content.
 
+Tile coding software in reinforcement learning - [link][14] to software fibrary
+
 Here is the the LaTex style for [NeurIPS 2019][1].
 
 Here is a list of [LaTex symbols][9]
@@ -51,3 +53,4 @@ Liquid filters reference is [here][8].
 [11]:https://inst.eecs.berkeley.edu/~cs188/sp20/
 [12]:https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-034-artificial-intelligence-fall-2010/
 [13]:https://www.markdownguide.org/basic-syntax/
+[14]:http://incompleteideas.net/tiles/tiles3.html
