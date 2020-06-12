@@ -60,6 +60,10 @@ $$ A_t \doteq \text{argmax}_a Q_t(a)\ $$
 ## Epsilon-greedy method
 Greedy action selection always exploits current knowledge to maximize imediate reward; it spends no time at all sampling apparently inferior actions to see if they might really be better.
 
-A simple alternative is to behave greedily most of the time, but every once in a while, say with small probability epsilon, instead select randomly from among all the actions with equal probability, independly of the acton-value estimates. We call methods using this near-greedy action selection rule epsilon-greedy methods.
+A simple alternative is to behave greedily most of the time, but every once in a while, say with small probability epsilon, instead select randomly from among all the actions with equal probability, independly of the acton-value estimates. We call methods using this near-greedy action selection rule **epsilon-greedy methods**.
+
+We can formulate this simple action selection method as follow.
+With probability greater than 1-epsilon select optimal action.
+With probability smaller of equal to epsilon select random action with equal probability of selection of each action avaialble in that state.
 
 
