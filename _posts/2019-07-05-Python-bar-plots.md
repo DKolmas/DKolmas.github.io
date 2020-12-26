@@ -37,7 +37,7 @@ ax1.bar( x3, track3, color='#2d7f5e', width=barWidth, edgecolor='white', label='
 ax1.set_xlabel('Tracks in different scenarios',fontsize=15, color='gray')
 ax1.set_ylabel('Track intensity [%]',fontsize=14, color='gray')
 a=ax1.set_xticks(x2)
-a=ax1.set_xticklabels({'scenario 1','scenario 2','scenario 3','scenario 4'})
+a=ax1.set_xticklabels(['scenario 1','scenario 2','scenario 3','scenario 4'])
 a=ax1.grid()
 a=ax1.legend()
 plt.show()
