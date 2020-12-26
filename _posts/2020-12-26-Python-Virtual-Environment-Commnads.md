@@ -9,10 +9,10 @@ classes: wide
 ---
 
 Check version of already installed pip version (globally)
- - python -m pip --version
+ - python3 -m pip --version
 
 Upgrade pip to the newest version
-* python -m pip install -U pip
+* python3 -m pip install -U pip
 
 Create Python virtual environment
 * python3 -m venv /path/to/new/virtual/environment
