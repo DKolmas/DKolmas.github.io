@@ -1,8 +1,8 @@
 ---
 title: "Python Virtual Environment"
 date: 2020-12-26
-categories: [Development]
-tags: [Python, VM]
+categories: [Snippet]
+tags: [Python]
 excerpt: "A set of commands used to create Python VM"
 mathjax: "true"
 classes: wide

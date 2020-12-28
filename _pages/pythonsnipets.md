@@ -1,7 +1,7 @@
 ---
 layout: archive
 permalink: /python-snippets/
-title: "Python snippets"
+title: "Python related notes"
 author_profile: true
 classes: wide
 header:
