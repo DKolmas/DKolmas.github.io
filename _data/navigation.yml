@@ -2,6 +2,8 @@
 main:
   - title: "Reinforcement Learning"
     url: /rl/
+  - title: "Statistics"
+    url: /stat/
   - title: "Machine Learning"
     url: /machine-learning/
   - title: "Python"
